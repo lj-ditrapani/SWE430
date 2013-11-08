@@ -1,5 +1,7 @@
 TO DO
 =====
+    - Fix all html to be HTML 5
+    - Mark of the web?
     - What about:  keep refactoring lesson only (help meet objectives? and test is still good)
     - Create support-pack directory, .gitignore
         - zip directory and put on shared L drive
@@ -18,6 +20,7 @@ TO DO
         - exercise
         - exam
     - jsfiddle.net codepen.io ???
+
 
 old notes
 ==========

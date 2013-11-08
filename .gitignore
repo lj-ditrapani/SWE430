@@ -1,20 +1,32 @@
-# Combine exam and exercise_answers in separate project.
+# Combine exam and exercise-answers in separate project.
 # Never on gituhb
 # Put in exam_answers folder, zip, on shared L drive
 /exam
-/exercise_answers
+/exercise-answers
 
 # support-pack should be zipped and served from ditrapani.info
 # and put on shared L drive
-# Media files, .png files, .pdf files, external libraries, 
-# immutable .js files 
+# Media files, .png files, .pdf files, external libraries,
+# immutable .js files
 /support-pack
 
-# Should delete because all art is for 
+# Should delete because all art is for
 #   example 1 (should be completely revamped)
-#   or 
+#   or
 #   example 2 (moving to SWE 450)
 /art
 
 # build artifacts
 /swe430.zip
+
+# Libraries
+/website/css/prettify.css
+/website/css/qunit.css
+/website/js/coffee-script.js
+/website/js/prettify.js
+/website/js/qunit.js
+/website/js/utils.js
+
+# Pictures
+/website/lesson1/cycles.png
+/website/lesson1/legacy.png
