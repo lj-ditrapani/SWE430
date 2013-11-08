@@ -18,6 +18,8 @@
 
 # build artifacts
 /swe430.zip
+/website/example.zip
+/website/exercise.zip
 
 # Libraries
 /website/css/prettify.css
