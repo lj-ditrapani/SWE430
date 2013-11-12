@@ -4,10 +4,7 @@
 /exam
 /exercise-answers
 
-# support.zip should be zipped and served from ditrapani.info
-# and put on shared L drive
-# Media files, .png files, .pdf files, external 3rd-party libraries,
-# immutable .js files
+# .pdf files
 /support
 
 # Should delete because all art is for
@@ -17,18 +14,19 @@
 /art
 
 # build artifacts
-/swe430.zip
+/SWE430.zip
+/SWE430-support.zip
 /website/example.zip
 /website/exercise.zip
 
-# Libraries
+# Libraries (include in SWE430-support.zip)
 /website/css/prettify.css
 /website/css/qunit.css
 /website/js/coffee-script.js
 /website/js/prettify.js
 /website/js/qunit.js
-/website/js/utils.js
+/website/js/ljd-utils.js
 
-# Pictures
+# Pictures (include in SWE430-support.zip)
 /website/lesson1/cycles.png
 /website/lesson1/legacy.png

@@ -10,7 +10,8 @@ TO DO
 - Create package-support.sh
     - for 3rd party libraries, .pdf, .png files
     - .gitignore support files
-    - zip files into 430-support.zip and put on shared L drive
+    - zip files into SWE430-support.zip and put on shared L drive and 
+      served from ditrapani.info
     - media files (images, books, videos)
     - binary art sources (dia, gimp)
     - immutable libraries (qunit.js qunit.css)
@@ -33,9 +34,12 @@ TO DO
 -------------------
 
 Production: website dir (goes on github)
-    zip-website.sh to create release
+    - zip-website.sh to create release SWE430-website.zip
+    - put SWE430-website.zip on ditrapani.info/resources & L drive
+    - This .zip file is loaded right on blackboard
+    - .zip file contains everything but the FOUO stuff
 
-Exams/Answers, separte git project (goes on L drive FOUO)
+Exams/Answers, separte git project (goes on L drive, FOUO stuff)
 exam-and-exercise-answers, zip-exam-and-exercise-answers.sh
 
 support.zip package-support.sh unpack-support.sh
