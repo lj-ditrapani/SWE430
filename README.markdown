@@ -5,13 +5,10 @@ TO DO
 - Mark of the web?
 - Exercise instructions
 - Exercise answer CoffeeScript -> JavaScript
-- Create `exam-and-exercise-answers` directory.  Contains exam 
-  questions .txt with answers.  Also contains exercise answers.
-  Put under git
 - Shorten example (old example 1, now just example, because only 1)
-- Remove Refactoring content (move to SWE 450)
-- What about:  keep refactoring lesson only
-  (help meet objectives? and test is still good)
+- keep refactoring lesson only
+  (help meet objectives and test is still good)
+- Remove references to refactoring example and exercise
 - make a survey for 330/430 asking how many hours for each
     - learn javascript/qunit
     - lesson
@@ -37,12 +34,17 @@ TO DO
 
 - Exam and Exercise Answers, separate git project
   (goes on L drive, FOUO stuff)
-  exam-and-exercise-answers dir, exam-and-exercises.zip
+    - exam-and-exercise-answers dir
+    - zip-exam-and-exercise-answers.sh
+    - exam-and-exercise-answers.zip
+    - load-exercise-dependencies.sh  copy dependencies of
+      exercise answers (exercis-tests.html, qunit.js, qunit.css)
+      answers into exercise answer folders
     - **Needed for teaching**
 
-- Support:  SWE430-support.zip package-support.sh
+- Support:  SWE430-support.zip zip-support.sh
 (SWE430-support.zip goes on L drive, scripts on github)
-package-support.sh
+zip-support.sh
     - for 3rd party libraries, .pdf, .png files
     - .gitignore support files
     - zip files into SWE430-support.zip and put on shared L drive and 
