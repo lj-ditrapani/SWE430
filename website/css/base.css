@@ -35,16 +35,16 @@ table {
 }
 
 th {
-color: #b0d0ff;
-background-color: #002070;
-border: 1px solid black;
-padding: 3px;
+    color: #b0d0ff;
+    background-color: #002070;
+    border: 1px solid black;
+    padding: 3px;
 }
 
 td {
-border: 1px solid black;
-width: 150px;
-padding: 3px;
+    border: 1px solid black;
+    width: 150px;
+    padding: 3px;
 }
 
 div.filename {

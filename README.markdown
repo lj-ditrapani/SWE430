@@ -1,25 +1,45 @@
 TO DO
 =====
-    - Fix all html to be HTML 5
-    - Mark of the web?
-    - What about:  keep refactoring lesson only (help meet objectives? and test is still good)
-    - Create support-pack directory, .gitignore
-        - zip directory and put on shared L drive
-        - media files (images, books, videos)
-        - binary art sources (dia, gimp)
-        - immutable libraries (qunit.js qunit.css)
-    - Create script to unzip support-pack and place files in correct directory
-    - Create `exams_answers` directory.  Contains exams questions .txt with answers.  Also contains exercise answers.
-    - Create script to unzip `exams_answers` and place files in correct
-    - Shorten example (old example 1, now just example, because only 1)
-    - Remove Refactoring content (move to SWE 450)
-    - make a survey for 330/430 asking how many hours for each
-        - learn javascript/qunit
-        - lesson
-        - example
-        - exercise
-        - exam
-    - jsfiddle.net codepen.io ???
+- use new ljd-utils.js
+- Fix all html to be HTML 5
+- Mark of the web?
+- Exercise instructions
+- Exercise answer CoffeeScript -> JavaScript
+- What about:  keep refactoring lesson only
+  (help meet objectives? and test is still good)
+- Create package-support.sh
+    - for 3rd party libraries, .pdf, .png files
+    - .gitignore support files
+    - zip files into 430-support.zip and put on shared L drive
+    - media files (images, books, videos)
+    - binary art sources (dia, gimp)
+    - immutable libraries (qunit.js qunit.css)
+- Create unpack-support.sh script to unzip support and place files in 
+  correct directory
+- Create `exam-and-exercise-answers` directory.  Contains exam 
+  questions .txt with answers.  Also contains exercise answers.
+  Put under git
+- Shorten example (old example 1, now just example, because only 1)
+- Remove Refactoring content (move to SWE 450)
+- make a survey for 330/430 asking how many hours for each
+    - learn javascript/qunit
+    - lesson
+    - example
+    - exercise
+    - exam
+- jsfiddle.net codepen.io ???
+
+3 parts to project
+-------------------
+
+Production: website dir (goes on github)
+    zip-website.sh to create release
+
+Exams/Answers, separte git project (goes on L drive FOUO)
+exam-and-exercise-answers, zip-exam-and-exercise-answers.sh
+
+support.zip package-support.sh unpack-support.sh
+(support.zip goes on L drive, scripts on github)
 
 
 old notes

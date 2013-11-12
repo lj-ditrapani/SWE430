@@ -4,11 +4,11 @@
 /exam
 /exercise-answers
 
-# support-pack should be zipped and served from ditrapani.info
+# support.zip should be zipped and served from ditrapani.info
 # and put on shared L drive
-# Media files, .png files, .pdf files, external libraries,
+# Media files, .png files, .pdf files, external 3rd-party libraries,
 # immutable .js files
-/support-pack
+/support
 
 # Should delete because all art is for
 #   example 1 (should be completely revamped)
