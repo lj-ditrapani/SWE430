@@ -7,16 +7,6 @@ TO DO
 - Exercise answer CoffeeScript -> JavaScript
 - What about:  keep refactoring lesson only
   (help meet objectives? and test is still good)
-- Create package-support.sh
-    - for 3rd party libraries, .pdf, .png files
-    - .gitignore support files
-    - zip files into SWE430-support.zip and put on shared L drive and 
-      served from ditrapani.info
-    - media files (images, books, videos)
-    - binary art sources (dia, gimp)
-    - immutable libraries (qunit.js qunit.css)
-- Create unpack-support.sh script to unzip support and place files in 
-  correct directory
 - Create `exam-and-exercise-answers` directory.  Contains exam 
   questions .txt with answers.  Also contains exercise answers.
   Put under git
@@ -33,17 +23,32 @@ TO DO
 3 parts to project
 -------------------
 
-Production: website dir (goes on github)
-    - zip-website.sh to create release SWE430-website.zip
-    - put SWE430-website.zip on ditrapani.info/resources & L drive
+- Git project: (goes on github and a SWE430-source.zip on L drive)
+  All source files (except FOUO stuff, 3rd party stuff, and media)
+    - **Needed for dev**
+
+- Release: website dir
+    - zip-website.sh to create release SWE430.zip
+    - put SWE430.zip on ditrapani.info/resources & L drive
     - This .zip file is loaded right on blackboard
     - .zip file contains everything but the FOUO stuff
+    - **Needed for teaching**
 
-Exams/Answers, separte git project (goes on L drive, FOUO stuff)
-exam-and-exercise-answers, zip-exam-and-exercise-answers.sh
+- Exams/Answers, separte git project (goes on L drive, FOUO stuff)
+  exam-and-exercise-answers, zip-exam-and-exercise-answers.sh
+    - **Needed for teaching**
 
-support.zip package-support.sh unpack-support.sh
-(support.zip goes on L drive, scripts on github)
+- Support:  SWE430-support.zip package-support.sh
+(SWE430-support.zip goes on L drive, scripts on github)
+package-support.sh
+    - for 3rd party libraries, .pdf, .png files
+    - .gitignore support files
+    - zip files into SWE430-support.zip and put on shared L drive and 
+      served from ditrapani.info
+    - media files (images, books, videos)
+    - binary art sources (dia, gimp)
+    - immutable libraries (qunit.js qunit.css)
+    - **Needed for dev**
 
 
 old notes
@@ -58,7 +63,7 @@ BLACKBOARD
 ============
 
 content collection -> class name
-upload package -> website.zip (overwrite)
+upload package -> SWE430.zip (overwrite)
 ensure folders have public read permission set
     or just link to a top level file?
 content collection -> class name -> click on permissions column for pertinent file
