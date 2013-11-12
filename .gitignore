@@ -1,25 +1,11 @@
-# Combine exam and exercise-answers in separate project.
-# Never on gituhb
-# Put in exam_answers folder, zip, on shared L drive
-/exam
-/exercise-answers
+# FOUO stuff; separate git repository.  Never on gituhb!
+# Becomes SWE430-exam-and-exercise-answers.zip, put on shared L drive
+/exam-and-exercise-answers
 
-# .pdf files
+# .pdf files (included in SWE430-support.zip)
 /support
 
-# Should delete because all art is for
-#   example 1 (should be completely revamped)
-#   or
-#   example 2 (moving to SWE 450)
-/art
-
-# build artifacts
-/SWE430.zip
-/SWE430-support.zip
-/website/example.zip
-/website/exercise.zip
-
-# Libraries (include in SWE430-support.zip)
+# Libraries (included in SWE430-support.zip)
 /website/css/prettify.css
 /website/css/qunit.css
 /website/js/coffee-script.js
@@ -27,6 +13,21 @@
 /website/js/qunit.js
 /website/js/ljd-utils.js
 
-# Pictures (include in SWE430-support.zip)
+# Pictures (included in SWE430-support.zip)
 /website/lesson1/cycles.png
 /website/lesson1/legacy.png
+
+# build artifacts
+/SWE430.zip
+/SWE430-source.zip
+/SWE430-support.zip
+/SWE430-exam-and-exercise-answers.zip
+/website/example.zip
+/website/exercise.zip
+
+# TODO!!
+# Should delete because all art is for
+#   example 1 (should be completely revamped)
+#   or
+#   example 2 (moving to SWE 450)
+/art

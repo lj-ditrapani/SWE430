@@ -5,13 +5,13 @@ TO DO
 - Mark of the web?
 - Exercise instructions
 - Exercise answer CoffeeScript -> JavaScript
-- What about:  keep refactoring lesson only
-  (help meet objectives? and test is still good)
 - Create `exam-and-exercise-answers` directory.  Contains exam 
   questions .txt with answers.  Also contains exercise answers.
   Put under git
 - Shorten example (old example 1, now just example, because only 1)
 - Remove Refactoring content (move to SWE 450)
+- What about:  keep refactoring lesson only
+  (help meet objectives? and test is still good)
 - make a survey for 330/430 asking how many hours for each
     - learn javascript/qunit
     - lesson
@@ -19,6 +19,7 @@ TO DO
     - exercise
     - exam
 - jsfiddle.net codepen.io ???
+- use HAML, SASS, and/or LESS?  Other templating?
 
 3 parts to project
 -------------------
@@ -34,8 +35,9 @@ TO DO
     - .zip file contains everything but the FOUO stuff
     - **Needed for teaching**
 
-- Exams/Answers, separte git project (goes on L drive, FOUO stuff)
-  exam-and-exercise-answers, zip-exam-and-exercise-answers.sh
+- Exam and Exercise Answers, separate git project
+  (goes on L drive, FOUO stuff)
+  exam-and-exercise-answers dir, exam-and-exercises.zip
     - **Needed for teaching**
 
 - Support:  SWE430-support.zip package-support.sh
