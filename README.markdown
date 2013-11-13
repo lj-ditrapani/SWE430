@@ -1,12 +1,14 @@
 TO DO
 =====
+- Exercise instructions
+    - string manipulation functions; provide tutorial
+    - consider splitting the project up into 2 segments?
+    - Fix this sentence for new example code: "This is accomplished in the same way we export the target object which contains both the Target and the Grid classes in Example 1."
 - use new ljd-utils.js
 - Fix all html to be HTML 5
 - Mark of the web?
-- Exercise instructions
-- Exercise answer CoffeeScript -> JavaScript
 - Shorten example (old example 1, now just example, because only 1)
-- keep refactoring lesson only
+- keep refactoring lesson
   (help meet objectives and test is still good)
 - Remove references to refactoring example and exercise
 - make a survey for 330/430 asking how many hours for each

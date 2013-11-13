@@ -1,14 +1,13 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <!-- Author:  Lyall Jonathan Di Trapani ======================== -->
+    <!-- saved from url=(0022)http://ditrapani.info/ -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-	<title> SWE 430 Exercise 1 --- Password Checker </title>
-    <link rel="stylesheet" href="../css/base.css" type="text/css">
-    <link rel="stylesheet" href="../css/prettify.css" type="text/css">
-    <script type="text/javascript" src="../js/prettify.js"></script>
+	<title> SWE 430 Exercise --- Password Checker </title>
+    <link rel="stylesheet" href="css/base.css" type="text/css">
+    <link rel="stylesheet" href="css/prettify.css" type="text/css">
+    <script type="text/javascript" src="js/prettify.js"></script>
     <style type="text/css">
         span.reason {
             color: green;
@@ -19,7 +18,7 @@ PUBLIC "-//W3C//DTD HTML 4.01//EN"
     </style>
 </head>
 
-<body onload="prettyPrint()"> 
+<body onload="prettyPrint()">
 <h1> SWE 430 Exercise 1 --- Password Checker</h1>
 
 <h2>
@@ -27,11 +26,11 @@ Exercise 1 Instructions
 </h2>
 
 <p>
-Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test (write test => check if test fails => write production code => run all unit tests => refactor => run tests => go to next test case).  
+Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test (write test =&gt; check if test fails =&gt; write production code =&gt; run all unit tests =&gt; refactor =&gt; run tests =&gt; go to next test case).  
 </p>
 
 <p>
-Turn in both the source code (code.coffee) and the unit tests (test.coffee) on blackboard Exercise 1 Submission.  If you have any questions, run into problems, or need clarification, please let me know.  Your production code will be evaluated by running it against a set of reference test cases (written according to the specification).  Your unit test cases will be evaluate by using them to test a faulty implementation.
+Turn in both the source code (code.js) and the unit tests (test.js) on blackboard Exercise Submission.  If you have any questions, run into problems, or need clarification, please let me know.  Your production code will be evaluated by running it against a set of reference test cases (written according to the specification).  Your unit test cases will be evaluated by using them to test a faulty implementation.
 </p>
 
 <h2>
@@ -39,7 +38,7 @@ Password Checker Specification
 </h2>
 
 <p>
-The check function in the password module determines if a proposed password is valid or not.  Function signature:  String X list of Strings => boolean X String
+The check function in the password module determines if a proposed password is valid or not.  Function signature:  <code>String X list of Strings => boolean X String</code>
 </p>
 
 <ul>
@@ -47,30 +46,36 @@ The check function in the password module determines if a proposed password is v
     Inputs: a proposed password and an array of 0 to 6 previous passwords.
     </li>
     <li>
-    Output: A 2 element list containing a boolean and a String.  The boolean is true if the proposed password is valid, false otherwise.  When the boolean is false, the String provides the reason the password is invalid.  When the boolean is true, second value is the empty string: <code> "" </code>.
+    Output: A 2 element array containing a boolean and a String.  The boolean is true if the proposed password is valid, false otherwise.  When the boolean is false, the String provides the reason the password is invalid.  When the boolean is true, the second value is the empty string: <code> "" </code>.
     </li>
 </ul>
 
 <p>
-Precondition:  All previous passwords are assumed to be valid (you don't have to test that the previous passwords are valid, only test the proposed password.)  Example usage:
+Precondition:  All previous passwords are assumed to be valid (you don't have to test that the previous passwords are valid, only test the proposed password.)  Here is an example of using the password.check function:
 </p>
 
 
 <div class="code">
 <pre class="prettyprint">
-proposed_password = 'P@55W*rd'
-previous_passwords = ['aaAA11!!', 'bbBB22@@']
-[result, reason] = password.check(proposed_password, previous_passwords)
+var proposed_password, previous_passwords, pair, result, reason;
+proposed_password = 'P@55W*rd';
+previous_passwords = ['aaAA11!!', 'bbBB22@@'];
+pair = password.check(proposed_password, previous_passwords);
+result = pair[0];       // true or false boolean value
+reason = pair[1];       // String value
 </pre> </div>
 
-<p>The result variable would evaluate to true and the reason would be <code>""</code>; the empty string.</p>
+<p>Because proposed_password is a valid password, the result variable would evaluate to true and the reason would be <code>""</code>; the empty string.</p>
 
 
 <div class="code">
 <pre class="prettyprint">
-proposed_password = 'aaaaaaaaaaaaaaaBB22##'
-previous_passwords = ['aaAA11!!', 'bbBB22@@']
-[result, reason] = password.check(proposed_password, previous_passwords)
+var proposed_password, previous_passwords, pair, result, reason;
+proposed_password = 'aaaaaaaaaaaaaaaBB22##';
+previous_passwords = ['aaAA11!!', 'bbBB22@@'];
+pair = password.check(proposed_password, previous_passwords);
+result = pair[0];       // true or false boolean value
+reason = pair[1];       // String value
 </pre> </div>
 
 <p>In this case, the result variable would evaluate to false and the reason would be <code>"too long"</code>.  Even though the password fails 2 rules, <code>"too long"</code> and <code>"4+ char substring"</code>, only the reason for the first failure (according to the order listed below) is reported.</p>
@@ -79,7 +84,7 @@ previous_passwords = ['aaAA11!!', 'bbBB22@@']
 
 
 <div class="code">
-<div class="filename"> <span class="filename"> code.coffee </span> </div>
+<div class="filename"> <span class="filename"> code.js </span> </div>
 <pre class="prettyprint">
 window.password = {}
 password.check = (proposed_password, previous_passwords) ->
