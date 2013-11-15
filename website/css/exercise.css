@@ -1,0 +1,9 @@
+strong {
+    color: green;
+    font-weight: normal;
+}
+
+em {
+    color: #900;
+    font-style: normal;
+}

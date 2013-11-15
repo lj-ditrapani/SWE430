@@ -45,7 +45,7 @@ title.text = config['title']
 title.tail = '\n'
 head.insert(1, title)
 for css_file_name in config['css']:
-    attrib = dict(rel='stylesheet', href=css_file_name, type='text/css')
+    attrib = dict(href=css_file_name, rel='stylesheet', type='text/css')
     e = ET.Element('link', attrib)
     e.tail = '\n'
     head.append(e)
@@ -56,5 +56,6 @@ for js_file_name in config['js']:
     e.tail = '\n'
     head.append(e)
 f = open('website/{0}.html'.format(file_name), 'w')
+f.write('<!DOCTYPE html>\n')
 tree.write(f)
 f.close()
