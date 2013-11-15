@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: sans-serif;
     color: #002070;
     background-color: #b0d0ff;
@@ -8,22 +7,19 @@ body
     margin-right: auto;
 }
 
-h1
-{
+h1 {
     color: #b0d0ff;
     background-color: #002070;
     padding: 5px;
     text-align: center;
 }
 
-span.emph
-{
+strong {
     color: #990000;
     font-weight: bold;
 }
 
-p.footnote
-{
+p.footnote {
     font-style: italic;
     font-size: 12px;
 }

@@ -48,28 +48,28 @@ The only global variable your code should export is an object (which will serve 
 
 In order to be declared "valid," all accepted passwords must adhere to the following criteria:
 
-1. A password must be at least 8 (<span class="reason">too short</span>) and no more than 20 characters long (<span class="reason">too long</span>).
-2. A password is comprised of only <a href="http://en.wikipedia.org/wiki/ASCII">ASCII</a> printable characters.  No whitespcae---tabs, space, etc., control characters, or unicode is allowed (<span class="reason">not printable ASCII</span>).
+1. A password must be at least 8 (**too short**) and no more than 20 characters long (**too long**).
+2. A password is comprised of only [ASCII](http://en.wikipedia.org/wiki/ASCII) printable characters.  No whitespcae---tabs, space, etc., control characters, or unicode is allowed (**not printable ASCII**).
 3. Each password must contain:
-    - 2 or more upper-case letters (<span class="reason">upper-case</span>)
-    - 2 or more lower-case letters (<span class="reason">lower-case</span>)
-    - 2 or more digit characters (0-9) (<span class="reason">digit</span>)
-    - 2 or more non-alphanumeric characters (<span class="reason">non-alphanumeric</span>)
+    - 2 or more upper-case letters (**upper-case**)
+    - 2 or more lower-case letters (**lower-case**)
+    - 2 or more digit characters (0-9) (**digit**)
+    - 2 or more non-alphanumeric characters (**non-alphanumeric**)
 4. A password cannot be similar to any of the user's previous six passwords.
       "Similar to" is defined as having any of the following:
-    - 6 or more of the same characters anywhere in the two passwords (<span class="reason">6+ same chars</span>)
+    - 6 or more of the same characters anywhere in the two passwords (**6+ same chars**)
         - Example: aaaaaaAA11!! and aaOO22@@aaa are not similar
-        - Example: aaaaaaAA11!! and <span class="bad">aaa</span>OO22@@<span class="bad">aaa</span> are similar
-        - Example: <span class="bad">aoAO12</span>!! and <span class="bad">oa</span>@<span class="bad">O1A</span>@<span class="bad">2</span> are similar
+        - Example: aaaaaaAA11!! and _aaa_OO22@@_aaa_ are similar
+        - Example: _aoAO12_!! and _oa_@_O1A_@_2_ are similar
     - 4 or more of the same characters in the same relative position 
         from the start of the password 
-        (<span class="reason">4+ chars in same position</span>)
+        (**4+ chars in same position**)
         - Example: aAaA!1!1 and oAoA@1@2 are not similar
-        - Example: a<span class="bad">A</span>a<span class="bad">A</span>!<span class="bad">1</span>!<span class="bad">1</span> and o<span class="bad">A</span>o<span class="bad">A</span>@<span class="bad">1</span>@<span class="bad">1</span> are similar
+        - Example: a_A_a_A_!_1_!_1_ and o_A_o_A_@_1_@_1_ are similar
     - Any identical 4-character substring 
-        (<span class="reason">4+ char substring</span>)
+        (**4+ char substring**)
         - Example: aaAA11!! and AA12oo@@ are not similar
-        - Example: aa<span class="bad">AA11</span>!! and <span class="bad">AA11</span>oo@@ are similar
+        - Example: aa_AA11_!! and _AA11_oo@@ are similar
 
 The appropriate "reason string" for each rule is shown in parentheses and in green.  The check() function only returns one reason for a password failure.  If a password fails multiple rules, only the reason for the first rule failed, according to the order listed above, is returned by the function.  Be sure to use the exact reason strings listed above---they are case sensitive.
 

@@ -13,12 +13,12 @@ def convert(file_name):
     text = get_text(file_name)
     return markdown2.markdown(text)
 
-
-html = convert('markdown/exercise.markdown')
+file_name = 'exercise'
+html = convert('markdown/{0}.markdown'.format(file_name))
 #head = get_text('html-fragments/head.html')
 head = get_text('markdown/head.html')
 
-f = open('markdown/exercise.html', 'w')
+f = open('website/{0}.html'.format(file_name), 'w')
 f.write(head)
 f.write(html)
 f.write('\n</body></html>\n')

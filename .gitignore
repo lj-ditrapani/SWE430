@@ -8,7 +8,6 @@
 # Libraries (included in SWE430-support.zip)
 /website/css/prettify.css
 /website/css/qunit.css
-/website/js/coffee-script.js
 /website/js/prettify.js
 /website/js/qunit.js
 /website/js/ljd-utils.js
