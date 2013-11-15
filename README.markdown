@@ -1,9 +1,7 @@
 TO DO
 =====
+- Refactor convert-markdown.py to generalize for any file
 - Ensure all files are set ff=dos
-- Get markdown working
-    - prettyprint
-    - css/js file selection in building head
 - Rewrite .sh scripts into python scripts
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.
