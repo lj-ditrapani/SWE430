@@ -73,4 +73,3 @@ In order to be declared "valid," all accepted passwords must adhere to the follo
 
 The appropriate "reason string" for each rule is shown in parentheses and in green.  The check() function only returns one reason for a password failure.  If a password fails multiple rules, only the reason for the first rule failed, according to the order listed above, is returned by the function.  Be sure to use the exact reason strings listed above---they are case sensitive.
 
-<p class="footnote"> Lyall Jonathan Di Trapani 13 Feb 2013 </p>

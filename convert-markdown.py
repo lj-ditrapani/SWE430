@@ -7,7 +7,7 @@ import markdown2
 def main(file_name):
     tree = init_tree()
     html = tree.getroot()
-    body = markdown2html(file_name)
+    body = markdown_2_html_body(file_name)
     html.append(body)
     config = get_json(file_name)
     if config['prettyprint']:
@@ -16,24 +16,21 @@ def main(file_name):
     write_tree(tree, file_name)
 
 
-def get_text(file_name):
-    f = open(file_name)
-    text = f.read()
-    f.close()
-    return text
-
-
 def init_tree():
-    tree = ET.ElementTree()
-    tree.parse('markdown/boilerplate.html')
-    return tree
+    return ET.parse('markdown/boilerplate.html')
 
 
-def markdown2html(file_name):
+def markdown_2_html_body(file_name):
     markdown_text = get_text('markdown/{0}.markdown'.format(file_name))
     html_text = markdown2.markdown(markdown_text)
-    body = ET.fromstring('<body>\n{0}\n</body>'.format(html_text))
-    return body
+    html_text += ('\n<p class="footnote"> Lyall Jonathan Di Trapani ' +
+                  '15 Nov 2013</p>\n')
+    return ET.fromstring('<body>\n{0}\n</body>'.format(html_text))
+
+
+def get_text(file_name):
+    with open(file_name) as f:
+        return f.read()
 
 
 def get_json(file_name):

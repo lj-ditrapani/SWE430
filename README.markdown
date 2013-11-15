@@ -1,7 +1,6 @@
 TO DO
 =====
 - Refactor convert-markdown.py to generalize for any file
-- Include footer code
 - Ensure all files are set ff=dos
 - Rewrite .sh scripts into python scripts
   (mostly zip, unzip, cp, and delete files)
