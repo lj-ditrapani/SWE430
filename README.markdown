@@ -1,5 +1,12 @@
 TO DO
 =====
+- Ensure all files are set ff=dos
+- Get markdown working
+- Rewrite .sh scripts into python scripts
+  (mostly zip, unzip, cp, and delete files)
+    - Test with jython.
+- Could write jshint and jslint launcher in python script?
+    - `check_js.bat` calls `check_js.js` which checks all js files
 - Exercise instructions
     - string manipulation functions; provide tutorial
     - consider splitting the project up into 2 segments?
@@ -19,6 +26,7 @@ TO DO
     - exam
 - jsfiddle.net codepen.io ???
 - use HAML, SASS, and/or LESS?  Other templating?
+- powershell has zip.exe and unzip.exe that work just like linux equiv
 
 3 parts to project
 -------------------
