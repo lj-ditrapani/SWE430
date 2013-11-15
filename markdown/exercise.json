@@ -1,7 +1,6 @@
 {
-    "motw": false,
     "title": "SWE 430 Exercise --- Password Checker",
     "css": ["css/prettify.css", "css/exercise.css"],
-    "js": ["js/prettify.js"],
+    "javascript": ["js/prettify.js"],
     "prettyprint": true
 }
