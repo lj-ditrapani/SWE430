@@ -1,8 +1,12 @@
+#!/usr/bin/env python
 import io
 import os
 import json
 import xml.etree.ElementTree as ET
 import markdown2
+
+
+IO_PARAMS = dict(encoding='ascii', newline='\r\n')
 
 
 def main(file_name):
@@ -30,8 +34,8 @@ def markdown_2_html_body(file_name):
 
 
 def get_text(file_name):
-    with io.open(file_name, encoding='ascii', newline='\r\n') as f:
-        return f.read()
+    with io.open(file_name, **IO_PARAMS) as markdown_file:
+        return markdown_file.read()
 
 
 def get_json(file_name):
@@ -77,26 +81,25 @@ def add_css_links(head, css_file_names):
         attrib = dict(href=css_file_name,
                       rel='stylesheet',
                       type='text/css')
-        e = ET.Element('link', attrib)
-        e.tail = '\n'
-        head.append(e)
+        element = ET.Element('link', attrib)
+        element.tail = '\n'
+        head.append(element)
 
 
 def add_javascript_links(head, javascript_file_names):
     for javascript_file_name in javascript_file_names:
         attrib = dict(type='text/javascript', src=javascript_file_name)
-        e = ET.Element('script', attrib)
-        e.text = ' '        # Forces an explicit closing tag
-        e.tail = '\n'
-        head.append(e)
+        element = ET.Element('script', attrib)
+        element.text = ' '        # Forces an explicit closing tag
+        element.tail = '\n'
+        head.append(element)
 
 
 def write_tree(tree, file_name):
-    f = io.open('website/{0}.html'.format(file_name),
-                'w', encoding='ascii', newline='\r\n')
-    f.write(u'<!DOCTYPE html>\n')
-    f.write(unicode(ET.tostring(tree.getroot())))
-    f.close()
+    html_file_name = 'website/{0}.html'.format(file_name)
+    with io.open(html_file_name, 'w', **IO_PARAMS) as html_file:
+        html_file.write(u'<!DOCTYPE html>\n')
+        html_file.write(unicode(ET.tostring(tree.getroot())))
 
 
 if __name__ == '__main__':
