@@ -1,7 +1,7 @@
-import sys
 import json
 import xml.etree.ElementTree as ET
 import markdown2
+import io
 
 
 def main(file_name):
@@ -29,12 +29,22 @@ def markdown_2_html_body(file_name):
 
 
 def get_text(file_name):
-    with open(file_name) as f:
+    with io.open(file_name, encoding='ascii', newline='\r\n') as f:
         return f.read()
 
 
 def get_json(file_name):
-    return json.load(open('markdown/{0}.json'.format(file_name)))
+    text = get_text('markdown/{0}.markdown'.format(file_name))
+    title = text.split('\n', 1)[0].strip()
+    config = dict(
+        title=title,
+        css=[],
+        javascript=[],
+        prettyprint=False,
+    )
+    json_config = json.load(open('markdown/{0}.json'.format(file_name)))
+    config.update(json_config)
+    return config
 
 
 def enable_pretty_printing(tree):
@@ -79,9 +89,10 @@ def add_javascript_links(head, javascript_file_names):
 
 
 def write_tree(tree, file_name):
-    f = open('website/{0}.html'.format(file_name), 'w')
-    f.write('<!DOCTYPE html>\n')
-    tree.write(f)
+    f = io.open('website/{0}.html'.format(file_name),
+                'w', encoding='ascii', newline='\r\n')
+    f.write(u'<!DOCTYPE html>\n')
+    f.write(unicode(ET.tostring(tree.getroot())))
     f.close()
 
 
