@@ -104,3 +104,4 @@ def write_tree(tree, file_name):
 
 if __name__ == '__main__':
     main('exercise')
+    main('index')

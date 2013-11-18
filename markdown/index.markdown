@@ -1,118 +1,68 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <!-- Author:  Lyall Jonathan Di Trapani ======================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title> SWE 430 Home Page </title>
-    <link rel="stylesheet" href="css/base.css" type="text/css">
-</head>
-
-<body>
-<h1> SWE 430 Home Page</h1>
+SWE 430 Home Page
+========================================================================
 
 
-<p>SWE 430 <a href="syllabus.html">Syllabus</a></p>
+SWE 430 [Syllabus](syllabus.html)
 
-<p><a href="instructions.html">Instructions</a>
-for examples and exercises</p>
+[Instructions](instructions.html)
+for examples and exercises
 
-<p>Learn about CoffeScript and qUnit in the
-<a href="tutorial.html">tutorial</a>.</p>
+Learn about CoffeScript and qUnit in the [tutorial](tutorial.html)
 
-
-<hr>
-<h2>First Half</h2>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-<h3> Lessons </h3>
-<ul>
-    <li>
-        <a href="lesson1/tdd.html">Lesson 1:  TDD and Unit Testing</a>
-    </li>
-    <li>
-        <a href="430/example1.1.html">Example 1.1</a>
-    </li>
-    <li>
-        <a href="430/example1.2.html">Example 1.2</a> [optional]
-    </li>
-    <li>
-<a href="430/example1/example1.zip">
-Example 1 zip Environment</a>
-    </li>
-    <li>
-<a href="http://jsbin.com/swe430_example1/latest/edit?javascript,live">
+First Half
+---------------------
+
+
+**Lessons**
+
+- <a href="lesson1/tdd.html">Lesson 1:  TDD and Unit Testing</a>
+- <a href="430/example1.1.html">Example 1.1</a>
+- <a href="430/example1.2.html">Example 1.2</a> \[optional\]
+- <a href="430/example1/example1.zip"> Example 1 zip Environment</a>
+- <a href="http://jsbin.com/swe430_example1/latest/edit?javascript,live">
 Example 1 jsbin Environment</a>
-    </li>
-</ul>
 
-<h3> Exercises </h3>
-<ul>
-    <li>
-        <a href="430/exercise1.html">Exercise 1</a>
-    </li>
-    <li>
-        <a href="430/exercise1.zip">Exercise 1 zip Environment</a>
-    </li>
-    <li>
-<a href="http://jsbin.com/swe430_exercise1/latest/edit?javascript,live">
+**Exercises**
+
+- [Exercise](exercise.html)
+- <a href="430/exercise1.zip">Exercise 1 zip Environment</a>
+- <a href="http://jsbin.com/swe430_exercise1/latest/edit?javascript,live">
 Exercise 1 jsbin Environment</a>
-    </li>
-</ul>
 
 
-<hr>
-<h2>Second Half</h2>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-<h3>Lessons</h3>
-<ul>
-    <li>
-        <a href="lesson2.1.html">Lesson 2.1: Tools and Standards</a>
-    </li>
-    <li>
-        <a href="lesson2.2.html">Lesson 2.2: Refactoring</a>
-    </li>
-    <li>
-        <a href="430/example2.html">Example 2</a>
-    </li>
-    <li>
-<a href="430/example2/example2.zip">
-Example 2 zip Environment</a>
-    </li>
-    <li>
-<a href="http://jsbin.com/swe430_example2/latest/edit">
-Example 2 jsbin Environment
-</a>
-    </li>
-</ul>
-
-<h3>Exercises</h3>
-<ul>
-    <li>
-        <a href="430/exercise2.html">Exercise 2</a>
-    </li>
-    <li>
-        <a href="430/fmc16.txt">FMc16 ISA</a>
-    </li>
-    <li>
-<a href="430/exercise2.zip">
-Exercise 2 zip Environment</a>
-    </li>
-    <li>
-<a href="http://jsbin.com/swe430_exercise2/latest/edit?javascript,live">
-Exercise 2 jsbin Environment
-</a>
-    </li>
-</ul>
+Second Half
+---------------------
 
 
-<hr>
-<h2>Exam</h2>
-<p>The exam will be available during week 3 on blackboard under 
-the Exams tab. </p>
+**Lessons**
+
+- <a href="lesson2.1.html">Lesson 2.1: Tools and Standards</a>
+- <a href="lesson2.2.html">Lesson 2.2: Refactoring</a>
+- <a href="430/example2.html">Example 2</a>
+- <a href="430/example2/example2.zip">Example 2 zip Environment</a>
+- <a href="http://jsbin.com/swe430_example2/latest/edit">
+Example 2 jsbin Environment</a>
+
+**Exercises**
+
+- <a href="430/exercise2.html">Exercise 2</a>
+- <a href="430/fmc16.txt">FMc16 ISA</a>
+- <a href="430/exercise2.zip">Exercise 2 zip Environment</a>
+- <a href="http://jsbin.com/swe430_exercise2/latest/edit?javascript,live">
+Exercise 2 jsbin Environment</a>
 
 
-<p class="footnote"> Lyall Jonathan Di Trapani 13 Feb 2013 </p>
-</body></html>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+Exam
+---------------------
+
+The exam will be available during week 3 on blackboard under 
+the Exams tab.
