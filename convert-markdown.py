@@ -1,7 +1,8 @@
+import io
+import os
 import json
 import xml.etree.ElementTree as ET
 import markdown2
-import io
 
 
 def main(file_name):
@@ -42,8 +43,10 @@ def get_json(file_name):
         javascript=[],
         prettyprint=False,
     )
-    json_config = json.load(open('markdown/{0}.json'.format(file_name)))
-    config.update(json_config)
+    json_file_name = 'markdown/{0}.json'.format(file_name)
+    if os.path.exists(json_file_name):
+        json_config = json.load(open(json_file_name))
+        config.update(json_config)
     return config
 
 
