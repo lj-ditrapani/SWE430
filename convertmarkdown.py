@@ -108,5 +108,6 @@ if __name__ == '__main__':
     main('syllabus')
     main('instructions')
     main('zip-instructions')
+    main('jsbin-instructions')
     main('lesson1')
     main('exercise')
