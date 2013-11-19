@@ -1,28 +1,47 @@
 TO DO
 ========================================================================
-- Give checkpoints in the examples (complete code so far) so students know where they are
-- Check SWE 430 13A offering discussion board and announcement, for info to include (questions, problems, ..)
-- Grab tutorial (and lessons) from 499 course and integrate into Lesson 1 and 2
-- Grab instructions from 499 course and update 430 instructions
+
+Lessons
+
+- Add javascript style standards to lesson 1
+
+DBQ
+
 - Add discussion board questions for interaction with managers
-- Re-order lessons?  Include javascript tutorial as a lesson?
+
+Tutorials
+
 - Make javascript tutorial
+- Grab tutorial (and lessons) from 499 course and integrate into Lesson 1 and 2
+- string manipulation functions; provide tutorial
+
+Instructions
+
+- Grab instructions from 499 course and update 430 instructions
+
+Examples
+
+- Give checkpoints in the examples (complete code so far) so students know where they are
+- New examples (1 and 2)
+- ex 1 is write code against finished tests
+- ex 2 is full-blow TDD
+
+Exercise 3
+
+- string manipulation functions; provide tutorial
+- consider splitting the project up into 2 segments?
+- Fix this sentence for new example code: "This is accomplished in
+  the same way we export the target object which contains both the
+  Target and the Grid classes in Example 1."
+
+General TO DO
+
+- Check SWE 430 13A offering discussion board and announcement, for info to include (questions, problems, ..)
 - Ensure all files are set ff=dos
 - Rewrite .sh scripts into python scripts
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.
-- Exercise instructions
-    - string manipulation functions; provide tutorial
-    - consider splitting the project up into 2 segments?
-    - Fix this sentence for new example code: "This is accomplished in
-      the same way we export the target object which contains both the
-      Target and the Grid classes in Example 1."
 - use new ljd-utils.js
-- Fix all html to be HTML 5
-- Mark of the web?
-- Shorten example (old example 1, now just example, because only 1)
-- keep refactoring lesson
-  (help meet objectives and test is still good)
 - Remove references to refactoring example and exercise
 - Could write jshint and jslint launcher in python script?
     - `check_js.bat` calls `check_js.js` which checks all js files
@@ -34,11 +53,6 @@ TO DO
     - exam
 - jsfiddle.net codepen.io ???
 - use HAML, SASS, and/or LESS?  Other templating?
-
-1h 30m for discussion board questions
-4 hours for lessons
-5 hours for javascript tutorial
-10 hours for exercise
 
 
 3 parts to project
