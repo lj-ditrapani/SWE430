@@ -105,5 +105,6 @@ def write_tree(tree, file_name):
 
 if __name__ == '__main__':
     main('index')
+    main('syllabus')
     main('lesson1')
     main('exercise')
