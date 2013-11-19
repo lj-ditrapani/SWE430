@@ -1,5 +1,7 @@
 TO DO
 ========================================================================
+- Give checkpoints in the examples (complete code so far) so students know where they are
+- Check SWE 430 13A offering discussion board and announcement, for info to include (questions, problems, ..)
 - Grab tutorial (and lessons) from 499 course and integrate into Lesson 1 and 2
 - Grab instructions from 499 course and update 430 instructions
 - Add discussion board questions for interaction with managers
@@ -38,16 +40,6 @@ TO DO
 5 hours for javascript tutorial
 10 hours for exercise
 
-Perhaps do
-- Lesson 1: Tools
-- Lesson 2: Refactoring
-- Lesson 3: TDD
-- Discussion board questions
-- Lesson 4: JavaScript tutorial
-- Lesson 5: qUnit tutorial
-- Example 1
-- Example 2
-- Exercise
 
 3 parts to project
 -------------------
