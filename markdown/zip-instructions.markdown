@@ -1,25 +1,14 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <!-- Author:  Lyall Jonathan Di Trapani ======================== -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-	<title> SWE 430 zip Instructions</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css">
-</head>
+SWE 430 zip Instructions
+========================================================================
 
-<body>
-<h1>SWE 430 zip Instructions</h1>
 
-<h2>The Local zip File Environment</h2>
-<p>
+The Local zip File Environment
+------------------------------
+
 The local zip environment is simply a zip file containing 6 files:  an html page, two javascript files, a CSS files, and two CoffeeScript files.
-</p>
 
-<p>
 Contents of environment .zip file:
-</p>
+
 <dl>
     <dt>HTML file</dt>
     <dd>
@@ -47,49 +36,33 @@ Contents of environment .zip file:
     </dd>
 </dl>
 
-<p>
 You'll find the environment zip file under the "Lessons" or "Exercises" section.  E.g. if you want to work through Example 1, select the link for "Example 1 Environment" under "Lessons" which links to a file named "example1.zip".  When you are ready to do Exercise 1, select the link for "Exercise 1 Environment" under "Exercises" which links to a file named "exercise1.zip".
-</p>
 
-<p>Steps to use the environment:</p>
-<ol>
-<li>
-Right click the environment and select "Save target as...".
-</li>
-<li>
-Save the zip file on your computer.
-</li>
-<li>
-Unzip the .zip file into a folder.
-</li>
-<li>
-Open the folder with the contents of the unzipped zip file.
-</li>
-<li>
-Locate the HTML (.html) file and open it in your web browser.
-</li>
-<li>
-Open the test code and production code CoffeScript files (they end in .coffee) in a text editor or IDE.  Write your test code in the test file and your production code in the production file.
-</li>
-</ol>
+Steps to use the environment:
 
-<h2>Text Editors</h2>
-<p>
+1. Right click the environment and select "Save target as...".
+2. Save the zip file on your computer.
+3. Unzip the .zip file into a folder.
+4. Open the folder with the contents of the unzipped zip file.
+5. Locate the HTML (.html) file and open it in your web browser.
+6. Open the test code and production code CoffeScript files (they end in .coffee) in a text editor or IDE.  Write your test code in the test file and your production code in the production file.
+
+
+Text Editors
+------------
+
 If you are not sure what a <a href="http://en.wikipedia.org/wiki/Text_editor">text editor</a> is, it is simply a program to create and modify plain <a href="http://en.wikipedia.org/wiki/ASCII">ASCII</a> text files.  You will need one to edit your .coffee files.  On Windows, Notepad and Wordpad can be used as text editors and are pre-installed with the operating system.  If you use Wordpad, make sure you save as plain text (.txt) document and not .rtf or some other format.  If you can, I recommend using a text editor designed for writing code, like Notepad++ or jEdit, instead of Notepad or Wordpad.  On Mac OS X, TextEdit is pre-installed.  On Unix systems, vi or vim is usually installed by default with emacs available from the package manager along with a plethora of other text editors.
-</p>
 
-<h2>Printing and Debugging</h2>
-<p>
+
+Printing and Debugging
+----------------------
+
 While working with the environment, you will likely benefit from a console and a debugger.  In Internet Explorer 9 and later, they can be accessed by pressing F12, which opens up the Developer Tools.  Selecting the console tab in the new window allows you too see any error messages as well as use the console.log() function to print messages to the console for debugging purposes.  You may also interactively type JavaScript into the console to see it executed immediately.
 Firefox has a powerful extension called firebug with similar features.
 If you are using an old version of Internet Explorer, you can use qUnit as a makeshift console by making a dummy test with an ok() assertion.  You can pass a label as the second argument to the ok() function.  Whatever you pass will be printed alongside the result of the ok() assertion as long as you convert it to a string first (call the .toString() method on the object). 
-</p>
 
-<h2>Saving and Short-cut Keys</h2>
-<p>
+
+Saving and Short-cut Keys
+-------------------------
+
 As you work through the examples and exercises, be sure to periodically save your file.  Most GUI-based text editors have the save function mapped to the Control-S (press the Control key and the 'S' key at the same time) keyboard shortcut.  Since you will be running your unit tests often (at least once a minute) you can re-run the tests by pressing the Control-R keyboard shortcut when the web browser is in focus.  To quickly switch between your text editor and web browser, the Alt-Tab key combination can be used.  This way you can make changes to your CoffeeScript files in you text editor, hit Control-S to save, Alt-Tab to switch to the browser, and Control-R to rerun all the tests; all without lifting your fingers of off the keyboard.  This will save you time in the long run.
-</p>
-
-
-<p class="footnote"> Lyall Jonathan Di Trapani 04 Apr 2013 </p>
-</body></html>
