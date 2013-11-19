@@ -1,18 +1,4 @@
-span.emph
-{
-    font-style: italic;
-    color: #002070;
-    font-weight: normal;
-}
-
-h4.image {
-    text-align: center;
-}
-
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     border: 0px solid white;
 }
 

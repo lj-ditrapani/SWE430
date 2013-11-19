@@ -23,8 +23,10 @@ Test-driven development (TDD) is a cyclical development process that combines te
 Figure 1 shows how a TDD cycles fit into the larger picture of testing cycles.  The figure gives the approximate duration for each cycle.
 
 <div class="break"></div>
-<h4 class="image"> Figure 1:  Cycles of Testing </h4>
-<img src="cycles.png" alt="Cycles of Testing" />
+<div class="image">
+<h4> Figure 1:  Cycles of Testing </h4>
+<img src="images/cycles.png" alt="Cycles of Testing" />
+</div>
 
 A Single Cycle in the TDD Process
 
@@ -72,7 +74,7 @@ It is important to understand the risks in TDD and unit testing so they can be p
 
 <h3>Test Suite Execution Time</h3>
 
-The longer the test suite takes to run, the less often the test suite will be run.  Below, in the section on "**Scaling Unit Test Suites in Large Projects**," we give strategies for dealing with slow running test suites.
+The longer the test suite takes to run, the less often the test suite will be run.  Below, in the section on "<em>Scaling Unit Test Suites in Large Projects</em>," we give strategies for dealing with slow running test suites.
 
 <h3>TDD Cycle Time Length</h3>
 
@@ -100,114 +102,100 @@ Identify the slow running tests that are taking up the majority of the test suit
 
 Examples of dependencies that cause slow running tests:
 
-<ul>
-<li>
-Database:  A test that starts a database, sets up initial tables and creates a database connection. 
-</li>
-<li>
-Sockets:  A test that requires communicating with a remote server.
-</li>
-<li>
-Disk Access:  A test that reads on writes to a file on disk multiple times.
-</li>
-</ul>
+- Database:  A test that starts a database, sets up initial tables and creates a database connection. 
+- Sockets:  A test that requires communicating with a remote server.
+- Disk Access:  A test that reads on writes to a file on disk multiple times.
 
-<p>
 These dependencies can be easily substituted with special stubs called "mock" objects. A mock object has an identical interface to the real object it replaces.  For example, to replace a dependency on a file object that has read and write methods, one might use a mock object that also has read and write methods, but is backed by a string buffer, so reads and writes to the file only access main memory instead of the disk.  The unit under test must be properly parameterized so that the correct dependency can be injected at run time---the mock object during testing, and the actual object during integration testing, system testing and in production use.
-</p>
 
 <h3>Step 2:  Divide-up Test Suite</h3> 
 
-<p>
 If the first step is not enough to reduce the execution time of the test suite, it may be necessary to divide the test suite into multiple, smaller test suites.  This only occurs when the system is exceptionally large.  When deciding how to partition the software units, attempt to group interdependent units together.  Some dependencies will still exist between groups of software units.  If a unit depends on units outside its own test suite, those dependencies must be stubbed-out.  This will allow each test suite to be run safely in isolation from the other test suites.
-</p>
 
-<p>
 If a second sounds too short to run an entire test suite, don't worry.  If the developers take care to mock out database connections, network connections, files, and the like, you can easily run several thousand tests in one second, even on budget hardware.
-</p>
 
 
+Dealing with Legacy Systems
+---------------------------
 
-<h2> Dealing with Legacy Systems </h2>
-<p>
 When maintaining a legacy system, automated unit tests may not be available.  In this situation, as maintenance is performed on the software, unit tests should be created, using a TDD approach, for the portion of the system under maintenance.  Once a portion of the code is covered by unit tests, it becomes easier to refactor as the unit tests will detect if the covered code breaks.  As time progresses, more and more of the system will be covered by the unit tests; thus making it easier and easier to maintain.  Figure 2 depicts how, over the long term, a legacy system might progress from having no unit tests to being completely covered by unit tests.  Shaded regions represent portions of code covered by unit test.  Initially, the system has no unit tests and its design--the structure of the system--is not very clear.  As time goes on, more of the system is covered and more of the system can be refactored into a better design.
-</p>
 
-<h4 class="image"> Figure 2:  Progression of a Legacy System </h4>
-<img class="legacy" src="legacy.png" alt="Progression of a legacy system" />
+<div class="image">
+<h4> Figure 2:  Progression of a Legacy System </h4>
+<img class="legacy"
+     src="images/legacy.png"
+     alt="Progression of a legacy system" />
+</div>
 
-<p>
 When a bug is reported for the system, before attempting to correct the bug, a unit test should be created that catches the bug, so that if future work on the system reintroduces the bug, the test suite will catch it immediately instead of allowing the bug to be released into the field undetected once again. 
-</p>
 
-<p>
 The first maintenance sessions on a legacy system with no unit tests will go slowly at first as time is taken away from maintenance to add new unit tests.  However, over time, the maintenance time will shorten and eventually be much shorter than what it would have been without the unit tests.  Although adding unit tests to a legacy system may seem like a slow and difficult process, over time it will pay great dividends.
-</p>
 
-<h2>Software Security and Information Assurance</h2>
 
-<p>
+Software Security and Information Assurance
+-------------------------------------------
+
 The first line of defense in software security and information assurance is producing high quality code.  In other words, produce clean code: readable, maintainable, code that does what it is supposed to and nothing else.  Following the above guidance of using TDD with automated unit testing will go a long way to help produce quality code.
-</p>
 
-<p>
 However, this alone is not enough to ensure the security and availability of our software systems.  In addition, abuse cases must be considered.  The development team must think how an attacker might attempt to misuse the system.  From those abuse cases, developers write malicious test cases that exercise how an attacker would use the system in an attempt to compromise it, steal information, damage it, or otherwise harm national security.  
-</p>
 
-<p>
 Unit tests should also be developed from the mindset of an attacker.  Managers and developers should always be cognizant of security risks as unit tests are written, ensuring that unit tests cover common security holes such as the sanitization of inputs, to include, but not limited to: user inputs, network I/O, database transactions, and sensor inputs.  A risk-based approach should be taken when developing security-focused unit tests.  Common vulnerabilities and high-threat vulnerabilities should be addressed first. Software security must start at the lowest levels of testing.  One cannot wait until the end of the development process to "bolt" security on.
-</p>
 
 
-<h2>Testing a GUI</h2>
-<p>
+Testing a GUI
+--------------------
+
 Although graphical user interfaces (GUI) may be more difficult to test than business logic, many tools exists to help automate GUI testing.  Furthermore, good design practices in separating and decoupling user interface code from the rest of the application will help tremendously in GUI testing.
-</p>
 
-<h2>Testing Tests</h2>
-<p>
+
+Testing Tests
+--------------------
+
 Usually test code is very simple.  It flows from setting up pre-conditions, to executing the relevant unit, to assertion of post-conditions, to any cleanup code if necessary. This is often straight-line code with no branching.  However, if any test code becomes complex, including branching or calculations of its own, then it should be tested as well.  It is necessary to test our tests.  This happens implicitly during TDD.  Step 2 of the TDD cycle requires all tests to be run to ensure the new test fails.  However, when the test is more complex than just straight-line code, it may be necessary to write additional test cases that explicitly verify the complex test.
-</p>
 
-<h2>Conclusion</h2>
-<p>
+
+Conclusion
+--------------------
+
 This lesson covered TDD and unit testing.  In it, we introduced the concepts, discussed the benefits, and explored the risks of TDD and unit testing.  We also considered strategies to deal with large systems and legacy systems.  Finally we addressed software security, GUI testing, and testing tests as it applies to TDD and unit testing.  Following the above guidance will increase the quality of your code and help keep your project on time and under budget.
-</p>
 
 
-<h2> References </h2>
-
+References
+--------------------
 
 <dl>
 
 <dt>BECK02</dt>
 <dd>
-Beck, Kent.  **Test-Driven Development By Example**, 2002
+Beck, Kent.  <em>Test-Driven Development By Example</em>, 2002
 </dd>
 
 <dt>FOWL99</dt>
 <dd>
-Fowler, Martin.  **Refactoring Improving the Design of Existing Code**, 1999
+Fowler, Martin.  <em>Refactoring Improving the Design of Existing Code</em>, 1999
 </dd>
 
 <dt>HUNT00</dt>
 <dd>
-Hunt, Andrew and Thomas, Dave.  **The Pragmatic Programmer**, 2000
+Hunt, Andrew and Thomas, Dave.  <em>The Pragmatic Programmer</em>, 2000
 </dd>
 
 <dt>JORG08</dt>
 <dd>
-Jorgensen, Paul C. **Software Testing A Craftsman's Approach**, 3rd Edition, 2008
+Jorgensen, Paul C. <em>Software Testing A Craftsman's Approach</em>, 3rd Edition, 2008
 </dd>
 
 <dt>MCCO04</dt>
 <dd>
-McConnell, Steve.  **Code Complete**, 2nd Edition, 2004
+McConnell, Steve.  <em>Code Complete</em>, 2nd Edition, 2004
 </dd>
 
 <dt>WIKBDD</dt>
 <dd>
-<!--Wikipedia.  **Behavior-driven development**, <http://en.wikipedia.org/wiki/Behavior_driven_development> [online; accessed 22-March-2013] -->
+Wikipedia.  <em>Behavior-driven development</em>,
+<a href="http://en.wikipedia.org/wiki/Behavior_driven_development">
+http://en.wikipedia.org/wiki/Behavior_driven_development</a>
+[online; accessed 22-March-2013]
 </dd>
 
 </dl>
