@@ -16,8 +16,8 @@ Lessons
 ---------------------
 
 - [Lesson 1:  TDD and Unit Testing](lesson1.html)
-- [Lesson 2.1: Tools and Standards](lesson2.1.html)
-- [Lesson 2.2: Refactoring](lesson2.2.html)
+- [Lesson 2: Tools and Standards](lesson2.html)
+- [Lesson 3: Refactoring](lesson3.html)
 - [Example 1](example1.html)
 - [Example 2](example2.html)
 - [Example 1 zip Environment](example1/example1.zip)

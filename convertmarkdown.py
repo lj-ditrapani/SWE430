@@ -111,6 +111,6 @@ if __name__ == '__main__':
     main('jsbin-instructions')
     main('tutorial')
     main('lesson1')
-    # main('lesson2')
-    # main('lesson3')
+    main('lesson2')
+    main('lesson3')
     main('exercise')
