@@ -1,5 +1,8 @@
 TO DO
 ========================================================================
+- Add discussion board questions for interaction with managers
+- Re-order lessons?  Include javascript tutorial as a lesson?
+- Make javascript tutorial
 - Ensure all files are set ff=dos
 - Rewrite .sh scripts into python scripts
   (mostly zip, unzip, cp, and delete files)
@@ -27,6 +30,11 @@ TO DO
     - exam
 - jsfiddle.net codepen.io ???
 - use HAML, SASS, and/or LESS?  Other templating?
+
+1h 30m for discussion board questions
+4 hours for lessons
+5 hours for javascript tutorial
+10 hours for exercise
 
 3 parts to project
 -------------------
