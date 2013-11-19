@@ -10,6 +10,7 @@ IO_PARAMS = dict(encoding='ascii', newline='\r\n')
 
 
 def main(file_name):
+    print '\n\n==============', file_name, '==============\n\n'
     tree = init_tree()
     html = tree.getroot()
     body = markdown_2_html_body(file_name)
@@ -28,6 +29,7 @@ def init_tree():
 def markdown_2_html_body(file_name):
     markdown_text = get_text('markdown/{0}.markdown'.format(file_name))
     html_text = markdown2.markdown(markdown_text)
+    print html_text
     html_text += ('\n<p class="footnote"> Lyall Jonathan Di Trapani ' +
                   '15 Nov 2013</p>\n')
     return ET.fromstring('<body>\n{0}\n</body>'.format(html_text))
@@ -103,5 +105,6 @@ def write_tree(tree, file_name):
 
 
 if __name__ == '__main__':
-    main('exercise')
     main('index')
+    main('lesson1')
+    main('exercise')

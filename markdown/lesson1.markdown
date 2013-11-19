@@ -1,173 +1,104 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD HTML 4.01//EN" 
-"http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-    <!-- Author:  Lyall Jonathan Di Trapani  ======================  -->
-    <meta http-equiv="Content-Type"
-          content="text/html; charset=utf-8" >
-	<title>SWE 430 Lesson 1 TDD</title>
-    <link rel="stylesheet" href="../css/base.css" type="text/css">
-    <link rel="stylesheet" href="tdd.css" type="text/css">
-</head>
+SWE 430 Lesson 1:  TDD and Unit Testing
+========================================================================
 
-<h1>SWE 430 Lesson 1:  TDD and Unit Testing</h1>
-
-<p>
 In this lesson we will lay conceptual fondations regarding test-driven development (TDD) and unit testing which we will later apply in Example 1 and Exercise 1.
-</p>
 
 
-<h2>Unit Testing</h2>
+Unit Testing
+-------------------------
 
-<p>
-Unit testing is the lowest level of testing and it occurs during the construction phase.  Unit testing is intended to show that each unit has been built correctly (verification).  It tests the actual software construction.  As with all levels of testing, unit testing cannot prove the absence of faults.  It can only prove the absence or presence of faults for the specific test cases in the test suite.  For any non-trivial program, it is generally not feasible to test all possible test cases.  However, it is generally possible to test a set of test cases that exercise all statements in the program.  Also, a set of test cases can be selected that test for high-risk faults (mistakes that occur often and/or faults that have disastrous effects; selected according to the risk-management process).  By carefully selecting test cases that completely exercise the code (verification), and cover high-risk faults, unit testing can be used as a tool to help deliver high-quality software.  
-</p>
+Unit testing is the lowest level of testing and it occurs during the construction phase.  Unit testing is intended to show that each unit has been built correctly (verification).  It tests the actual software construction.  As with all levels of testing, unit testing cannot prove the absence of faults.  It can only prove the absence or presence of faults for the specific test cases in the test suite.  For any non-trivial program, it is generally not feasible to test all possible test cases.  However, it is generally possible to test a set of test cases that exercise all statements in the program.  Also, a set of test cases can be selected that test for high-risk faults (mistakes that occur often and/or faults that have disastrous effects; selected according to the risk-management process).  By carefully selecting test cases that completely exercise the code (verification), and cover high-risk faults, unit testing can be used as a tool to help deliver high-quality software.
 
-<p>
 Unit testing is the foundation of software testing.  Without reliable unit tests, integration and system testing become extremely difficult.  A software unit is "the smallest software component that can be compiled and executed" as defined by [JORG08].  The definition on Wikipedia.org explains it as the "smallest testable part of an application".  Unit testing is generally performed by the developer who wrote the code-they are the only ones familiar enough with its detailed functioning to be effective at testing it.
-</p>
 
-<p>
-Unit testing should be automated.  Automation will allow the tests to be run more often leading to a higher-quality software system. 
-</p>
+Unit testing should be automated.  Automation will allow the tests to be run more often leading to a higher-quality software system.
 
-<h2>Test-driven Development</h2>
-<p>
+Test-driven Development
+-------------------------
+
 A well-established best practice is to take a test-driven development (TDD) approach which includes using an automated unit testing framework such as an xUnit framework [BECK02] or a Behavior-driven Development (BDD, a more qualified form of TDD [WIKBDD]) framework.
-</p>
 
-<p>
 Test-driven development (TDD) is a cyclical development process that combines testing, construction, and design into short steps. The program is written in small units. For each unit, the programmer first writes the unit test, then writes the code to pass the unit test. Each unit is written and fully tested before moving on to the next unit. It often drives a bottom-up approach to development. The boon is more errors are detected earlier than when using an antiquated water-fall-like method.  To be effective, TDD cycles should be relatively short in duration.  An individual TDD cycle should take seconds to minutes.
-</p>
 
-<p>
 Figure 1 shows how a TDD cycles fit into the larger picture of testing cycles.  The figure gives the approximate duration for each cycle.
-</p>
 
-<div class=break></div>
-<h4 class=image> Figure 1:  Cycles of Testing </h4>
-<img src=cycles.png alt="Cycles of Testing">
+<div class="break"></div>
+<h4 class="image"> Figure 1:  Cycles of Testing </h4>
+<img src="cycles.png" alt="Cycles of Testing" />
 
-<p> A Single Cycle in the TDD Process </p>
+A Single Cycle in the TDD Process
 
-<ol>
-    <li>Write a test</li>
-    <li>Run all tests to ensure the new test fails</li>
-    <li>Write just the code to pass the test</li>
-    <li>Run all the tests to ensure the new test passes</li>
-    <li>Refactor production code to eliminate any duplication introduced by the new code and improve the structure of the code</li>
-    <li>Run all the tests</li>
-    <li>Refactor test code to eliminate any duplication introduced by the new test</li>
-    <li>Run all the tests</li>
-</ol>
+- Write a test
+- Run all tests to ensure the new test fails
+- Write just the code to pass the test
+- Run all the tests to ensure the new test passes
+- Refactor production code to eliminate any duplication introduced by the new code and improve the structure of the code
+- Run all the tests
+- Refactor test code to eliminate any duplication introduced by the new test
+- Run all the tests
 
-<p>
 Note that steps 2, 4, 6, and 8 provide immediate feed-back (none of these steps should take more than a second to run).  Steps 1, 5 and 7 are design activities.  In step 1, writing a test, the developer designs the low-level interface to the unit of code.  In step 5, the developer restructures existing production code to eliminate duplication.  Likewise in step 7---but for the test code.  Only step 3 adds new functionality to the system.  So every bit of functionality added is surrounded by robust design and feedback activities allowing the developer to spot errors early and keep the code base in a coherent structure.  Without TDD, construction activities cause the design of the code to decay over time with each addition of functionality.  With TDD, the design in the code base actually improves with each addition of functionality thanks to the refactoring and test-centric development.  Writing tests first forces the developer to write "testable code" and testable code is implicitly easier to maintain than "non-testable" code.
-</p>
 
 
-<h2> Benefits of TDD and Automated Unit Testing</h2>
+Benefits of TDD and Automated Unit Testing
+------------------------------------------
 
 
-<p>
 Best practices have now adopted the position that writing test cases before writing the code is a better approach to construction. There are many reasons for this:
-</p>
 
-<p>
 Benefits of Test-driven Development (TDD) with an automated testing framework:
-</p>
 
-<ul>
-    <li>
-The unit tests partition units of code. Failing tests point directly to the guilty unit.  The smaller the units, the finer the granularity of the fault isolation.
-    </li>
-    <li>
-Creating a test first directs the developer to design each unit to an interface (the test defines the interface to the unit.) 
-    </li>
-    <li>
-TDD also has several (subjective) psychological impacts: 
-    <ul>
-        <li>
-It gives the programmer a steady sense of progress as each unit is completed.
-        </li>
-        <li>
-It makes the code construction process more manageable by breaking it down into bite-sized pieces (the units).
-        </li>
-        <li>
-Seeing all the test cases pass during regression testing gives the programmer confidence in the code base. 
-        </li>
 
-    </ul>
-    </li>
-    <li>
-Developers detect errors earlier in the development process instead of waiting for a "testing" phase to find the same errors as in the waterfall method.  Earlier detection means less rework, therefore less cost to fix.
-    </li>
-    <li>
-Writing the tests first does not increase coding time.  The same time would be spent writing the tests during the "testing" phase of a waterfall method; only the developers loose the early detection of faults, increasing the cost of fixing the faults. 
-    </li>
-    <li>
-Obviously, running the tests can expose construction errors.  However, the process of writing test cases often exposes requirements and design errors as well.
-    </li>
-    <li>
-Because the tests are automated, they are run frequently at no cost overhead to the project.  If they were run manually, then they would not be run nearly as frequently, and be expensive to run in terms of manpower.
-    </li>
-    <li>
-Progress and results can be reported to the stakeholders earlier. 
-    </li>
-    <li>
-    Many projects have failed because management did not plan for testing.  With TDD, planning for unit tests is no longer an issue since they are accomplished with each unit of code written.  In TDD, developers proactively write tests instead of reacting to "finished" production code with testing.
-    </li>
-    <li>
-The unit tests developed can be used in automated regression testing.
-    </li>
-</ul>
+- The unit tests partition units of code. Failing tests point directly to the guilty unit.  The smaller the units, the finer the granularity of the fault isolation.
+- Creating a test first directs the developer to design each unit to an interface (the test defines the interface to the unit.) 
+- TDD also has several (subjective) psychological impacts: 
+    - It gives the programmer a steady sense of progress as each unit is completed.
+    - It makes the code construction process more manageable by breaking it down into bite-sized pieces (the units).
+    - Seeing all the test cases pass during regression testing gives the programmer confidence in the code base. 
+- Developers detect errors earlier in the development process instead of waiting for a "testing" phase to find the same errors as in the waterfall method.  Earlier detection means less rework, therefore less cost to fix.
+- Writing the tests first does not increase coding time.  The same time would be spent writing the tests during the "testing" phase of a waterfall method; only the developers loose the early detection of faults, increasing the cost of fixing the faults. 
+- Obviously, running the tests can expose construction errors.  However, the process of writing test cases often exposes requirements and design errors as well.
+- Because the tests are automated, they are run frequently at no cost overhead to the project.  If they were run manually, then they would not be run nearly as frequently, and be expensive to run in terms of manpower.
+- Progress and results can be reported to the stakeholders earlier. 
+- Many projects have failed because management did not plan for testing.  With TDD, planning for unit tests is no longer an issue since they are accomplished with each unit of code written.  In TDD, developers proactively write tests instead of reacting to "finished" production code with testing.
+- The unit tests developed can be used in automated regression testing.
 
 
 
-<h2>Risk in TDD and Unit Testing</h2>
-<p>
+Risk in TDD and Unit Testing
+----------------------------
+
 It is important to understand the risks in TDD and unit testing so they can be proactively managed and mitigated.
-</p>
 
 <h3>Test Suite Execution Time</h3>
-<p>
-The longer the test suite takes to run, the less often the test suite will be run.  Below, in the section on "<span class=emph>Scaling Unit Test Suites in Large Projects</span>," we give strategies for dealing with slow running test suites.
-</p>
+
+The longer the test suite takes to run, the less often the test suite will be run.  Below, in the section on "**Scaling Unit Test Suites in Large Projects**," we give strategies for dealing with slow running test suites.
 
 <h3>TDD Cycle Time Length</h3>
-<p>
+
 The longer the TDD cycles run, the more potential for problems and the bigger the problems can become.  With longer cycles, an error will take longer to fix than if shorter cycles were used.  There are two reasons for this:  1) Because more code has been written, it takes longer to isolate the bug.  2) If changes must be rolled back, there are more changes to roll back--therefore, more lost time.  One hour cycle means one hour lost in the worst case.  One minute cycle means one minute lost in the worst case.  A cycle that produces 100 lines of code means there will be 100 lines of code (plus dependencies) to sift through to find a bug.  A cycle that produces only 5 lines of code only has 5 lines (plus dependencies) to sift through to find a bug.
-</p>
 
 <h3>Writing Too Many Tests</h3>
-<p>
+
 Given infinite time, you can never have too many tests.  But since all projects have a schedule, time is finite.  Managers and developers must use wisdom to select the minimum number of test cases that 1) exercise all of the statements/expressions of the production code, 2) cover all of the requirements, and 3) test for high-risk faults.
-</p>
 
 <h3>Maintaining Test Code</h3>
-<p>
+
 Test code must be maintained to the same quality standards as the production code.  If the test code degrades, it will become difficult to add new tests to the test suite.  If so, developers will avoid creating new tests, and the value of the test suite will plummet as new production code is added without adequate test code.  This is why steps 7 and 8 in the TDD cycle are so important.  They direct the developer to refactor the test code when necessary.  Performing these steps will ensure the test code retains its value and remains manageable for the developers.
-</p>
 
 
-<h2> Scaling Unit Test Suites in Large Projects </h2>
+Scaling Unit Test Suites in Large Projects
+------------------------------------------
 
-<p>
 The entire test suite must run quickly.  If the entire test suite cannot execute in under a second, its value is diminished.  If the developer has to "waste" time waiting for tests to complete, the developer will be less likely to run the test suite.
-</p>
 
-<p> TDD generally scales well in large projects, but if a test suite is running too slowly, here are some steps to take.
-</p>
+TDD generally scales well in large projects, but if a test suite is running too slowly, here are some steps to take.
 
 <h3>Step 1:  Replace Slow Dependencies with Mock Objects</h3>
-<p>
-Identify the slow running tests that are taking up the majority of the test suite's execution time.  The cause of the long execution time of the guilty tests is often its dependencies.  
-</p>
 
-<p>
+Identify the slow running tests that are taking up the majority of the test suite's execution time.  The cause of the long execution time of the guilty tests is often its dependencies.  
+
 Examples of dependencies that cause slow running tests:
-</p>
 
 <ul>
 <li>
@@ -202,9 +133,8 @@ If a second sounds too short to run an entire test suite, don't worry.  If the d
 When maintaining a legacy system, automated unit tests may not be available.  In this situation, as maintenance is performed on the software, unit tests should be created, using a TDD approach, for the portion of the system under maintenance.  Once a portion of the code is covered by unit tests, it becomes easier to refactor as the unit tests will detect if the covered code breaks.  As time progresses, more and more of the system will be covered by the unit tests; thus making it easier and easier to maintain.  Figure 2 depicts how, over the long term, a legacy system might progress from having no unit tests to being completely covered by unit tests.  Shaded regions represent portions of code covered by unit test.  Initially, the system has no unit tests and its design--the structure of the system--is not very clear.  As time goes on, more of the system is covered and more of the system can be refactored into a better design.
 </p>
 
-<!-- <div class=break></div> -->
-<h4 class=image> Figure 2:  Progression of a Legacy System </h4>
-<img class=legacy src=legacy.png alt="Progression of a legacy system">
+<h4 class="image"> Figure 2:  Progression of a Legacy System </h4>
+<img class="legacy" src="legacy.png" alt="Progression of a legacy system" />
 
 <p>
 When a bug is reported for the system, before attempting to correct the bug, a unit test should be created that catches the bug, so that if future work on the system reintroduces the bug, the test suite will catch it immediately instead of allowing the bug to be released into the field undetected once again. 
@@ -252,36 +182,32 @@ This lesson covered TDD and unit testing.  In it, we introduced the concepts, di
 
 <dt>BECK02</dt>
 <dd>
-Beck, Kent.  <span class=emph>Test-Driven Development By Example</span>, 2002
+Beck, Kent.  **Test-Driven Development By Example**, 2002
 </dd>
 
 <dt>FOWL99</dt>
 <dd>
-Fowler, Martin.  <span class=emph>Refactoring Improving the Design of Existing Code</span>, 1999
+Fowler, Martin.  **Refactoring Improving the Design of Existing Code**, 1999
 </dd>
 
 <dt>HUNT00</dt>
 <dd>
-Hunt, Andrew and Thomas, Dave.  <span class=emph>The Pragmatic Programmer</span>, 2000
+Hunt, Andrew and Thomas, Dave.  **The Pragmatic Programmer**, 2000
 </dd>
 
 <dt>JORG08</dt>
 <dd>
-Jorgensen, Paul C. <span class=emph>Software Testing A Craftsman's Approach</span>, 3rd Edition, 2008
+Jorgensen, Paul C. **Software Testing A Craftsman's Approach**, 3rd Edition, 2008
 </dd>
 
 <dt>MCCO04</dt>
 <dd>
-McConnell, Steve.  <span class=emph>Code Complete</span>, 2nd Edition, 2004
+McConnell, Steve.  **Code Complete**, 2nd Edition, 2004
 </dd>
 
 <dt>WIKBDD</dt>
 <dd>
-Wikipedia.  <span class=emph>Behavior-driven development</span>, http://en.wikipedia.org/wiki/Behavior_driven_development [online; accessed 22-March-2013]
+<!--Wikipedia.  **Behavior-driven development**, <http://en.wikipedia.org/wiki/Behavior_driven_development> [online; accessed 22-March-2013] -->
 </dd>
 
 </dl>
-
-
-<p class="footnote"> Lyall Jonathan Di Trapani 22 Mar 2013 </p>
-</body></html>

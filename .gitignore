@@ -21,8 +21,8 @@
 /jshint-rhino-2.1.4.js
 
 # Pictures (included in SWE430-support.zip)
-/website/lesson1/cycles.png
-/website/lesson1/legacy.png
+/website/images/cycles.png
+/website/images/legacy.png
 
 # build artifacts
 /SWE430.zip
