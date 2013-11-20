@@ -104,13 +104,16 @@ def write_tree(tree, file_name):
 
 
 if __name__ == '__main__':
-    main('index')
-    main('syllabus')
-    main('instructions')
-    main('zip-instructions')
-    main('jsbin-instructions')
-    main('tutorial')
-    main('lesson1')
-    main('lesson2')
-    main('lesson3')
-    main('exercise')
+    file_names = [
+        'index',
+        'syllabus',
+        'instructions',
+        'zip-instructions',
+        'jsbin-instructions',
+        'tutorial',
+        'lesson1',
+        'lesson2',
+        'lesson3',
+        'exercise',
+    ]
+    map(main, file_names)
