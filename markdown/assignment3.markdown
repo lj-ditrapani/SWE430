@@ -1,4 +1,4 @@
-SWE 430 Exercise --- Password Checker
+SWE 430 Assignment 3 --- Password Checker
 =====================================
 
 Exercise Instructions
@@ -73,3 +73,7 @@ In order to be declared "valid," all accepted passwords must adhere to the follo
 
 The appropriate "reason string" for each rule is shown in parentheses and in green.  The check() function only returns one reason for a password failure.  If a password fails multiple rules, only the reason for the first rule failed, according to the order listed above, is returned by the function.  Be sure to use the exact reason strings listed above---they are case sensitive.
 
+- [Assignment 3 zip Environment](assignment3.zip)
+- [Assignment 3 jsbin Environment][jsbin assignment 3]
+
+[jsbin assignment 3]: http://jsbin.com/swe430_assignment3/latest/edit?javascript,live

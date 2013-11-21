@@ -1,6 +1,10 @@
 TO DO
 ========================================================================
 
+Index
+
+- Move zip & jsbin environment links into example and assigment pages
+
 Lessons
 
 - Add javascript style standards to lesson 1
@@ -35,6 +39,7 @@ Examples
 - ex 2 is full-blow TDD
 - Make video screen cast for Example 1
 - Make video screen cast for Example 2?
+- Grab ideas from example 1.1, 1.2 and 2 from 430 13B
 
 Assignments
 
@@ -74,7 +79,7 @@ General TO DO
 - use HAML, SASS, and/or LESS?  Other templating?
 
 
-3 parts to project
+4 parts to project
 -------------------
 
 - Git project: (goes on github and a SWE430-source.zip on L drive)

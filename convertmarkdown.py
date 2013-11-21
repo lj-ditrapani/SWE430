@@ -113,10 +113,15 @@ if __name__ == '__main__':
         'instructions',
         'zip-instructions',
         'jsbin-instructions',
-        'tutorial',
+        'javascript-tutorial',
+        'qunit-tutorial',
         'lesson1',
         'lesson2',
         'lesson3',
-        'exercise',
+        'example1',
+        'example2',
+        'assignment1',
+        'assignment2',
+        'assignment3',
     ]
     map(main, file_names)
