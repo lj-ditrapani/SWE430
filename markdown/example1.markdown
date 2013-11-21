@@ -1,4 +1,4 @@
-Example 1
+SWE 430 Example 1 --- Running Tests
 =====================================================================================================
 
 - [Example 1 zip Environment](example1.zip)
