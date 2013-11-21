@@ -33,8 +33,12 @@ Examples
 - New examples (1 and 2)
 - ex 1 is write code against finished tests
 - ex 2 is full-blow TDD
+- Make video screen cast for Example 1
+- Make video screen cast for Example 2?
 
-Exercise 3
+Assignments
+
+Assignment 3
 
 - string manipulation functions; provide tutorial
 - consider splitting the project up into 2 segments?
@@ -64,7 +68,7 @@ General TO DO
     - learn javascript/qunit
     - lesson
     - example
-    - exercise
+    - assignment
     - exam
 - jsfiddle.net codepen.io ???
 - use HAML, SASS, and/or LESS?  Other templating?
@@ -84,14 +88,14 @@ General TO DO
     - .zip file contains everything but the FOUO stuff
     - **Needed for teaching**
 
-- Exam and Exercise Answers, separate git project
+- Exam and Assignment Answers, separate git project
   (goes on L drive, FOUO stuff)
-    - exam-and-exercise-answers dir
-    - zip-exam-and-exercise-answers.sh
-    - exam-and-exercise-answers.zip
-    - load-exercise-dependencies.sh  copy dependencies of
-      exercise answers (exercis-tests.html, qunit.js, qunit.css)
-      answers into exercise answer folders
+    - exam-and-assignment-answers dir
+    - zip-exam-and-assignment-answers.sh
+    - exam-and-assignment-answers.zip
+    - load-assignment-dependencies.sh  copy dependencies of
+      assignment answers (exercis-tests.html, qunit.js, qunit.css)
+      answers into assignment answer folders
     - **Needed for teaching**
 
 - Support:  SWE430-support.zip zip-support.sh
@@ -140,7 +144,7 @@ Navigation menu
 -------------
 Top left + sign
     -> Tool link:  Announcements and Contacts (in type)
-    -> content area:  everything else (emaxs, lessons, exercises, admin info)
+    -> content area:  everything else (emaxs, lessons, assignments, admin info)
 
 
 Content Area
