@@ -1,7 +1,7 @@
-SWE 430 Lesson 2:  Tools and Standards
+SWE 430 Lesson 1:  Tools and Standards
 ========================================================================
 
-This lessons discusses general construction tools and coding standards.
+This lesson discusses general construction tools and coding standards.
 
 
 Constructions Tools
@@ -27,7 +27,7 @@ The book [97TEPSK] is a collection of short essays by several professional devel
 - <a href="http://programmer.97things.oreilly.com/wiki/index.php/Know_Your_IDE">Know Your IDE</a>, page 90
 - <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Unix_Tools_Are_Your_Friends">The Unix Tools Are Your Friends</a>, page 176
 
-There are many other software development tools.  Some are generally useful, such as unit testing frameworks (discussed in lesson 1), and others that are only applicable in specific domains.  We will not attempt to discuss them all in detail here.
+There are many other software development tools.  Some are generally useful, such as unit testing frameworks (discussed in [Lesson 3](lesson3.html)), and others that are only applicable in specific domains.  We will not attempt to discuss them all in detail here.
 
 
 Coding Standards
@@ -50,7 +50,7 @@ There are a couple of entries in [97TEPSK] that deal with coding standards:
 Conclusion
 ----------
 
-This lesson focused on software tools and coding standards.  The next lesson, Lesson 2.2, deals with refactoring.
+This lesson focused on software tools and coding standards.  The next lesson, [Lesson 2](lesson2.html), deals with refactoring.
 
 <dl>
 <dt>97TEPSK</dt>

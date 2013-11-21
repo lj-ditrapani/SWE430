@@ -1,4 +1,4 @@
-SWE 430 Lesson 3:  Refactoring
+SWE 430 Lesson 2:  Refactoring
 ========================================================================
 
 In this lesson we will lay the conceptual foundations of refactoring which we will later apply in Example 2 and Exercise 2.
@@ -121,7 +121,7 @@ Page 101:
 Conclusion
 ----------
 
-This lesson briefly discussed refactoring.  You are ready to work through Example 2.  As you work through the example, keep the above tips in mind.  You will see them in action.  After you have worked through Example 2, You will receive an opportunity to apply these concepts yourself in Exercise 2.
+This lesson briefly discussed refactoring.  You are ready for [Lesson 3: Test-driven Development](lesson3.html).  Later in the course, as you work through the examples, keep the above tips in mind.  You will see them in action.  Also, you will receive opportunities to apply these concepts yourself in Assignments 1, 2, and 3.
 
 
 <dl>

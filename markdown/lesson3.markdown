@@ -1,7 +1,7 @@
-SWE 430 Lesson 1:  TDD and Unit Testing
+SWE 430 Lesson 3:  TDD and Unit Testing
 ========================================================================
 
-In this lesson we will lay conceptual fondations regarding test-driven development (TDD) and unit testing which we will later apply in Example 1 and Exercise 1.
+In this lesson we will lay conceptual foundations regarding test-driven development (TDD) and unit testing which we will later apply in the examples and assignments.
 
 
 Unit Testing
@@ -157,7 +157,7 @@ Usually test code is very simple.  It flows from setting up pre-conditions, to e
 Conclusion
 --------------------
 
-This lesson covered TDD and unit testing.  In it, we introduced the concepts, discussed the benefits, and explored the risks of TDD and unit testing.  We also considered strategies to deal with large systems and legacy systems.  Finally we addressed software security, GUI testing, and testing tests as it applies to TDD and unit testing.  Following the above guidance will increase the quality of your code and help keep your project on time and under budget.
+This lesson covered TDD and unit testing.  In it, we introduced the concepts, discussed the benefits, and explored the risks of TDD and unit testing.  We also considered strategies to deal with large systems and legacy systems.  Finally we addressed software security, GUI testing, and testing tests as it applies to TDD and unit testing.  Following the above guidance will increase the quality of your code and help keep your project be on time and under budget.  You are now ready to answer the discussion board questions on Blackboard and then move on to [Tutorial 1:  JavaScript Tutorial](javascript-tutorial.html).
 
 
 References

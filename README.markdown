@@ -1,10 +1,6 @@
 TO DO
 ========================================================================
 
-Index
-
-- Move zip & jsbin environment links into example and assigment pages
-
 Lessons
 
 - Add javascript style standards to lesson 1
