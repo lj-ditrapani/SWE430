@@ -1,0 +1,5 @@
+{
+    "css": ["css/prettify.css"],
+    "javascript": ["js/prettify.js"],
+    "prettyprint": true
+}
