@@ -1,6 +1,6 @@
 # FOUO stuff; separate git repository.  Never on gituhb!
-# Becomes SWE430-exam-and-exercise-answers.zip, put on shared L drive
-/exam-and-exercise-answers
+# Becomes SWE430-exam-and-assignment-answers.zip, put on shared L drive
+/exam-and-assignment-answers
 
 # .pdf files (included in SWE430-support.zip)
 /support
@@ -28,9 +28,11 @@
 /SWE430.zip
 /SWE430-source.zip
 /SWE430-support.zip
-/SWE430-exam-and-exercise-answers.zip
-/website/example.zip
-/website/exercise.zip
+/SWE430-exam-and-assignment-answers.zip
+/website/example1.zip
+/website/assignment1.zip
+/website/assignment2.zip
+/website/assignment3.zip
 /markdown2.pyc
 /markdown2$py.class
 
@@ -40,11 +42,16 @@
 /website/instructions.html
 /website/jsbin-instructions.html
 /website/zip-instructions.html
-/website/tutorial.html
+/website/javascript-tutorial.html
+/website/qunit-tutorial.html
 /website/lesson1.html
 /website/lesson2.html
 /website/lesson3.html
-/website/exercise.html
+/website/example1.html
+/website/example2.html
+/website/assignment1.html
+/website/assignment2.html
+/website/assignment3.html
 
 # TODO!!
 # Should delete because all art is for
