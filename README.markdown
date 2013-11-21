@@ -14,6 +14,14 @@ Tutorials
 - Make javascript tutorial
 - Grab tutorial (and lessons) from 499 course and integrate into Lesson 1 and 2
 - string manipulation functions; provide tutorial
+- function, function parameters & return
+- function definition vs function calling
+- var declaration
+- comparisons `> < >= <= ===`
+- not (!) operator
+- for loop (i & sequence length)
+- array and array indexing, push, .length
+- bool, num, string, array, object
 
 Instructions
 
@@ -33,6 +41,13 @@ Exercise 3
 - Fix this sentence for new example code: "This is accomplished in
   the same way we export the target object which contains both the
   Target and the Grid classes in Example 1."
+- 335 LOC: 183 code, 152 test
+
+- String.length, replace, slice() to get substring, indexOf to find
+  substring
+- slice() and indexOf() for "has 4 char substring" '4+ char substring'
+- charCodeAt
+- regex /[a-z]/ /[^a-z]/
 
 General TO DO
 
