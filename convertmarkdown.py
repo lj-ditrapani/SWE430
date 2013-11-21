@@ -29,6 +29,9 @@ def init_tree():
 def markdown_2_html_body(file_name):
     markdown_text = get_text('markdown/{0}.markdown'.format(file_name))
     html_text = markdown2.markdown(markdown_text)
+    if file_name != 'index':
+        html_text += ('\n<p>Return to <a href="index.html">' +
+                      'Index Page</a></p>')
     html_text += ('\n<p class="footnote"> Lyall Jonathan Di Trapani ' +
                   '15 Nov 2013</p>\n')
     return ET.fromstring('<body>\n{0}\n</body>'.format(html_text))

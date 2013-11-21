@@ -1,4 +1,4 @@
-SWE 430 Home Page
+SWE 430 Index Page
 ========================================================================
 
 
@@ -68,9 +68,9 @@ Week 3
 Capstone Assignment (9 hours)
 -----------------------------
 
-- [Assignment 3](Assignment.html) (9 hours)
-- [Assignment 3 zip Environment](assignment.zip)
-- [Assignment 3 jsbin Environment][jsbin assignment]
+- [Assignment 3](assignment3.html) (9 hours)
+- [Assignment 3 zip Environment](assignment3.zip)
+- [Assignment 3 jsbin Environment][jsbin assignment 3]
 
 
 Exam
@@ -84,5 +84,7 @@ the Exams tab.  The exam covers lessons 1-3.
 
 [jsbin example 1]: http://jsbin.com/swe430_example1/latest/edit?javascript,live
 [jsbin example 2]: http://jsbin.com/swe430_example2/latest/edit?javascript,live
-[jsbin assignment]: http://jsbin.com/swe430_assignment1/latest/edit?javascript,live
+[jsbin assignment 1]: http://jsbin.com/swe430_assignment1/latest/edit?javascript,live
+[jsbin assignment 2]: http://jsbin.com/swe430_assignment2/latest/edit?javascript,live
+[jsbin assignment 3]: http://jsbin.com/swe430_assignment3/latest/edit?javascript,live
 
