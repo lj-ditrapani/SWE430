@@ -38,7 +38,7 @@ def markdown_2_html_body(file_name):
 
 
 def get_text(file_name):
-    with io.open(file_name, **IO_PARAMS) as markdown_file:
+    with open(file_name, 'U') as markdown_file:
         return markdown_file.read()
 
 
