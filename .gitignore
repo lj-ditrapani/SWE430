@@ -14,12 +14,11 @@
 /website/js/ljd-utils.js
 
 # Dev Libraries (included in SWE430-support.zip)
-/markdown2
-/markdown2.py
-/jython-standalone-2.7-b1.jar
-/jslint4java-2.0.5.jar
-/rhino.jar
-/jshint-rhino-2.1.4.js
+/Lib/markdown2.py
+/Lib/jython-standalone-2.7-b1.jar
+/Lib/jslint4java-2.0.5.jar
+/Lib/rhino.jar
+/Lib/jshint-rhino-2.1.4.js
 
 # Pictures (included in SWE430-support.zip)
 /website/images/cycles.png
@@ -34,8 +33,8 @@
 /website/assignment1.zip
 /website/assignment2.zip
 /website/assignment3.zip
-/markdown2.pyc
-/markdown2$py.class
+/Lib/markdown2.pyc
+/Lib/markdown2$py.class
 
 # Auto-generated html from markdown
 /website/index.html

@@ -66,7 +66,7 @@ Assignment 3
 
 Tools and scripts
 
-- Rewrite .sh scripts into python scripts
+- Rewrite .sh scripts into python scripts, put in Lib
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.
 - Update packaging scripts (additional support libs; see .gitignore)
