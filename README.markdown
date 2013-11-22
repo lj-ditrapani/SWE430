@@ -78,6 +78,15 @@ Tools and scripts
     - `check_js.bat` calls `check_js.js` which checks all js files
 - jsfiddle.net codepen.io ???
 - use HAML, SASS, and/or LESS?  Other templating?
+- git rm pyunziptest.py once unzipping scripts complete
+- convert jshint, jslint to py/batch
+- convert-markdown.bat integrate into ui.py?
+- shell scripts to convert to python and put under Lib:
+    - load-exercise-answers-dependencies.sh
+    - zip-student-evironments.sh
+    - zip-support.sh
+    - zip-tool.sh
+- clean git ls-files
 
 General TO DO
 

@@ -53,7 +53,7 @@ def get_json(file_name):
     )
     json_file_name = 'markdown/{0}.json'.format(file_name)
     if os.path.exists(json_file_name):
-        json_config = json.load(open(json_file_name))
+        json_config = json.load(open(json_file_name, 'U'))
         config.update(json_config)
     return config
 
