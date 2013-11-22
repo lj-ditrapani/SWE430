@@ -53,6 +53,13 @@
 /website/assignment2.html
 /website/assignment3.html
 
+# Auto-generated html from studend-dev-tools/template-test.html
+/student-dev-tools/assignment1-test.html
+/student-dev-tools/assignment2-test.html
+/student-dev-tools/assignment3-test.html
+/student-dev-tools/example1-test.html
+/student-dev-tools/example2-test.html
+
 # TODO!!
 # Should delete because all art is for
 #   example 1 (should be completely revamped)
