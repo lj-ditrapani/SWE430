@@ -66,9 +66,17 @@ Assignment 3
 
 Tools and scripts
 
+- Fix `Lib/zip_website.py` 
+  does not generate valid zip file with jython, but ok with cpython
+  see `zip_website_error.txt`
 - Rewrite .sh scripts into python scripts, put in Lib
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.
+- shell scripts to convert to python and put under Lib:
+    - load-exercise-answers-dependencies.sh
+    - zip-student-evironments.sh
+    - zip-support.sh
+    - zip-tool.sh
 - Update packaging scripts (additional support libs; see .gitignore)
 - integrate studend-dev-tools/generate.py into batch file ...
     - generate everytime you do something (part of convertmarkdown.bat?)
@@ -81,11 +89,6 @@ Tools and scripts
 - git rm pyunziptest.py once unzipping scripts complete
 - convert jshint, jslint to py/batch
 - convert-markdown.bat integrate into ui.py?
-- shell scripts to convert to python and put under Lib:
-    - load-exercise-answers-dependencies.sh
-    - zip-student-evironments.sh
-    - zip-support.sh
-    - zip-tool.sh
 - clean git ls-files
 
 General TO DO
