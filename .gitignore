@@ -1,3 +1,4 @@
+# ======================================================================
 # FOUO stuff; separate git repository.  Never on gituhb!
 # Becomes SWE430-exam-and-assignment-answers.zip, put on shared L drive
 /exam-and-assignment-answers
@@ -66,3 +67,10 @@
 #   or
 #   example 2 (moving to SWE 450)
 /art
+
+# TODO!!
+# Delete or integrate
+/check-html.sh
+/coffeescript-windows-master.zip
+/possible_roman_decimal.js
+/website/old-example1/
