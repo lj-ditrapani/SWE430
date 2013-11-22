@@ -46,6 +46,9 @@ Examples
 
 Assignments
 
+- fix shell scripts too for exam-and-assignment-answers project to use
+  assigment instead of exercise 
+
 Assignment 3
 
 - string manipulation functions; provide tutorial
