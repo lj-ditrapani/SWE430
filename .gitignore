@@ -3,8 +3,12 @@
 # Becomes SWE430-exam-and-assignment-answers.zip, put on shared L drive
 /exam-and-assignment-answers
 
+
+
+### Begin: support files ###
+
 # .pdf files (included in SWE430-support.zip)
-/support
+/support/language_comparison_prechelt.pdf
 
 # Libraries (included in SWE430-support.zip)
 /website/css/prettify.css
@@ -23,6 +27,10 @@
 # Pictures (included in SWE430-support.zip)
 /website/images/cycles.png
 /website/images/legacy.png
+
+### End: support files ###
+
+
 
 # build artifacts
 /SWE430.zip
