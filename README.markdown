@@ -66,9 +66,8 @@ Assignment 3
 
 Tools and scripts
 
-- Fix `Lib/zip_website.py` 
-  does not generate valid zip file with jython, but ok with cpython
-  see `zip_website_error.txt`
+- Fixed! `Lib/zip_website.py` 
+  did not generate valid zip file with jython, but ok with cpython
 - Rewrite .sh scripts into python scripts, put in Lib
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.

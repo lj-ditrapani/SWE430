@@ -10,6 +10,7 @@ def zip_folder(folder_name, zip_name):
         for file in files:
             file_name = os.path.join(base, file)
             zip_file.write(file_name, file_name[rootlen:])
+    zip_file.close()
 
 
 zip_name = 'SWE430.zip'
