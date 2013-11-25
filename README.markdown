@@ -13,6 +13,7 @@ Flow
     - load-exercise-answers-dependencies.sh (combine with next line)
     - copy example test.html & blank code.js/test.js to website/example
     - copy qunit to proper dirs?  To run examples & assignment answers?
+    - copy website/assignment1/test.js to EAA/assignment1/test.js
 - do work
 - create-zip-env
 - convertmarkdown.py
@@ -66,7 +67,7 @@ Examples
 Assignments
 
 - fix shell scripts too for exam-and-assignment-answers project to use
-  assigment instead of exercise 
+  assignment instead of exercise 
 
 Assignment 3
 
@@ -139,7 +140,8 @@ General TO DO
     - **Needed for teaching**
 
 - Exam and Assignment Answers, separate git project
-  (goes on L drive, FOUO stuff)
+  (goes on L drive, FOUO stuff, ONLY answers)
+    - assignment1/test.js sourced from website/assignment1
     - exam-and-assignment-answers dir
     - zip-exam-and-assignment-answers.py
     - exam-and-assignment-answers.zip
