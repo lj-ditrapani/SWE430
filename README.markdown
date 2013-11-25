@@ -3,6 +3,14 @@ WIP
 
 example 1
 
+
+Flow
+=====
+
+- generatetesthtml.py
+- copy example test.html & blank code.js/test.js to website/example
+- copy qunit to proper dirs?  To run example? To run assignment answers?
+
 TO DO
 ========================================================================
 
@@ -66,8 +74,6 @@ Assignment 3
 
 Tools and scripts
 
-- Fixed! `Lib/zip_website.py` 
-  did not generate valid zip file with jython, but ok with cpython
 - Rewrite .sh scripts into python scripts, put in Lib
   (mostly zip, unzip, cp, and delete files)
     - Test with jython.
