@@ -13,13 +13,15 @@ Flow
     - load-exercise-answers-dependencies.sh (combine with next line)
     - copy example test.html & blank code.js/test.js to website/example
     - copy qunit to proper dirs?  To run examples & assignment answers?
-    - copy website/assignment1/test.js to EAA/assignment1/test.js
-- do work
+    - copy assignment1-dev/test.js to EAA/assignment1/test.js
+- # do work
+- # Ready to teach class
 - create-zip-env
 - convertmarkdown.py
-- Deploy
-- `zip_website.py`
-- save FOUO stuff
+- # Deploy
+- `zip_website.py` -> SWE430.zip
+- # Put SWE430.zip on blackboard
+- save FOUO stuff for future
 - `zip_exam_and_assignment_answers.py`
 
 
