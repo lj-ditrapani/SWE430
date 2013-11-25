@@ -21,7 +21,7 @@ Flow
 - # Deploy
 - `zip_website.py` -> SWE430.zip
 - # Put SWE430.zip on blackboard
-- save FOUO stuff for future
+- # save FOUO stuff for future
 - `zip_exam_and_assignment_answers.py`
 
 

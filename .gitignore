@@ -61,6 +61,12 @@
 /student-dev-tools/example1-test.html
 /student-dev-tools/example2-test.html
 
+# Files copied from other tracked sources (Lib/copy_files)
+/website/example1/code.js
+/website/example1/example1-test.html
+/website/example1/qunit.css
+/website/example1/qunit.js
+
 # TODO!!
 # Should delete because all art is for
 #   example 1 (should be completely revamped)
