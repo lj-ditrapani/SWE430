@@ -7,9 +7,20 @@ example 1
 Flow
 =====
 
+- Get and unzip `SWE430-exam-and-assignment-answers.zip`
 - generatetesthtml.py
-- copy example test.html & blank code.js/test.js to website/example
-- copy qunit to proper dirs?  To run example? To run assignment answers?
+- Copy files to locations
+    - load-exercise-answers-dependencies.sh (combine with next line)
+    - copy example test.html & blank code.js/test.js to website/example
+    - copy qunit to proper dirs?  To run examples & assignment answers?
+- do work
+- create-zip-env
+- convertmarkdown.py
+- Deploy
+- `zip_website.py`
+- save FOUO stuff
+- `zip_exam_and_assignment_answers.py`
+
 
 TO DO
 ========================================================================
@@ -79,9 +90,7 @@ Tools and scripts
     - Test with jython.
 - shell scripts to convert to python and put under Lib:
     - load-exercise-answers-dependencies.sh
-    - zip-student-evironments.sh
     - zip-support.sh
-    - zip-tool.sh
 - Update packaging scripts (additional support libs; see .gitignore)
 - integrate studend-dev-tools/generate.py into batch file ...
     - generate everytime you do something (part of convertmarkdown.bat?)
@@ -132,12 +141,13 @@ General TO DO
 - Exam and Assignment Answers, separate git project
   (goes on L drive, FOUO stuff)
     - exam-and-assignment-answers dir
-    - zip-exam-and-assignment-answers.sh
+    - zip-exam-and-assignment-answers.py
     - exam-and-assignment-answers.zip
     - load-assignment-dependencies.sh  copy dependencies of
       assignment answers (exercis-tests.html, qunit.js, qunit.css)
       answers into assignment answer folders
     - **Needed for teaching**
+    - **Needed for dev**
 
 - Support:  SWE430-support.zip zip-support.sh
 (SWE430-support.zip goes on L drive, scripts on github)
