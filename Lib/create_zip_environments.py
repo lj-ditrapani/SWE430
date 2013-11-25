@@ -14,8 +14,7 @@ def create_zip_environment(name):
         test_js = join(WEB, name, 'test.js')
     elif name == 'assignment1':
         # Assignment 1 uses a predifned test.js file
-        EAA = 'exam-and-assignment-answers'
-        test_js = join(EAA, name, 'test.js')
+        test_js = join('assignment1-dev', 'test.js')
     else:
         # All others use blank test file
         test_js = join(SDT, 'test.js')
