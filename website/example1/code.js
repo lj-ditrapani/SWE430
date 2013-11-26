@@ -1,6 +1,9 @@
-/** Author:  Lyall Jonathan Di Trapani =================================
+/**
+ * Author:  Lyall Jonathan Di Trapani =================================
  * Example 1 Production Code
- **/
+ * The stringStat module contains functions counting the number of
+ * a specified type of character present in a string.
+ */
 
 /*jslint browser: true */
 (function() {
@@ -11,7 +14,7 @@
 
 
     function countCharacters(string, predicate) {
-        var i, code, count = 0;
+        var i, count = 0;
         for (i = 0; i < string.length; i += 1) {
             if (predicate(string.charCodeAt(i))) {
                 count += 1;
@@ -51,7 +54,7 @@
         }
         return countCharacters(string, predicate);
     };
-    
+
 
     window.stringStat = stringStat;
 

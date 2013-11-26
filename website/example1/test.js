@@ -1,6 +1,7 @@
-/** Author:  Lyall Jonathan Di Trapani =================================
+/**
+ * Author:  Lyall Jonathan Di Trapani =================================
  * Example 1 Test Code
- **/
+ */
 
 /*global test,equal,stringStat*/
 (function() {
@@ -41,7 +42,7 @@
 
 
     test('Count control characters', function() {
-        var i, pair, tests = [
+        var tests = [
             ['abc\u0003\u007F\u0000de', 3],
             ['\u0000\u0010abc', 2],
             ['abc\u001F', 1],
@@ -52,7 +53,7 @@
 
 
     test('Count Non-ASCII characters', function() {
-        var i, pair, tests = [
+        var tests = [
             ['abc\u00FF\u2660\u0000\uFFFFde', 3],
             ['\u00FF\u007F\u0080abc', 2],
             ['abc\u0080', 1],
