@@ -6,19 +6,26 @@
 (function() {
     'use strict';
 
+
+    function runTests(functionName, tests) {
+        var i, pair;
+        for (i = 0; i < tests.length; i += 1) {
+            pair = tests[i];
+            equal(stringStat[functionName](pair[0]), pair[1]);
+        }
+    }
+
+
     test('Count upper-case characters', function() {
-        var i, pair, tests = [
+        var tests = [
             ['abcDEFgHI', 5],
             ['ABcDe', 3],
             ['abcD', 1],
             ['abcde', 0]
         ];
-        for (i = 0; i < tests.length; i += 1) {
-            pair = tests[i];
-            equal(stringStat.countUpperCaseLetters(pair[0]), pair[1]);
-        }
-        
+        runTests('countUpperCaseLetters', tests);
     });
+
 
     test('Count control characters', function() {
         var i, pair, tests = [
@@ -27,10 +34,8 @@
             ['abc\u001F', 1],
             ['abcde', 0]
         ];
-        for (i = 0; i < tests.length; i += 1) {
-            pair = tests[i];
-            equal(stringStat.countControlCharacters(pair[0]), pair[1]);
-        }
+        runTests('countControlCharacters', tests);
     });
+
 
 }());
