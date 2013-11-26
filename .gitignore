@@ -82,15 +82,7 @@
 /assignment1-dev/qunit.js
 
 # TODO!!
-# Should delete because all art is for
-#   example 1 (should be completely revamped)
-#   or
-#   example 2 (moving to SWE 450)
-/art
-
-# TODO!!
 # Delete or integrate
 /check-html.sh
-/coffeescript-windows-master.zip
 /possible_roman_decimal.js
 /website/old-example1/
