@@ -1,5 +1,5 @@
 Assignment 1
-=====================================================================================================
+========================================================================
 
 - [Assignment 1 zip Environment](assignment1.zip)
 - [Assignment 1 jsbin Environment][jsbin assignment 1]
