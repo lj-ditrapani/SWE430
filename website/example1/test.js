@@ -51,4 +51,16 @@
     });
 
 
+    test('Count Non-ASCII characters', function() {
+        var i, pair, tests = [
+            ['abc\u00FF\u2660\u0000\uFFFFde', 3],
+            ['\u00FF\u007F\u0080abc', 2],
+            ['abc\u0080', 1],
+            ['abcde', 0],
+            ['\u0000abcde\u007F\u0000', 0]
+        ];
+        runTests('countNonASCIICharacters', tests);
+    });
+
+
 }());

@@ -43,8 +43,17 @@
         }
         return countCharacters(string, predicate);
     };
+
+
+    stringStat.countNonASCIICharacters = function(string) {
+        function predicate(code) {
+            return code >= 0x80;
+        }
+        return countCharacters(string, predicate);
+    };
     
 
     window.stringStat = stringStat;
+
 
 }());
