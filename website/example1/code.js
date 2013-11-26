@@ -8,6 +8,19 @@
 
     var stringStat = {};
 
+    stringStat.countUpperCaseLetters = function(string) {
+        var i, code, count = 0;
+        for (i = 0; i < string.length; i += 1) {
+            code = string.charCodeAt(i);
+            if (code >= 65 && code <= 90) {
+                count += 1;
+            }
+        }
+        return count;
+    };
+
+    
+
     stringStat.countControlCharacters = function(string) {
         var i, code, count = 0;
         for (i = 0; i < string.length; i += 1) {
