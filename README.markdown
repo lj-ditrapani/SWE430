@@ -7,6 +7,7 @@ example 1
 Flow
 =====
 
+- Get and unzip `SWE430-support.zip`
 - Get and unzip `SWE430-exam-and-assignment-answers.zip`
 - generatetesthtml.py
 - Copy files to locations
@@ -153,9 +154,9 @@ General TO DO
     - **Needed for teaching**
     - **Needed for dev**
 
-- Support:  SWE430-support.zip zip-support.sh
+- Support:  SWE430-support.zip `zip_support.py`
 (SWE430-support.zip goes on L drive, scripts on github)
-zip-support.sh
+`zip_support.py`
     - for 3rd party libraries, .pdf, .png files
     - .gitignore support files
     - zip files into SWE430-support.zip and put on shared L drive and 
