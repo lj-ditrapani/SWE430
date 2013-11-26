@@ -127,6 +127,15 @@ General TO DO
     - `possible_roman_decimal.js`
     - website/old-example1
 
+Low-priority
+
+- Load code.js and test.js increments on the page 
+    - When convertmarkdown.py runs, transform special div tags into
+      container with code, prettyprint, make invisible, and provide
+      "show code" button.
+- Provide "run tests" button for each "show code" button to run the
+  actual tests
+
 
 4 parts to project
 -------------------
