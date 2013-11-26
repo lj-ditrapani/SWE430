@@ -28,7 +28,14 @@
         return countCharacters(string, predicate);
     };
 
-    
+
+    stringStat.countLowerCaseLetters = function(string) {
+        function predicate(code) {
+            return code >= 97 && code <= 122;
+        }
+        return countCharacters(string, predicate);
+    };
+
 
     stringStat.countControlCharacters = function(string) {
         function predicate(code) {
