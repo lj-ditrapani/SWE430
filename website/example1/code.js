@@ -6,31 +6,37 @@
 (function() {
     'use strict';
 
+
     var stringStat = {};
 
-    stringStat.countUpperCaseLetters = function(string) {
+
+    function countCharacters(string, predicate) {
         var i, code, count = 0;
         for (i = 0; i < string.length; i += 1) {
-            code = string.charCodeAt(i);
-            if (code >= 65 && code <= 90) {
+            if (predicate(string.charCodeAt(i))) {
                 count += 1;
             }
         }
         return count;
+    }
+
+
+    stringStat.countUpperCaseLetters = function(string) {
+        function predicate(code) {
+            return code >= 65 && code <= 90;
+        }
+        return countCharacters(string, predicate);
     };
 
     
 
     stringStat.countControlCharacters = function(string) {
-        var i, code, count = 0;
-        for (i = 0; i < string.length; i += 1) {
-            code = string.charCodeAt(i);
-            if (code <= 0x1F || code === 0x7F) {
-                count += 1;
-            }
+        function predicate(code) {
+            return code <= 0x1F || code === 0x7F;
         }
-        return count;
+        return countCharacters(string, predicate);
     };
+    
 
     window.stringStat = stringStat;
 
