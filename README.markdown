@@ -1,7 +1,40 @@
-WIP
-====
+4 parts to project
+========================================================================
 
-example 1
+- Git project: on github and SWE430-source.zip from github on L drive
+  All source files (except FOUO stuff, 3rd party stuff, and media)
+    - **Needed for dev**
+
+- Release: website dir
+    - `zip_website.py` to create release SWE430.zip
+    - put SWE430.zip on ditrapani.info/resources & L drive
+    - This .zip file is loaded right on blackboard
+    - .zip file contains everything but the FOUO stuff
+    - **Needed for teaching**
+
+- Exam and Assignment Answers, separate git project
+  (goes on L drive, FOUO stuff, ONLY answers)
+    - assignment1/test.js sourced from website/assignment1
+    - exam-and-assignment-answers dir
+    - `zip_exam_and_assignment_answers.py`
+    - exam-and-assignment-answers.zip
+    - `create_dev_environments.py`  copy dependencies of
+      assignment answers (exercis-tests.html, qunit.js, qunit.css)
+      answers into assignment answer folders
+    - **Needed for teaching**
+    - **Needed for dev**
+
+- Support:  SWE430-support.zip `zip_support.py`
+  (SWE430-support.zip goes on L drive, script on github)
+  `zip_support.py`
+    - support files added to .gitignore 
+    - zip files into SWE430-support.zip and put on shared L drive and 
+      served from ditrapani.info
+    - for 3rd party libraries, .pdf, .png files
+    - media files (images, books, videos)
+    - binary art sources (dia, gimp)
+    - immutable libraries (qunit.js qunit.css)
+    - **Needed for dev**
 
 
 Flow
@@ -9,21 +42,23 @@ Flow
 
 - Get and unzip `SWE430-support.zip`
 - Get and unzip `SWE430-exam-and-assignment-answers.zip`
-- generatetesthtml.py
-- Copy files to locations
-    - load-exercise-answers-dependencies.sh (combine with next line)
-    - copy example test.html & blank code.js/test.js to website/example
-    - copy qunit to proper dirs?  To run examples & assignment answers?
-    - copy assignment1-dev/test.js to EAA/assignment1/test.js
-- # do work
+- `generatetesthtml.py`
+- Copy files to locations with `create_dev_environments.py`
+- # do work (modify markdown files, code examples, assignments) ...
 - # Ready to teach class
-- create-zip-env
-- convertmarkdown.py
+- `create_zip_env.py` to zip up example and assignment environments
+- `convertmarkdown.py` to generate html files
 - # Deploy
 - `zip_website.py` -> SWE430.zip
 - # Put SWE430.zip on blackboard
 - # save FOUO stuff for future
 - `zip_exam_and_assignment_answers.py`
+
+
+WIP
+====
+
+example 1
 
 
 TO DO
@@ -115,12 +150,6 @@ General TO DO
   info to include (questions, problems, ..)
 - Ensure all files are set ff=dos
 - Remove references to refactoring example and exercise
-- make a survey for 330/430 asking how many hours for each
-    - learn javascript/qunit
-    - lesson
-    - example
-    - assignment
-    - exam
 - Delete or integrate extra files being ignored
     - art
     - coffeescript-windows
@@ -135,45 +164,13 @@ Low-priority
       "show code" button.
 - Provide "run tests" button for each "show code" button to run the
   actual tests
+- make a survey for 330/430 asking how many hours for each
+    - learn javascript/qunit
+    - lesson
+    - example
+    - assignment
+    - exam
 
-
-4 parts to project
--------------------
-
-- Git project: (goes on github and a SWE430-source.zip on L drive)
-  All source files (except FOUO stuff, 3rd party stuff, and media)
-    - **Needed for dev**
-
-- Release: website dir
-    - zip-website.sh to create release SWE430.zip
-    - put SWE430.zip on ditrapani.info/resources & L drive
-    - This .zip file is loaded right on blackboard
-    - .zip file contains everything but the FOUO stuff
-    - **Needed for teaching**
-
-- Exam and Assignment Answers, separate git project
-  (goes on L drive, FOUO stuff, ONLY answers)
-    - assignment1/test.js sourced from website/assignment1
-    - exam-and-assignment-answers dir
-    - zip-exam-and-assignment-answers.py
-    - exam-and-assignment-answers.zip
-    - load-assignment-dependencies.sh  copy dependencies of
-      assignment answers (exercis-tests.html, qunit.js, qunit.css)
-      answers into assignment answer folders
-    - **Needed for teaching**
-    - **Needed for dev**
-
-- Support:  SWE430-support.zip `zip_support.py`
-(SWE430-support.zip goes on L drive, scripts on github)
-`zip_support.py`
-    - for 3rd party libraries, .pdf, .png files
-    - .gitignore support files
-    - zip files into SWE430-support.zip and put on shared L drive and 
-      served from ditrapani.info
-    - media files (images, books, videos)
-    - binary art sources (dia, gimp)
-    - immutable libraries (qunit.js qunit.css)
-    - **Needed for dev**
 
 
 old notes
