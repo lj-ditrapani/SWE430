@@ -106,6 +106,8 @@ Examples
 
 Assignments
 
+- Explain type signatures?
+
 Assignment 3
 
 - string manipulation functions; provide tutorial
