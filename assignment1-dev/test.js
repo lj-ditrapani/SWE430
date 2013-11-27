@@ -1,7 +1,7 @@
 /**
  * Author:  Lyall Jonathan Di Trapani ==================================
  * Assignment 1
- * basicMath library
+ * Test the basicMath library
  */
 
 
@@ -21,6 +21,22 @@
         equal(basicMath.subtract(0, 0), 0)
         equal(basicMath.subtract(3, 7), -4)
         equal(basicMath.subtract(-12, -15), 3)
+    });
+
+
+    test('Multiply', function() {
+        equal(basicMath.multiply(0, 0), 0)
+        equal(basicMath.multiply(3, 7), 21)
+        equal(basicMath.multiply(9, -4), -36)
+        equal(basicMath.multiply(-2, -5), 10)
+        equal(basicMath.multiply(-6, 1), -6)
+    });
+
+
+    test('Divide', function() {
+        ok(isNaN(basicMath.divide(0, 0)));
+        equal(basicMath.divide(16, 5), 3.2);
+        equal(basicMath.divide(-9, -3), 3);
     });
 
 
