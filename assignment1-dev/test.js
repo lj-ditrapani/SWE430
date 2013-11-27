@@ -11,10 +11,10 @@
 
 
     function runTests(function_name, tests) {
-        var i, pair;
+        var i, triple, result;
         for (i = 0; i < tests.length; i += 1) {
             triple = tests[i];
-            result = basicMath[function_name](triple[0], triple[1])
+            result = basicMath[function_name](triple[0], triple[1]);
             equal(result, triple[2]);
         }
     }
@@ -54,8 +54,13 @@
 
     test('Divide', function() {
         var tests = [
+            [0, 100, 0],
+            [7, 1, 7],
+            [1, 8, 0.125],
             [16, 5, 3.2],
-            [-9, -3, 3]
+            [7, -2, -3.5],
+            [-9, -3, 3],
+            [-6, 12, -0.5]
         ];
         ok(isNaN(basicMath.divide(0, 0)));
         runTests('divide', tests);
