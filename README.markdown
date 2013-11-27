@@ -94,18 +94,17 @@ Instructions
 Examples
 
 - Give checkpoints in the examples (complete code so far) so students
-  know where they are
+  know where they are.
+  Provide links to e.g. code01.js code02.js code03.js ...
 - New examples (1 and 2)
 - ex 1 is write code against finished tests
 - ex 2 is full-blow TDD
 - Make video screen cast for Example 1
+- Make video screen cast for Assignment 1
 - Make video screen cast for Example 2?
 - Grab ideas from example 1.1, 1.2 and 2 from 430 13B
 
 Assignments
-
-- fix shell scripts too for exam-and-assignment-answers project to use
-  assignment instead of exercise 
 
 Assignment 3
 
@@ -124,25 +123,19 @@ Assignment 3
 
 Tools and scripts
 
-- Rewrite .sh scripts into python scripts, put in Lib
-  (mostly zip, unzip, cp, and delete files)
-    - Test with jython.
-- shell scripts to convert to python and put under Lib:
-    - load-exercise-answers-dependencies.sh
-    - zip-support.sh
-- Update packaging scripts (additional support libs; see .gitignore)
-- integrate studend-dev-tools/generate.py into batch file ...
-    - generate everytime you do something (part of convertmarkdown.bat?)
-    - generate once in a pre-dev set-up script
-- use new ljd-utils.js (no need so far...used in old example1.1)
-- Could write jshint and jslint launcher in python script?
-    - `check_js.bat` calls `check_js.js` which checks all js files
-- jsfiddle.net codepen.io ???
-- use HAML, SASS, and/or LESS?  Other templating?
-- git rm pyunziptest.py once unzipping scripts complete
+- Combine `generatetesthtml` and `create_dev_environments` into init
+- Combine into deploy:
+    - `create_zip_env.py`
+    - `convertmarkdown.py`
+    - `zip_website.py`
+    - `zip_exam_and_assignment_answers.py`
+- Delete ljd-utils.js???
+- Could write `check_html.js`
+    - `check_html.bat` calls `check_html.js` which checks all html files
 - convert jshint, jslint to py/batch
-- convert-markdown.bat integrate into ui.py?
+- Create ui.py to 1) init env and 2) deploy 3) lint check
 - clean git ls-files
+- Update jsbins
 
 General TO DO
 
@@ -151,8 +144,7 @@ General TO DO
 - Ensure all files are set ff=dos
 - Remove references to refactoring example and exercise
 - Delete or integrate extra files being ignored
-    - art
-    - coffeescript-windows
+    - Lib/check-html.sh
     - `possible_roman_decimal.js`
     - website/old-example1
 
@@ -164,6 +156,8 @@ Low-priority
       "show code" button.
 - Provide "run tests" button for each "show code" button to run the
   actual tests
+- jsfiddle.net codepen.io ???
+- use HAML, SASS, and/or LESS?  Other templating?
 - make a survey for 330/430 asking how many hours for each
     - learn javascript/qunit
     - lesson
