@@ -22,6 +22,16 @@
     }
 
 
+    test('Replace Two Characters', function() {
+        var f = roman.replaceTwoCharacters;
+        equal(f('a', 'fg', 'WX'), 'a');
+        equal(f('abcde', 'fg', 'WX'), 'abcde');
+        equal(f('abcde', 'ab', 'WX'), 'WXcde');
+        equal(f('abcde', 'cd', 'WXY'), 'abWXYe');
+        equal(f('abcde', 'de', 'WXYZ'), 'abcWXYZ');
+    });
+
+
     test('Rewrite function', function() {
         var tests = [
             ['IV', 'IIII'],
