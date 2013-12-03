@@ -9,18 +9,23 @@
     'use strict';
 
 
-    test('I -> 1', function() {
-        equal(roman.toDecimal('I'), 1);
-    });
+    function runTests(tests) {
+        var i, pair, label;
+        for (i = 0; i < tests.length; i += 1) {
+            pair = tests[i];
+            label = pair[0] + ' -> ' + pair[1];
+            equal(roman.toDecimal(pair[0]), pair[1], label);
+        }
+    }
 
 
-    test('V -> 5', function() {
-        equal(roman.toDecimal('V'), 5);
-    });
-
-
-    test('X -> 10', function() {
-        equal(roman.toDecimal('X'), 10);
+    test('Individual Roman Numerals', function() {
+        var tests = [
+            ['I', 1],
+            ['V', 5],
+            ['X', 10]
+        ];
+        runTests(tests);
     });
 
 
