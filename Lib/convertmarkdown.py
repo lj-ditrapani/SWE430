@@ -10,7 +10,7 @@ IO_PARAMS = dict(encoding='ascii', newline='\r\n')
 
 
 def main(file_name):
-    print '\n\n============ converting', file_name, '============\n\n'
+    # print '\n\n============ converting', file_name, '============\n\n'
     tree = init_tree()
     html = tree.getroot()
     body = markdown_2_html_body(file_name)
