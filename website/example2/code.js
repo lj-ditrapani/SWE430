@@ -21,6 +21,33 @@
     };
 
 
+    function replaceTwoCharacters(string, twoCharacters, replacement) {
+        var index = string.indexOf(twoCharacters);
+        if (index === -1) {
+            return string;
+        }
+        return string.slice(0, index) + replacement +
+               string.slice(index + 2, string.length);
+    }
+
+
+    function rewrite(romanNumerals) {
+        var i, subtractivePairs, replacements;
+        subtractivePairs = [
+            'IV', 'IX', 'XL', 'XC', 'CD', 'CM'
+        ];
+        replacements = [
+            'IIII', 'VIIII', 'XXXX', 'LXXXX', 'CCCC', 'DCCCC'
+        ];
+        for (i = 0; i < subtractivePairs.length; i += 1) {
+            romanNumerals = replaceTwoCharacters(romanNumerals,
+                                                 subtractivePairs[i],
+                                                 replacements[i]);
+        }
+        return romanNumerals;
+    }
+
+
     function toDecimal(romanNumerals) {
         var i, number = 0;
         for (i = 0; i < romanNumerals.length; i += 1) {
@@ -31,6 +58,7 @@
 
 
     window.roman = {
+        rewrite: rewrite,
         toDecimal: toDecimal
     };
 

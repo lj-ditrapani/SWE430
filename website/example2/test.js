@@ -9,14 +9,39 @@
     'use strict';
 
 
-    function runTests(tests) {
-        var i, pair, label;
+    function runTests(tests, runRewriteTest) {
+        var i, pair, label, functionName = 'toDecimal';
+        if (runRewriteTest) {
+            functionName = 'rewrite';
+        }
         for (i = 0; i < tests.length; i += 1) {
             pair = tests[i];
             label = pair[0] + ' -> ' + pair[1];
-            equal(roman.toDecimal(pair[0]), pair[1], label);
+            equal(roman[functionName](pair[0]), pair[1], label);
         }
     }
+
+
+    test('Rewrite function', function() {
+        var tests = [
+            ['IV', 'IIII'],
+            ['IX', 'VIIII'],
+            ['XL', 'XXXX'],
+            ['XC', 'LXXXX'],
+            ['CD', 'CCCC'],
+            ['CM', 'DCCCC'],
+            ['CDLIX', 'CCCCLVIIII'],
+            ['MCMXIX', 'MDCCCCXVIIII'],
+            ['MCMXX', 'MDCCCCXX'],
+            ['MCMXXI', 'MDCCCCXXI'],
+            ['MMMCDXLIV', 'MMMCCCCXXXXIIII'],
+            ['MMMCDXCIV', 'MMMCCCCLXXXXIIII'],
+            ['MMMDCCCXCVII', 'MMMDCCCLXXXXVII'],
+            ['MMMCMXLIX', 'MMMDCCCCXXXXVIIII'],
+            ['MMMCMXCIX', 'MMMDCCCCLXXXXVIIII']
+        ];
+        runTests(tests, true);
+    });
 
 
     test('Individual Roman Numerals', function() {

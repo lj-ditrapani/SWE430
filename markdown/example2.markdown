@@ -136,14 +136,37 @@ Fails because we have not implemented subtractive rules yet.
 [test08.js](example2/test08.js)
 
 
-Substitution function
+Rewrite function
 ---------------------
 
 Our code works fine if we allow numerals to be repeated 4 times and ignore the Subtractive rules.  Instead of changing our code, let's create a rewrite function that rewrites normal roman numerals by removing subtractive pairs and replacing them by the 4 symbol equivalent.
 
 We start by writing the test.
 
+fail
+
 Now we write the code.
+
+Object doesn't support property or method 'rewrite'
+
+Add rewrite function to roman module
+
+All assertions fail; result is undefined
+
+Create replace two characters function `replaceTwoCharacters`
+If `twoCharacters` is found in string, replace it with `replacement`.
+
+Call `replaceTwoCharacters` six times in rewrite function
+
+pass
+
+Refactor into loop
+
+pass
+
+Refactor the test.  Use existing runTest with second `runRewriteTest` boolean parameter.
+
+pass
 
 [test09.js](example2/test09.js)
 [code09.js](example2/code09.js)
