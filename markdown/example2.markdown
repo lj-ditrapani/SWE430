@@ -92,3 +92,22 @@ Refactor test code
 
 
 [test05.js](example2/test05.js)
+
+
+Finish Individual Roman Numerals test
+-------------------------------------
+
+Failed
+Result is undefined for L, C, D, and M
+
+Add L, C, D, M entries by copying the X entry.
+
+Failed
+Result is 10 for L, C, D, and M
+
+Fix dictionary values
+
+Pass
+
+[code06.js](example2/code06.js)
+[test06.js](example2/test06.js)
