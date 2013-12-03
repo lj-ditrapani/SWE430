@@ -35,7 +35,8 @@ Return 1
 
 Passes
 
-02
+[code02.js](example2/code02.js)
+[test02.js](example2/test02.js)
 
 
 V -> 5 Test
@@ -49,4 +50,24 @@ Use if-else
 
 pass
 
-03
+[code03.js](example2/code03.js)
+[test03.js](example2/test03.js)
+
+
+X -> 10 Test
+------------
+
+Failed
+- expected: 10
+- result: 5
+
+Use if-else
+
+pass
+
+[code04.js](example2/code04.js)
+[test04.js](example2/test04.js)
+
+
+Refactor to use dictionary
+--------------------------

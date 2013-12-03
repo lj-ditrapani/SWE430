@@ -13,8 +13,10 @@
     function toDecimal(romanNumerals) {
         if (romanNumerals === 'I') {
             return 1;
-        } else {
+        } else if (romanNumerals === 'V') {
             return 5;
+        } else {
+            return 10;
         }
     }
 

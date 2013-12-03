@@ -19,4 +19,9 @@
     });
 
 
+    test('X -> 10', function() {
+        equal(roman.toDecimal('X'), 10);
+    });
+
+
 }());
