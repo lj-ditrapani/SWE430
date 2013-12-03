@@ -9,15 +9,12 @@
     'use strict';
 
 
-    function runTests(tests, runRewriteTest) {
-        var i, pair, label, functionName = 'toDecimal';
-        if (runRewriteTest) {
-            functionName = 'rewrite';
-        }
+    function runTests(tests) {
+        var i, pair, label;
         for (i = 0; i < tests.length; i += 1) {
             pair = tests[i];
             label = pair[0] + ' -> ' + pair[1];
-            equal(roman[functionName](pair[0]), pair[1], label);
+            equal(roman.toDecimal(pair[0]), pair[1], label);
         }
     }
 
