@@ -1,5 +1,5 @@
 /**
- * Author:  Lyall Jonathan Di Trapani =================================
+ * Author:  Lyall Jonathan Di Trapani ==================================
  * Example 1 Test Code
  */
 
