@@ -71,3 +71,18 @@ pass
 
 Refactor to use dictionary
 --------------------------
+
+
+        var DICTIONARY = {
+            I: 1,
+            V: 5,
+            X: 10
+        };
+
+
+        function toDecimal(romanNumerals) {
+            return DICTIONARY[romanNumerals];
+        }
+
+[code05.js](example2/code05.js)
+[test05.js](example2/test05.js)

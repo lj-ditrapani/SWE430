@@ -10,14 +10,15 @@
     'use strict';
 
 
+    var DICTIONARY = {
+        I: 1,
+        V: 5,
+        X: 10
+    };
+
+
     function toDecimal(romanNumerals) {
-        if (romanNumerals === 'I') {
-            return 1;
-        } else if (romanNumerals === 'V') {
-            return 5;
-        } else {
-            return 10;
-        }
+        return DICTIONARY[romanNumerals];
     }
 
 
