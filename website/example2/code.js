@@ -10,8 +10,12 @@
     'use strict';
 
 
-    function toDecimal() {
-        return 1;
+    function toDecimal(romanNumerals) {
+        if (romanNumerals === 'I') {
+            return 1;
+        } else {
+            return 5;
+        }
     }
 
 

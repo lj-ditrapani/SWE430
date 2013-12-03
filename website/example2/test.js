@@ -14,4 +14,9 @@
     });
 
 
+    test('V -> 5', function() {
+        equal(roman.toDecimal('V'), 5);
+    });
+
+
 }());
