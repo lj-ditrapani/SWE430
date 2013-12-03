@@ -50,6 +50,7 @@
 
     function toDecimal(romanNumerals) {
         var i, number = 0;
+        romanNumerals = rewrite(romanNumerals);
         for (i = 0; i < romanNumerals.length; i += 1) {
             number += DICTIONARY[romanNumerals[i]];
         }

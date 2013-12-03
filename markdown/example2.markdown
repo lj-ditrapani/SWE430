@@ -181,16 +181,7 @@ pass
 Back to the Rewrite Function
 ----------------------------
 
-Now we write the code.
-
-Object doesn't support property or method 'rewrite'
-
-Add rewrite function to roman module
-
-All assertions fail; result is undefined
-
-Create replace two characters function `replaceTwoCharacters`
-If `twoCharacters` is found in string, replace it with `replacement`.
+Now we write the code for the `rewrite` function using the `replaceTwoCharacters` helper function.
 
 Call `replaceTwoCharacters` six times in rewrite function
 
@@ -206,3 +197,14 @@ pass
 
 [test10.js](example2/test10.js)
 [code10.js](example2/code10.js)
+
+
+Integrate the Rewrite function into the toDecimal function
+----------------------------------------------------------
+
+Integrate the `rewrite` function into the `toDecimal` function to pass the "Subtractive Rules" test.
+
+Pass
+
+[test11.js](example2/test11.js)
+[code11.js](example2/code11.js)
