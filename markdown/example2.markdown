@@ -85,4 +85,10 @@ Refactor to use dictionary
         }
 
 [code05.js](example2/code05.js)
+
+
+Refactor test code
+------------------
+
+
 [test05.js](example2/test05.js)
