@@ -22,7 +22,11 @@
 
 
     function toDecimal(romanNumerals) {
-        return DICTIONARY[romanNumerals];
+        var i, number = 0;
+        for (i = 0; i < romanNumerals.length; i += 1) {
+            number += DICTIONARY[romanNumerals[i]];
+        }
+        return number;
     }
 
 

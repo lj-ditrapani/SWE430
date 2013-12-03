@@ -33,4 +33,20 @@
     });
 
 
+    test('Roman Numeral Stings', function() {
+        var tests = [
+            ['II', 2],
+            ['III', 3],
+            ['VI', 6],
+            ['VIII', 8],
+            ['XII', 12],
+            ['XVII', 17],
+            ['CLXVI', 166],
+            ['MMDCCCLXXXVIII', 2888],
+            ['MMMDCCLXXVII', 3777]
+        ];
+        runTests(tests);
+    });
+
+
 }());

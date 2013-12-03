@@ -113,5 +113,14 @@ Pass
 [code06.js](example2/code06.js)
 
 
-Finish Individual Roman Numerals test
+Roman Numeral String Test
 -------------------------------------
+
+All assertions fail with undefined.  Expected single letter numbers.  We must rewrite the code to handle strings of multiple roman numerals.
+
+Rewrite code to loop through characters and sum values.
+
+Pass
+
+[test07.js](example2/test07.js)
+[code07.js](example2/code07.js)
