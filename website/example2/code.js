@@ -58,6 +58,7 @@
 
 
     window.roman = {
+        replaceTwoCharacters: replaceTwoCharacters,
         rewrite: rewrite,
         toDecimal: toDecimal
     };
