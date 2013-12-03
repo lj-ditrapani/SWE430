@@ -12,8 +12,8 @@ Initial
 
 Initial skeleton, module function wrapper
 
-[code01.js](example2/code01.js)
 [test01.js](example2/test01.js)
+[code01.js](example2/code01.js)
 
 
 I -> 1 Test
@@ -35,8 +35,8 @@ Return 1
 
 Passes
 
-[code02.js](example2/code02.js)
 [test02.js](example2/test02.js)
+[code02.js](example2/code02.js)
 
 
 V -> 5 Test
@@ -50,8 +50,8 @@ Use if-else
 
 pass
 
-[code03.js](example2/code03.js)
 [test03.js](example2/test03.js)
+[code03.js](example2/code03.js)
 
 
 X -> 10 Test
@@ -65,8 +65,8 @@ Use if-else
 
 pass
 
-[code04.js](example2/code04.js)
 [test04.js](example2/test04.js)
+[code04.js](example2/code04.js)
 
 
 Refactor to use dictionary
@@ -109,5 +109,9 @@ Fix dictionary values
 
 Pass
 
-[code06.js](example2/code06.js)
 [test06.js](example2/test06.js)
+[code06.js](example2/code06.js)
+
+
+Finish Individual Roman Numerals test
+-------------------------------------
