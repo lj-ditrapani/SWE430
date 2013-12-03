@@ -22,25 +22,32 @@
     }
 
 
+    test('Replace Two Characters', function() {
+        var f = roman.replaceTwoCharacters;
+        equal(f('a', 'fg', 'WX'), 'a');
+        equal(f('abcde', 'fg', 'WX'), 'abcde');
+        equal(f('abcde', 'ab', 'WX'), 'WXcde');
+        equal(f('abcde', 'cd', 'WXY'), 'abWXYe');
+        equal(f('abcde', 'de', 'WXYZ'), 'abcWXYZ');
+    });
+
+
     test('Rewrite function', function() {
-        var tests = [
-            ['IV', 'IIII'],
-            ['IX', 'VIIII'],
-            ['XL', 'XXXX'],
-            ['XC', 'LXXXX'],
-            ['CD', 'CCCC'],
-            ['CM', 'DCCCC'],
-            ['CDLIX', 'CCCCLVIIII'],
-            ['MCMXIX', 'MDCCCCXVIIII'],
-            ['MCMXX', 'MDCCCCXX'],
-            ['MCMXXI', 'MDCCCCXXI'],
-            ['MMMCDXLIV', 'MMMCCCCXXXXIIII'],
-            ['MMMCDXCIV', 'MMMCCCCLXXXXIIII'],
-            ['MMMDCCCXCVII', 'MMMDCCCLXXXXVII'],
-            ['MMMCMXLIX', 'MMMDCCCCXXXXVIIII'],
-            ['MMMCMXCIX', 'MMMDCCCCLXXXXVIIII']
-        ];
-        runTests(tests, true);
+        equal(roman.rewrite('IV'), 'IIII');
+        equal(roman.rewrite('IX'), 'VIIII');
+        equal(roman.rewrite('XL'), 'XXXX');
+        equal(roman.rewrite('XC'), 'LXXXX');
+        equal(roman.rewrite('CD'), 'CCCC');
+        equal(roman.rewrite('CM'), 'DCCCC');
+        equal(roman.rewrite('CDLIX'), 'CCCCLVIIII');
+        equal(roman.rewrite('MCMXIX'), 'MDCCCCXVIIII');
+        equal(roman.rewrite('MCMXX'), 'MDCCCCXX');
+        equal(roman.rewrite('MCMXXI'), 'MDCCCCXXI');
+        equal(roman.rewrite('MMMCDXLIV'), 'MMMCCCCXXXXIIII');
+        equal(roman.rewrite('MMMCDXCIV'), 'MMMCCCCLXXXXIIII');
+        equal(roman.rewrite('MMMDCCCXCVII'), 'MMMDCCCLXXXXVII');
+        equal(roman.rewrite('MMMCMXLIX'), 'MMMDCCCCXXXXVIIII');
+        equal(roman.rewrite('MMMCMXCIX'), 'MMMDCCCCLXXXXVIIII');
     });
 
 

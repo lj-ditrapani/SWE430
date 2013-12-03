@@ -32,19 +32,6 @@
 
 
     function rewrite(romanNumerals) {
-        var i, subtractivePairs, replacements;
-        subtractivePairs = [
-            'IV', 'IX', 'XL', 'XC', 'CD', 'CM'
-        ];
-        replacements = [
-            'IIII', 'VIIII', 'XXXX', 'LXXXX', 'CCCC', 'DCCCC'
-        ];
-        for (i = 0; i < subtractivePairs.length; i += 1) {
-            romanNumerals = replaceTwoCharacters(romanNumerals,
-                                                 subtractivePairs[i],
-                                                 replacements[i]);
-        }
-        return romanNumerals;
     }
 
 
@@ -58,6 +45,7 @@
 
 
     window.roman = {
+        replaceTwoCharacters: replaceTwoCharacters,
         rewrite: rewrite,
         toDecimal: toDecimal
     };
