@@ -124,3 +124,26 @@ Pass
 
 [test07.js](example2/test07.js)
 [code07.js](example2/code07.js)
+
+
+Subtractive Rules Test
+----------------------
+
+Add a test to ensure subtractive rules are being applied.
+
+Fails because we have not implemented subtractive rules yet.
+
+[test08.js](example2/test07.js)
+
+
+Substitution function
+---------------------
+
+Our code works fine if we allow numerals to be repeated 4 times and ignore the Subtractive rules.  Instead of changing our code, let's create a rewrite function that rewrites normal roman numerals by removing subtractive pairs and replacing them by the 4 symbol equivalent.
+
+We start by writing the test.
+
+Now we write the code.
+
+[test09.js](example2/test09.js)
+[code09.js](example2/code09.js)

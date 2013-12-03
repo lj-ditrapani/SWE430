@@ -49,4 +49,26 @@
     });
 
 
+    test('Subtractive Rules', function() {
+        var tests = [
+            ['IV', 4],
+            ['IX', 9],
+            ['XL', 40],
+            ['XC', 90],
+            ['CD', 400],
+            ['CM', 900],
+            ['CDLIX', 459],
+            ['MCMXIX', 1919],
+            ['MCMXX', 1920],
+            ['MCMXXI', 1921],
+            ['MMMCDXLIV', 3444],
+            ['MMMCDXCIV', 3494],
+            ['MMMDCCCXCVII', 3897],
+            ['MMMCMXLIX', 3949],
+            ['MMMCMXCIX', 3999]
+        ];
+        runTests(tests);
+    });
+
+
 }());
