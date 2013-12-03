@@ -206,5 +206,4 @@ Integrate the `rewrite` function into the `toDecimal` function to pass the "Subt
 
 Pass
 
-[test11.js](example2/test11.js)
 [code11.js](example2/code11.js)
