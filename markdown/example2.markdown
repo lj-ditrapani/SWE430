@@ -133,7 +133,7 @@ Add a test to ensure subtractive rules are being applied.
 
 Fails because we have not implemented subtractive rules yet.
 
-[test08.js](example2/test07.js)
+[test08.js](example2/test08.js)
 
 
 Substitution function
