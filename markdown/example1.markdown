@@ -7,6 +7,7 @@ Create a stringStat module with string inspection functions.
 - [Example 1 jsbin Environment][jsbin example 1]
 
 [jsbin example 1]: http://jsbin.com/swe430_example1/latest/edit?javascript,live
+[ASCII]: http://en.wikipedia.org/wiki/ASCII
 
 
 
@@ -57,7 +58,7 @@ We will start by creating an empty function with the appropriate name attached t
     window.stringStat = stringStat;
 
 Now the "Count upper-case characters" test assertions each fail with an `undefined` result.  Let's fill in the function to take in a string parameter and count the number of upper-case letters found in the string.  The function should initialize a count variable to 0, loop through each character in the string and add one to the count if the character is an upper-case letter.  Looking at the table on the
-[ASCII](http://en.wikipedia.org/wiki/ASCII)
+[ASCII][]
 Wikipedia page, we can see that upper-case characters have code values between 64 and 90 inclusive, so these will be the values we will use to compare the character code value against.
 
     stringStat.countUpperCaseLetters = function(string) {
@@ -101,7 +102,7 @@ The assertions for the "Count lower-case characters" test now all fail with a re
     };
 
 All we had to do to make the code work is is change the two numbers in the `if` statement.  According to the 
-[ASCII](http://en.wikipedia.org/wiki/ASCII)
+[ASCII][]
 table, lower-case characters have code values between 97 and 122 inclusive.  So we just change the 65 to 97 and the 90 to 122 and we are done.
 
 Run the tests again.  Now the first and second tests pass.
@@ -160,7 +161,8 @@ Count Control Characters
 ------------------------
 
 Now that we have refactored the code, we can move on to the 3rd test, "Count control characters".  Looking again at the 
-[ASCII](http://en.wikipedia.org/wiki/ASCII) tables, we see that the ASCII control characters are found in the first 32 ASCI characters (code values 0 through 31 inclusive) and the last (code value 127). 
+[ASCII][]
+tables, we see that the ASCII control characters are found in the first 32 ASCI characters (code values 0 through 31 inclusive) and the last (code value 127). 
 
 We can leverage the `countCharacters` helper function we produced from the previous refactoring to help us write the `countControlCharacters` function.
 
@@ -184,7 +186,7 @@ There is no need to refactor, so we move on.
 Count Non-ASCII Characters
 --------------------------
 
-We only have one failing test left to deal with---the "Count Non-ASCII characters" test.  Any character with a code value above 127 is not an ASCII character.  We can the code for the `countNonASCIICharacters` function in the same way we wrote the code for the other three functions.
+We only have one failing test left to deal with---the "Count Non-ASCII characters" test.  Any character with a code value above 127 is not an ASCII character.  We can write the code for the `countNonASCIICharacters` function in the same way we wrote the code for the other three functions.
 
     stringStat.countNonASCIICharacters = function(string) {
         function predicate(code) {
