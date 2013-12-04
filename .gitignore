@@ -33,53 +33,21 @@
 
 
 # build artifacts
-/SWE430.zip
-/SWE430-source.zip
-/SWE430-support.zip
-/SWE430-exam-and-assignment-answers.zip
-/website/example1.zip
-/website/example2.zip
-/website/assignment1.zip
-/website/assignment2.zip
-/website/assignment3.zip
+*.zip
 /Lib/markdown2.pyc
 /Lib/markdown2$py.class
 
 # Auto-generated html from markdown
-/website/index.html
-/website/syllabus.html
-/website/instructions.html
-/website/jsbin-instructions.html
-/website/zip-instructions.html
-/website/javascript-tutorial.html
-/website/qunit-tutorial.html
-/website/lesson1.html
-/website/lesson2.html
-/website/lesson3.html
-/website/example1.html
-/website/example2.html
-/website/assignment1.html
-/website/assignment2.html
-/website/assignment3.html
+/website/*.html
 
 # Auto-generated html from studend-dev-tools/template-test.html
-/student-dev-tools/assignment1-test.html
-/student-dev-tools/assignment2-test.html
-/student-dev-tools/assignment3-test.html
-/student-dev-tools/example1-test.html
-/student-dev-tools/example2-test.html
-
-# Files copied from other tracked sources (Lib/copy_files)
-/website/example1/example1-test.html
-/website/example1/qunit.css
-/website/example1/qunit.js
-/website/example2/example2-test.html
-/website/example2/qunit.css
-/website/example2/qunit.js
-/assignment1-dev/assignment1-test.html
+# And files copied from other tracked sources
+# (Lib/create_dev_environments.py)
+example*-test.html
+assignment*-test.html
+qunit.css
+qunit.js
 /assignment1-dev/code.js
-/assignment1-dev/qunit.css
-/assignment1-dev/qunit.js
 
 # TODO!!
 # Delete or integrate
