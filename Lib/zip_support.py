@@ -17,12 +17,12 @@ def make_support_zip_file():
         text = gitignore_file.read()
     _, tail = text.split('### Begin: support files ###')
     support_files, _ = tail.split('### End: support files ###')
-    zip_file = zipfile.ZipFile('SWE430-support.zip', 'w', 
+    zip_file = zipfile.ZipFile('SWE430-support.zip', 'w',
                                zipfile.ZIP_DEFLATED)
     for line in support_files.split('\n'):
         handle_line(line, zip_file)
     zip_file.close()
-    
+
 
 def handle_line(line, zip_file):
     '''If line is a file, write to SWE340-support.zip'''

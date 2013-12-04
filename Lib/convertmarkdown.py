@@ -111,7 +111,7 @@ def write_tree(tree, file_name):
 
 
 if __name__ == '__main__':
-    file_names = [
+    file_names = (
         'index',
         'syllabus',
         'instructions',
@@ -127,5 +127,5 @@ if __name__ == '__main__':
         'assignment1',
         'assignment2',
         'assignment3',
-    ]
+    )
     map(main, file_names)
