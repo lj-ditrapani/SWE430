@@ -87,7 +87,7 @@ The next failing test is fails with "`Object doesn't support property or method 
     stringStat.countLowerCaseLetters = function() {
     };
 
-The assertions for the "Count lower-case characters" test now all fail with a result of `undefined`.  Now we can implement the body of the `countLowerCaseLetters` function.  First, we add the string parameter to the function.  The body of the function should be very similar to the `countUpperCaseLetters` function.  So let's copy the code we wrote for `countUpperCaseLetters` and modify it to make it count lower-case letters instead.
+The assertions for the "Count lower-case characters" test now all fail with a result of `undefined`.  Let's implement the body of the `countLowerCaseLetters` function.  First, we add the string parameter to the function.  The body of the function should be very similar to the `countUpperCaseLetters` function.  So let's copy the code we wrote for `countUpperCaseLetters` and modify it to make it count lower-case letters instead.
 
     stringStat.countLowerCaseLetters = function(string) {
         var i, code, count = 0;
@@ -159,9 +159,42 @@ Run the tests one more time.  The first two tests still pass.  We have successfu
 Count Control Characters
 ------------------------
 
+Now that we have refactored the code, we can move on to the 3rd test, "Count control characters".  Looking again at the 
+[ASCII](http://en.wikipedia.org/wiki/ASCII) tables, we see that the ASCII control characters are found in the first 32 ASCI characters (code values 0 through 31 inclusive) and the last (code value 127). 
+
+We can leverage the `countCharacters` helper function we produced from the previous refactoring to help us write the `countControlCharacters` function.
+
+    stringStat.countControlCharacters = function(string) {
+        function predicate(code) {
+            return code <= 31 || code === 127;
+        }
+        return countCharacters(string, predicate);
+    };
+
+Instead of using the "and" boolean operator (`&&`) in the predicate, we instead use the "or" boolean operator (`||`).
+
+Run the tests.  We now see the firs three tests passing.
+
+There is no need to refactor, so we move on.
+
+[code05.js](example1/code05.js)
+
 
 
 Count Non-ASCII Characters
 --------------------------
 
+We only have one failing test left to deal with---the "Count Non-ASCII characters" test.  Any character with a code value above 127 is not an ASCII character.  We can the code for the `countNonASCIICharacters` function in the same way we wrote the code for the other three functions.
 
+    stringStat.countNonASCIICharacters = function(string) {
+        function predicate(code) {
+            return code >= 128;
+        }
+        return countCharacters(string, predicate);
+    };
+
+Run the tests.  Now all tests pass.
+
+There is no need to refactor, so we have completed the example.
+
+[code06.js](example1/code06.js)
