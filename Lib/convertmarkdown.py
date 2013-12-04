@@ -61,7 +61,11 @@ def get_json(file_name):
 def enable_pretty_printing(tree):
     pre_list = tree.findall('body/pre')
     for pre in pre_list:
-        pre.set('class', 'prettyprint')
+        code = pre.find('code')
+        text = code.text
+        pre.clear()
+        pre.text = text
+        pre.set('class', 'prettyprint linenums')
     body = tree.find('body')
     body.set('onload', 'prettyPrint()')
 
