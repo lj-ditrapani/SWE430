@@ -1,7 +1,7 @@
 /**
  * Author:  Lyall Jonathan Di Trapani ==================================
  * Example 1 Production Code
- * The stringStat module contains functions counting the number of
+ * The stringStat module contains functions for counting the number of
  * a specified type of character present in a string.
  */
 
