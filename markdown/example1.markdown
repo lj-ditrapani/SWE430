@@ -197,4 +197,4 @@ Run the tests.  Now all tests pass.
 
 There is no need to refactor, so we have completed the example.
 
-[code06.js](example1/code06.js)
+[final code.js](example1/code.js)
