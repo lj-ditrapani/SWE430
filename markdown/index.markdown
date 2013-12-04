@@ -29,10 +29,10 @@ Answer the three discussion board questions on blackboard. (1 hour)
 - [Tutorial 3: Instructions](instructions.html) for examples and assignments (1 hour)
 
 
-<h3>Running Tests Iteratively (1 hour)</h3>
+<h3>Running Tests (1 hour)</h3>
 
-- [Example 1: Running Tests Iteratively --- String Functions](example1.html) (30 min)
-- [Assignment 1: Running Tests Iteratively --- Math Library](assignment1.html) (30 min)
+- [Example 1: Running Tests --- String Functions](example1.html) (30 min)
+- [Assignment 1: Running Tests --- Math Library](assignment1.html) (30 min)
 
 
 - - - - - -
@@ -43,7 +43,7 @@ Week 2
 <h3>Full-blown TDD (7 hours)</h3>
 
 - [Example 2: TDD from Scratch --- Roman Numerals](example2.html) (4 hours)
-- [Assignment 2: TDD from Scratch --- ?](assignment2.html) (2 hours)
+- [Assignment 2: TDD from Scratch --- Titlize](assignment2.html) (2 hours)
 
 
 - - - - - -
@@ -53,7 +53,7 @@ Week 3
 
 <h3>Capstone Assignment (9 hours)</h3>
 
-- [Assignment 3](assignment3.html) (9 hours)
+- [Assignment 3: Password Checker](assignment3.html) (9 hours)
 
 
 <h3>Exam</h3>
