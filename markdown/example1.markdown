@@ -9,6 +9,7 @@ Create a stringStat module with string inspection functions.
 [jsbin example 1]: http://jsbin.com/swe430_example1/latest/edit?javascript,live
 
 
+
 Initial Boilerplate
 -------------------
 
@@ -38,6 +39,7 @@ So we will follow the advice of the test failure messages and create a stringSta
 Now all four tests fail with the message that the function under test is missing.  Let's start with the first one:  "`Object doesn't support property or method 'countUpperCaseLetters'`".
 
 [code01.js](example1/code01.js)
+
 
 
 Count Upper-case Characters
@@ -76,6 +78,7 @@ Run the tests again.  Now the first test passes.
 [code02.js](example1/code02.js)
 
 
+
 Count Lower-case Characters
 ---------------------------
 
@@ -105,11 +108,58 @@ Run the tests again.  Now the first and second tests pass.
 
 [code03.js](example1/code03.js)
 
-Count Control Characters
-------------------------
+
 
 Refactor Code
 -------------
+
+Before we move on to the next test, we should refactor our code.  You probably know that copying and pasting code is generally a sign of poor design.  The code for our `countLowerCaseLetters` and `countUpperCaseLetters` functions are nearly identical.  We should factor-out the duplicate code into a common helper function both functions can share.
+
+As you have seen, the only difference between the two functions is the criteria used to determine if the current character is one we want to count or not.  So let's call our helper function `countCharacters`.  It will take two parameters, a string and a predicate function.
+
+The predicate function takes a character code value as input and returns a boolean (true or false) value as output.  A return value of true indicates the character should be counted and a return value of false indicates the character should not be counted.
+
+
+    function countCharacters(string, predicate) {
+        var i, count = 0;
+        for (i = 0; i < string.length; i += 1) {
+            if (predicate(string.charCodeAt(i))) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
+Run the tests.  The first two tests still pass, so we don't have any major syntax errors.  Now we rewrite the `countUpperCaseLetters` function to make use of the new `countCharacters` helper function.
+
+    stringStat.countUpperCaseLetters = function(string) {
+        function predicate(code) {
+            return code >= 65 && code <= 90;
+        }
+        return countCharacters(string, predicate);
+    };
+
+The new `countUpperCaseLetters` function simply defines an appropriate predicate function and then calls the `countCharacters` function passing the string and predicate function as parameters.
+
+Run the tests.  The first two tests still pass.  So we haven't broken anything during the refactoring.  No we can refactor the second function using the same process.
+
+    stringStat.countLowerCaseLetters = function(string) {
+        function predicate(code) {
+            return code >= 97 && code <= 122;
+        }
+        return countCharacters(string, predicate);
+    };
+
+Run the tests one more time.  The first two tests still pass.  We have successfully refactored our code; we eliminated duplication, while preserving behavior.
+
+[code04.js](example1/code04.js)
+
+
+
+Count Control Characters
+------------------------
+
+
 
 Count Non-ASCII Characters
 --------------------------
