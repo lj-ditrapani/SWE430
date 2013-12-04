@@ -84,7 +84,5 @@
 # TODO!!
 # Delete or integrate
 /Lib/check-html.sh
-/possible_roman_decimal.js
-/website/old-example1/
-/lint-ex2.sh
-/lint-ex1.sh
+/Lib/lint-ex2.sh
+/Lib/lint-ex1.sh
