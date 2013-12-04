@@ -1,7 +1,7 @@
 /**
  * Author:  Lyall Jonathan Di Trapani ==================================
  * Example 1 Production Code
- * The stringStat module contains functions for counting the number of
+ * The stringInfo module contains functions for counting the number of
  * a specified type of character present in a string.
  */
 
@@ -10,10 +10,10 @@
     'use strict';
 
 
-    var stringStat = {};
+    var stringInfo = {};
 
 
-    window.stringStat = stringStat;
+    window.stringInfo = stringInfo;
 
 
 }());

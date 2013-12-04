@@ -1,7 +1,7 @@
 /**
  * Author:  Lyall Jonathan Di Trapani ==================================
  * Example 1 Production Code
- * The stringStat module contains functions for counting the number of
+ * The stringInfo module contains functions for counting the number of
  * a specified type of character present in a string.
  */
 
@@ -10,10 +10,10 @@
     'use strict';
 
 
-    var stringStat = {};
+    var stringInfo = {};
 
 
-    stringStat.countUpperCaseLetters = function(string) {
+    stringInfo.countUpperCaseLetters = function(string) {
         var i, code, count = 0;
         for (i = 0; i < string.length; i += 1) {
             code = string.charCodeAt(i);
@@ -25,7 +25,7 @@
     };
 
 
-    window.stringStat = stringStat;
+    window.stringInfo = stringInfo;
 
 
 }());

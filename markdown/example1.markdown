@@ -1,7 +1,7 @@
 SWE 430 Example 1 --- Running Tests
 ========================================================================
 
-Create a stringStat module with string inspection functions.
+Create a stringInfo module with string inspection functions.
 
 - [Example 1 zip Environment](example1.zip)
 - [Example 1 jsbin Environment][jsbin example 1]
@@ -22,17 +22,17 @@ First, we write the boilerplate code for the code.js file.
 
     }());
 
-All four tests fail with the same error: `'stringStat' is undefined`.
-So we will follow the advice of the test failure messages and create a stringStat object.
+All four tests fail with the same error: `'stringInfo' is undefined`.
+So we will follow the advice of the test failure messages and create a stringInfo object.
 
     (function() {
         'use strict';
 
 
-        var stringStat = {};
+        var stringInfo = {};
 
 
-        window.stringStat = stringStat;
+        window.stringInfo = stringInfo;
 
 
     }());
@@ -46,22 +46,22 @@ Now all four tests fail with the message that the function under test is missing
 Count Upper-case Characters
 ---------------------------
 
-We will start by creating an empty function with the appropriate name attached to the stringStat object.
+We will start by creating an empty function with the appropriate name attached to the stringInfo object.
 
-    var stringStat = {};
+    var stringInfo = {};
 
 
-    stringStat.countUpperCaseLetters = function() {
+    stringInfo.countUpperCaseLetters = function() {
     };
 
 
-    window.stringStat = stringStat;
+    window.stringInfo = stringInfo;
 
 Now the "Count upper-case characters" test assertions each fail with an `undefined` result.  Let's fill in the function to take in a string parameter and count the number of upper-case letters found in the string.  The function should initialize a count variable to 0, loop through each character in the string and add one to the count if the character is an upper-case letter.  Looking at the table on the
 [ASCII][]
 Wikipedia page, we can see that upper-case characters have code values between 64 and 90 inclusive, so these will be the values we will use to compare the character code value against.
 
-    stringStat.countUpperCaseLetters = function(string) {
+    stringInfo.countUpperCaseLetters = function(string) {
         var i, code, count = 0;
         for (i = 0; i < string.length; i += 1) {
             code = string.charCodeAt(i);
@@ -85,12 +85,12 @@ Count Lower-case Characters
 
 The next failing test is fails with "`Object doesn't support property or method 'countLowerCaseLetters'`" because the `countLowerCaseLetters` function doesn't exist yet.  Let's declare the `countUpperCaseLetters` function now.
 
-    stringStat.countLowerCaseLetters = function() {
+    stringInfo.countLowerCaseLetters = function() {
     };
 
 The assertions for the "Count lower-case characters" test now all fail with a result of `undefined`.  Let's implement the body of the `countLowerCaseLetters` function.  First, we add the string parameter to the function.  The body of the function should be very similar to the `countUpperCaseLetters` function.  So let's copy the code we wrote for `countUpperCaseLetters` and modify it to make it count lower-case letters instead.
 
-    stringStat.countLowerCaseLetters = function(string) {
+    stringInfo.countLowerCaseLetters = function(string) {
         var i, code, count = 0;
         for (i = 0; i < string.length; i += 1) {
             code = string.charCodeAt(i);
@@ -133,7 +133,7 @@ The predicate function takes a character code value as input and returns a boole
 
 Run the tests.  The first two tests still pass, so we don't have any major syntax errors.  Now we rewrite the `countUpperCaseLetters` function to make use of the new `countCharacters` helper function.
 
-    stringStat.countUpperCaseLetters = function(string) {
+    stringInfo.countUpperCaseLetters = function(string) {
         function predicate(code) {
             return code >= 65 && code <= 90;
         }
@@ -144,7 +144,7 @@ The new `countUpperCaseLetters` function simply defines an appropriate predicate
 
 Run the tests.  The first two tests still pass.  So we haven't broken anything during the refactoring.  No we can refactor the second function using the same process.
 
-    stringStat.countLowerCaseLetters = function(string) {
+    stringInfo.countLowerCaseLetters = function(string) {
         function predicate(code) {
             return code >= 97 && code <= 122;
         }
@@ -166,7 +166,7 @@ tables, we see that the ASCII control characters are found in the first 32 ASCI 
 
 We can leverage the `countCharacters` helper function we produced from the previous refactoring to help us write the `countControlCharacters` function.
 
-    stringStat.countControlCharacters = function(string) {
+    stringInfo.countControlCharacters = function(string) {
         function predicate(code) {
             return code <= 31 || code === 127;
         }
@@ -188,7 +188,7 @@ Count Non-ASCII Characters
 
 We only have one failing test left to deal with---the "Count Non-ASCII characters" test.  Any character with a code value above 127 is not an ASCII character.  We can write the code for the `countNonASCIICharacters` function in the same way we wrote the code for the other three functions.
 
-    stringStat.countNonASCIICharacters = function(string) {
+    stringInfo.countNonASCIICharacters = function(string) {
         function predicate(code) {
             return code >= 128;
         }

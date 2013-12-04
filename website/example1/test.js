@@ -3,7 +3,7 @@
  * Example 1 Test Code
  */
 
-/*global test,equal,stringStat*/
+/*global test,equal,stringInfo*/
 (function() {
     'use strict';
 
@@ -12,7 +12,7 @@
         var i, pair;
         for (i = 0; i < tests.length; i += 1) {
             pair = tests[i];
-            equal(stringStat[functionName](pair[0]), pair[1]);
+            equal(stringInfo[functionName](pair[0]), pair[1]);
         }
     }
 
