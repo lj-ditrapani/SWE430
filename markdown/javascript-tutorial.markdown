@@ -13,35 +13,38 @@ All our examples and assignments are in JavaScript.  A quick overview of JavaScr
 <a href="SmoothCoffeeScript.pdf">Smooth CoffeeScript</a>) and
 <a href="http://arcturo.github.io/library/coffeescript/02_syntax.html">The Little Book on CoffeeScript</a> (if link is blocked, you can also read it on Safari Online.)  If you have any questions or run into any problems, please don't hesitate to ask me for help!
 
-Note:  **Everything you need to run CoffeeScript and qUnit is contained within the environment for each example and exercise.  You do not need to install anything.**
+Note:  **Everything you need to run JavaScript and qUnit is contained within the environment for each example and assignment.  You do not need to install anything.**
 
-whitespace
+var
+----
 
-Most programmers use whitespace to give a visual layout to their code.  In CoffeeScript, this idea is taken a step further.  Whitespace is used to define both the visual layout and the syntax of the program.  It makes the code more readable by enforcing consistent layout while eliminating needless syntax tokens  (semicolons, braces, parentheses) already expressed by the layout.
+    var x, y, z;
+    x = 5;
+    y = 'hello';
+    z = [true, false];
 
-From coffeescript.org:
+Arrays
+------
+    
+    var list;
+    // Create a list with []
+    list = [];
+    // You can specify initial values for a list
+    list = ['a', 'b', 'c'];
+    // Use [] to return the value of the list at the given index
+    list[0];                    // Returns 'a'
+    list[1];                    // Returns 'b'
+    list[2];                    // Returns 'c'
+    list.length;                // Returns 3
 
-"First, the basics: CoffeeScript uses significant whitespace to delimit blocks of code."
+Control flow
+------------
 
-    f = (x) -> x * x            # Function defined in-line, compiles ok
-
-    f = (x) ->                  # Function defined with body as sub-block
-        x = 2                   # Proper indentation
-        x + 5                   # Every statement in body lines up
-
-    f = (x) ->                  # Improper indentation
-        x = 2                   # Statements in body must line up
-          x + 5                 # Should be 2 spaces &lt;-
-
-    if good                     # Proper indentation of blocks
-        do_a()                  # if and else line up
+    if good
+        do_a()
     else
         do_b()
 
-    if bad
-        do_a()
-        else                    # Improper indentation, will not compile
-        do_b()
 
 From wikipedia:
 "Coffeescript is very sensitive to whitespace, counting a tab as a single space."
@@ -49,6 +52,7 @@ From wikipedia:
 When writing CoffeeScript, it's best not to use tabs and instead just stick with spaces.  Most text editors and IDEs have a setting to change tabs to spaces.  For example, when I type Tab, my editor inserts 4 spaces instead.
 
 functions
+---------
 
     square = (x) -> x * x       # -> defines a function
     square 3                    # Returns 9
