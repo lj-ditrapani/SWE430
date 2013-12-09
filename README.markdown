@@ -86,6 +86,8 @@ Tutorials
 - for loop (i & sequence length)
 - array and array indexing, push, .length
 - bool, num, string, array, object
+- Update qunit jsbin to JavaScript
+- Change CoffeeScript jsbin to JavaScript
 
 Instructions
 
