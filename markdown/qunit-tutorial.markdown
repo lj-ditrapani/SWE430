@@ -36,7 +36,7 @@ The 'test' function is the core of the qUnit framework.  Each test function defi
         equal(1 + 1, 2);
     });
 
-From now on, we will anonymous functions in our tests because it 
+From now on, we will use anonymous functions in our tests because it 
 is easier and less cluttered
 
 
@@ -111,7 +111,7 @@ deepEqual
 throws
 ------
 
-'throws' is used to assert that a callback throws an exception.  This allows us to test the behavior of our code when things go amiss.
+'throws' is used to assert that a callback throws an error or exception.  This allows us to test the behavior of our code when things go amiss.
 [throws documentation](http://api.qunitjs.com/throws/)
 
     test("Divide by zero", function() {
@@ -165,7 +165,7 @@ Tests can be organized into modules.
 setup
 -----
 
-When using modules, you can factor your common setup code into the module's setup method.
+When using modules, you can factor your common setup code into the module's setup method.  The setup method is defined inside an object as the value of the `setup` attribute.  The object is passed as the second parameter to the `module` function.
 [setup example in module documentation](http://api.qunitjs.com/module/)
 
     module('Module A', {

@@ -86,6 +86,7 @@ Tutorials
 - for loop (i & sequence length)
 - array and array indexing, push, .length
 - bool, num, string, array, object
+- qunit tutorial:  do we need throws or module stuff?
 - Update qunit jsbin to JavaScript
 - Change CoffeeScript jsbin to JavaScript
 
