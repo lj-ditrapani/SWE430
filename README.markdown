@@ -96,19 +96,13 @@ Instructions
 
 Examples
 
-- Give checkpoints in the examples (complete code so far) so students
-  know where they are.
-  Provide links to e.g. code01.js code02.js code03.js ...
-- New examples (1 and 2)
-- ex 1 is write code against finished tests
-- ex 2 is full-blow TDD
 - Make video screen cast for Example 1
-- Make video screen cast for Assignment 1
 - Make video screen cast for Example 2?
 - Grab ideas from example 1.1, 1.2 and 2 from 430 13B
 
 Assignments
 
+- Make video screen cast for Assignment 1
 - Explain type signatures?
 
 Assignment 3
@@ -130,11 +124,10 @@ Tools and scripts
 
 - Combine `generate_test_html` and `create_dev_environments` into init
 - Combine into deploy:
-    - `create_zip_env.py`
     - `convert_markdown.py`
+    - `create_zip_env.py`
     - `zip_website.py`
     - `zip_exam_and_assignment_answers.py`
-- Delete ljd-utils.js???
 - Could write `check_html.js`
     - `check_html.bat` calls `check_html.js` which checks all html files
 - convert jshint, jslint to py/batch
@@ -150,8 +143,8 @@ General TO DO
 - Remove references to refactoring example and exercise
 - Delete or integrate extra files being ignored
     - Lib/check-html.sh
-    - `possible_roman_decimal.js`
-    - website/old-example1
+    - Lib/lint-ex1.sh
+    - Lib/lint-ex2.sh
 
 Low-priority
 
@@ -171,26 +164,17 @@ Low-priority
     - exam
 
 
-
-old notes
-==========
-
-Provide a web-based IDE to eliminate the use of notepad
-Use smaller language (subset of coffeescript, scheme)
-
-
-
 BLACKBOARD
 ============
 
-content collection -> class name
-upload package -> SWE430.zip (overwrite)
-ensure folders have public read permission set
-    or just link to a top level file?
-content collection -> class name -> click on permissions column for
-pertinent file
-Permit Anyone -> read only -> submit
-    -> adds read permission to public group
+- content collection -> class name
+- upload package -> SWE430.zip (overwrite)
+- ensure folders have public read permission set
+  or just link to a top level file?
+- content collection -> class name -> click on permissions column for
+  pertinent file
+- Permit Anyone -> read only -> submit
+  -> adds read permission to public group
 
 Course copy
 -----------
@@ -205,19 +189,22 @@ Users and Group -> Users ->
 Navigation menu
 -------------
 Top left + sign
-    - Tool link:  Announcements and Contacts (in type)
-    - content area:  everything else (emaxs, lessons, assignments,
-      admin info)
+
+- Tool link:  Announcements and Contacts (in type)
+- content area:  everything else (emaxs, lessons, assignments,
+  admin info)
 
 
 Content Area
 ------------------
-Build content -> File -> single link item (html, zip)
-Build content -> Item -> multi-link item + title [+ description]
-    very similar to new page...
-Assessment -> Test:  build an exam; can upload questions in one shot
+
+- Build content -> File -> single link item (html, zip)
+- Build content -> Item -> multi-link item + title [+ description]
+        - very similar to new page...
+- Assessment -> Test:  build an exam; can upload questions in one shot
 using excel tab delimited ASCII text format
 
 Assessment -> do unlimited attempts
-    to grade -> grade center -> view grade details
-    (top right 'v' in assignment box) clear attempt or ignore attempt
+
+- to grade -> grade center -> view grade details
+- (top right 'v' in assignment box) clear attempt or ignore attempt

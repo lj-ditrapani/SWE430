@@ -15,7 +15,6 @@
 /website/css/qunit.css
 /website/js/prettify.js
 /website/js/qunit.js
-/website/js/ljd-utils.js
 
 # Dev Libraries (included in SWE430-support.zip)
 /Lib/markdown2.py
