@@ -85,6 +85,7 @@ Tutorials
 - function definition vs function calling
 - string manipulation functions; provide tutorial
 - array and array indexing, push, .length
+- if else
 - for loop (i & sequence length)
 - qunit tutorial:  do we need throws or module stuff?
 - Update qunit jsbin to JavaScript
