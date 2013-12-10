@@ -1,7 +1,40 @@
 SWE 430 Example 1 --- Running Tests
 ========================================================================
 
-Create a stringInfo module with string inspection functions.
+Before we jump into full-blown TDD, we will start be working through an
+example and an assignment where all the tests are already written.  This
+will introduce you to running tests iteratively and writing code
+incrementally while running your test suite between each increments of
+code.
+
+In this example, we will create a `stringInfo` module with the following
+four string inspection functions.
+
+<table class="functions">
+<tr>
+<th>Function Name</th><th>Input</th><th>Output</th>
+</tr>
+<tr>
+<td>countUpperCaseLetters</td>
+<td>String</td>
+<td>Number of ASCII upper-case characters.</td>
+</tr>
+<tr>
+<td>countLowerCaseLetters</td>
+<td>String</td>
+<td>Number of ASCII lower-case characters.</td>
+</tr>
+<tr>
+<td>countControlCharacters</td>
+<td>String</td>
+<td>Number of ASCII control characters in the input string.</td>
+</tr>
+<tr>
+<td>countNonASCIICharacters</td>
+<td>String</td>
+<td>Number of non-ASCII characters in the input string.</td>
+</tr>
+</table>
 
 - [Example 1 zip Environment](example1.zip)
 - [Example 1 jsbin Environment][jsbin example 1]
