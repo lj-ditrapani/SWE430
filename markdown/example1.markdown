@@ -39,6 +39,9 @@ four string inspection functions.
 - [Example 1 zip Environment](example1.zip)
 - [Example 1 jsbin Environment][jsbin example 1]
 
+For a refresher on using the above environments, see the 
+[Environment Instructions](instructions.html).
+
 [jsbin example 1]: http://jsbin.com/swe430_example1/latest/edit?javascript,live
 [ASCII]: http://en.wikipedia.org/wiki/ASCII
 
