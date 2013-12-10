@@ -42,12 +42,12 @@ Flow
 
 - Get and unzip `SWE430-support.zip`
 - Get and unzip `SWE430-exam-and-assignment-answers.zip`
-- `generatetesthtml.py`
+- `generate_test_html.py`
 - Copy files to locations with `create_dev_environments.py`
 - # do work (modify markdown files, code examples, assignments) ...
 - # Ready to teach class
 - `create_zip_env.py` to zip up example and assignment environments
-- `convertmarkdown.py` to generate html files
+- `convert_markdown.py` to generate html files
 - # Deploy
 - `zip_website.py` -> SWE430.zip
 - # Put SWE430.zip on blackboard
@@ -128,10 +128,10 @@ Assignment 3
 
 Tools and scripts
 
-- Combine `generatetesthtml` and `create_dev_environments` into init
+- Combine `generate_test_html` and `create_dev_environments` into init
 - Combine into deploy:
     - `create_zip_env.py`
-    - `convertmarkdown.py`
+    - `convert_markdown.py`
     - `zip_website.py`
     - `zip_exam_and_assignment_answers.py`
 - Delete ljd-utils.js???
@@ -156,7 +156,7 @@ General TO DO
 Low-priority
 
 - Load code.js and test.js increments on the page 
-    - When convertmarkdown.py runs, transform special div tags into
+    - When `convert_markdown.py` runs, transform special div tags into
       container with code, prettyprint, make invisible, and provide
       "show code" button.
 - Provide "run tests" button for each "show code" button to run the
