@@ -77,15 +77,15 @@ Tutorials
 - Make javascript tutorial
 - Grab tutorial (and lessons) from 499 course and integrate into
   Lesson 1 and 2
-- string manipulation functions; provide tutorial
+- var declaration
+- bool, num, string, array, object
+- comparisons `> < >= <= ===`
+- not (!) operator (&& || ?)
 - function, function parameters & return
 - function definition vs function calling
-- var declaration
-- comparisons `> < >= <= ===`
-- not (!) operator
-- for loop (i & sequence length)
+- string manipulation functions; provide tutorial
 - array and array indexing, push, .length
-- bool, num, string, array, object
+- for loop (i & sequence length)
 - qunit tutorial:  do we need throws or module stuff?
 - Update qunit jsbin to JavaScript
 - Change CoffeeScript jsbin to JavaScript
@@ -134,6 +134,8 @@ Tools and scripts
 - Create ui.py to 1) init env and 2) deploy 3) lint check
 - clean git ls-files
 - Update jsbins
+
+Exam: Exam covers lessons 1-3, include study guide?
 
 General TO DO
 
