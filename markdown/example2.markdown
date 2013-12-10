@@ -500,7 +500,7 @@ Refactor the test.  Use existing runTest with second `runRewriteTest` boolean pa
 
 pass
 
-[test10.js](example2/test10.js)
+[final test.js](example2/test.js)
 [code10.js](example2/code10.js)
 
 
@@ -521,4 +521,4 @@ Integrate the `rewrite` function into the `toDecimal` function to pass the "Subt
 
 Pass
 
-[code11.js](example2/code11.js)
+[final code.js](example2/code.js)
