@@ -64,6 +64,10 @@ example 1
 TO DO
 ========================================================================
 
+Syllabus
+
+- Missing objective???  How to update?
+
 Lessons
 
 - Add javascript style standards to lesson 1

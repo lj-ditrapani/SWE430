@@ -1,34 +1,31 @@
 SWE 430 Syllabus
 ========================================================================
 
+
 Welcome!
 --------
 
-Welcome to SWE 430: Software Construction!  I am happy to have you in my class.  This offering presents all new material that centers on modern software construction best practices such as test-driven development, automated unit testing, and refactoring.  The content will be more technical than you may be used to from previous SWE offerings.  The format of the course takes a hands-on approach, focusing on examples and exercises.  I hope you enjoy the course as much as I have enjoyed developing the content!
+Welcome to SWE 430: Software Implementation!  I am happy to have you in my class.  This offering presents new material that centers on modern software implementation best practices such as test-driven development, automated unit testing, and refactoring.  The content will be more technical than you may be used to from previous SWE offerings.  The format of the course takes a hands-on approach, focusing on examples and assignments.  I hope you enjoy the course as much as I have enjoyed developing the content!
 
-The first half of the course presents a lesson focusing on TDD and unit testing, an example applying the concepts of the lesson, and a graded exercise where the student applies what he or she has learned.  The second half of the course has lessons on refactoring, tools and standards.  Like the first half of the course, there is an accompanying example and exercise.  There will be a final exam at the end of the course.  The majority of the time you spend on the class will be in working through the examples and the exercises.
+The first week of the course lays the necessary conceptual foundations.  You will read 3 lessons, answer 3 discussion board questions, and accomplish 3 tutorials.  The week ends with a short example and assignment on running tests iteratively and coding incrementally which will prepare you for full-blow test-driven development.
+
+
+In the second week, you will work through an example of TDD and then complete a short TDD assignment.  The TDD example provides a concrete instantiation of the concepts you learned in week 1 and the assignment gives you the opportunity to apply the concepts on your own.
+
+The final week allows you to apply all that you have learned in a capstone TDD assignment and concludes with a final exam.
+
+The majority of the time you spend on the class will be in working through the two examples and the three assignments.
+
 
 Where to Start?
 ---------------
 
 Flow of the course:
 
-- Start by posting an introduction of yourself on the discussion board.
-- Read through 
-    <a href="lesson1/tdd.html">Lesson 1:  TDD and Unit Testing</a>.
-- Next, read the <a href="instructions.html">Instructions</a> for working through the examples and exercises.
-- Then learn about CoffeeScript and qUnit in the <a href="tutorial.html">tutorial</a>.
-- Now you are ready for your first example.  Grab the Example 1 Environment
-(<a href="430/example1/example1.zip">zip</a>, 
-<a href="http://jsbin.com/swe430_example1/latest/edit?javascript,live">
-jsbin</a>) 
-and start working through <a href="430/example1.1.html">Example 1.1</a>.  If you would like additional instruction, <a href="430/example1.2.html">Example 1.2</a> is also available.  Example 1.2 is optional.
-- With the lesson and example under your belt, you should have no problems completing <a href="430/exercise1.html">Exercise 1</a> with the associated Environment
-(<a href="430/exercise1.zip">zip</a>,
-<a href="http://jsbin.com/swe430_exercise1/latest/edit?javascript,live">
-jsbin</a>).
+- Finish reading this syllabus.
+- Then post an introduction of yourself on the discussion board.
+- Next, go to the [Index Page](index.html) and complete the work for week 1.
 
-The second half of the course will follow the same pattern; 1) lesson, 2) example, 3) exercise.  There will be an exam at the end of the course.
 
 Learning Objectives
 -------------------
@@ -42,42 +39,52 @@ Learning Objectives
 7. Analyze methods of improving software assurance.
 Identify steps involved in construction and debugging processes.
 
+
 Evaluation
 ----------
 
-You will primarily be evaluated on the work you turn in for Exercise 1 and 2 and your score on the final exam.  The points possible for each evaluated item is listed below.
+You will primarily be evaluated on the work you turn in for Assignment 1 and 2 and your score on the final exam.  The points possible for each evaluated item is listed below.
 
 <table summary="Points possible for each graded item">
 <tr><th>Item</th><th>Points Possible</th></tr>
 <tr><td>Introduction</td><td>05</td></tr>
-<tr><td>Exercise 1 </td><td>40</td></tr>
-<tr><td>Exercise 2 </td><td>40</td></tr>
-<tr><td>Final Exam </td><td>15</td></tr>
+<tr><td>3 Discussion Board Questions</td><td>15</td></tr>
+<tr><td>Assignment 1 </td><td>05</td></tr>
+<tr><td>Assignment 2 </td><td>10</td></tr>
+<tr><td>Assignment 3 </td><td>60</td></tr>
+<tr><td>Final Exam </td><td>10</td></tr>
 </table>
 
-The bulk of your grade depends on the exercises, so please be sure to give yourself plenty of time to complete them.  Each exercise will take approximately six hours to complete.  You need at least 75 points to pass the class.
+The bulk of your grade depends on the assignments, so please be sure to give yourself plenty of time to complete them.  Assignment 3 will take approximately nine hours to complete.  You need at least 75 points to pass the class.
+
 
 Due Dates
 ---------
 
-Meeting the recommended due dates will allow you to progress smoothly through the course.  The deadlines are there to ensure I have enough time to grade everyone's work. If I don't have enough time to grade your work, I cannot give you a fair assessment.
+Meeting the recommended turn-in dates will allow you to progress smoothly through the course, requiring about 8 hours per week.  The deadlines are there to ensure I have enough time to grade everyone's work. If I don't have enough time to grade your work, I cannot give you a fair assessment.  If you wait until the deadlines to do the work, you will find you have a disproportionate amount of work to do the last week.  Following the recommended turn-in dates will give you a more pleasant experience in the course.
 
 <table summary="Due dates for each graded item">
 <tr><th>Item</th><th>Recommended Turn-in</th><th>Deadline</th></tr>
-<tr><td>Introduction</td><td>09 July</td><td>15 July</td></tr>
-<tr><td>Exercise 1 </td> <td>15 July</td><td>22 July</td></tr>
-<tr><td>Exercise 2 </td> <td>25 July</td><td>26 July</td></tr>
-<tr><td>Final Exam </td> <td>26 July</td><td>26 July</td></tr>
+<tr><td>Introduction</td><td>07 April</td><td>14 April</td></tr>
+<tr><td>3 Discussion Board Questions</td>
+                         <td>10 April</td><td>14 April</td></tr>
+<tr><td>Assignment 1</td><td>11 April</td><td>14 April</td></tr>
+<tr><td>Assignment 2</td><td>17 April</td><td>21 April</td></tr>
+<tr><td>Assignment 3</td><td>24 April</td><td>25 April</td></tr>
+<tr><td>Final Exam </td> <td>25 April</td><td>25 April</td></tr>
 </table>
 
 <!--
 Item          Recommended    Deadline
 =====================================
 Intro           1st Mon      2nd Mon
-Exercise 1      2nd Mon      3rd Mon
-Exercise 2      3rd Thu      3rd Fri
+3 DB Questions  1st Thu      2nd Mon
+Assignment 1    1st Fri      2nd Mon
+Assignment 2    2nd Thu      3rd Mon
+Assignment 3    3rd Thu      3rd Fri
 Final Exam      3rd Fri      3rd Fri
 -->
+
 
 AFIT Policies
 -------------
