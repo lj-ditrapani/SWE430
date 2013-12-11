@@ -1,4 +1,4 @@
-SWE 430 Instructions
+SWE 430 Tutorial 3:  Environment Instructions
 ========================================================================
 
 Each example and assignment has an associated environment.  The environment allows you to work through the examples interactively; building the same software as in the examples.  The environment runs entirely within your web browser; there is no need to install any software.  Likewise, for the assignments, the environments allow you to complete the assignments without having to install any software on your computer.  
