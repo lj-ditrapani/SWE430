@@ -190,3 +190,9 @@ When using modules, you can factor your common setup code into the module's setu
     test('x = z', function() {
         equal(this.x, this.z);
     });
+
+
+Conclusion
+----------
+
+You will be using the above functions in the examples and exercises.  With the JavaScript and qUnit tutorials under your belt, you can now move on to the [Environment Instructions](instructions.html).
