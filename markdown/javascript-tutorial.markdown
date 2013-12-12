@@ -1,15 +1,13 @@
 SWE 430 Tutorial 1:  JavaScript Tutorial
 ========================================================================
 
-This tutorial gives a short introduction of the JavaScript basics you will need to understand to complete the course.  The estimated time to complete this tutorial is 1 hours.
+This tutorial gives a short introduction of the JavaScript basics you will need to understand to complete the course.  The estimated time to complete this tutorial is 1 hour.
 
-All our examples and assignments are in JavaScript.  Make sure you understand the topics listed below.  If the overview is not enough, complete books are also available: 
-
-If you have any questions or run into any problems, please don't hesitate to ask me for help!
+All the examples and assignments of this course are in JavaScript, so it is important you understand the topics listed below.  If the overview is not enough, a book with addition information is available at the end of the tutorial.  If you have any questions or run into any problems, please don't hesitate to ask me for help!
 
 You can interact with the code from this JavaScript tutorial at jsbin.com:
 
-- [jsbin JavaScript Tutorial](http://jsbin.com/swe430_javascript_tutorial/latest/edit?javascript,console,live)
+- [jsbin JavaScript Tutorial](http://jsbin.com/swe430_javascript_tutorial/latest/edit?javascript,console)
 
 
 Note:  **Everything you need to run JavaScript and qUnit is contained within the environment for each example and assignment.  You do not need to install anything.**
@@ -25,7 +23,7 @@ Math Operators
     3 / y;                  // Divide 3 by y
 
 
-var declarations
+Var Declarations
 ----------------
 
 To declare a new variable, precede it with the var keyword.  This ensures that it is only defined in the local scope and not globally.  Because  JavaScript is dynamically typed, you do not specify the type of the variable as you would in statically type languages like Java, C#, and C++.
@@ -55,7 +53,7 @@ Arrays
     list.length;                // Returns 3
 
 
-Control flow
+Control Flow
 ------------
 
     if good
@@ -64,7 +62,7 @@ Control flow
         do_b()
 
 
-functions
+Functions
 ---------
 
     square = (x) -> x * x       # -> defines a function
@@ -78,35 +76,11 @@ functions
                                 # parameter and calls it
     call_with_3 square          # Also return 9
 
-Functions are defined with `->`.  Functions are first-class objects, can create closures, be assigned to variables, passed into functions as parameters and returned from functions as a return value.
+Functions are defined with the `function` keyword.  Functions are first-class objects, can be assigned to variables, can be passed into functions as parameters and can be returned from functions as a return value.
 
-String interpolation
-
-    obj = {x: 7}                # An object with x = 7
-    "3 + 4 = #{obj.x}"          # content inside #{} is executed
-                                # returns "3 + 4 = 7"
-
-The @ symbol
-
-    @x                          # means this.x (replace @ with this.)
-                                # 'this' is dynamically scoped
-
-Classes and Constructors
-
-    class A                 
-        constructor: (@x) ->    # Class A has a property named x
-
-        f: -> @x                # The method f() returns the value of x
-
-Inheritance and polymorphism with the "extends" and "super" keywords
-
-    class B extends A           # Inherits from class A
-        constructor: ->
-            super 5             # Call's class A constructor
-
-        f: -> super()           # Call's class A's f() method
 
 Accessing an object's property using a string
+---------------------------------------------
 
     b = new B                   # the x property is set to x
     b["x"]                      # returns 5
@@ -178,7 +152,7 @@ Functional Constructs
 Functions are defined using the "function" keyword.  JavaScript supports both named and anonymous functions (lambdas in other languages such as scheme, Haskell, ruby and python.)
 
 
-function
+Function
 --------
 
     function square(x) {        // Define a function named square
@@ -193,11 +167,12 @@ function
         return x * x;           // but does not name it
     };
 
-Anonymous functions can be used to create a private namespace to prevent temporary variables from polluting the global namespace or colliding with global variable names.
 
 
-Anonymous function to hid temporary variables
+Anonymous function to hide temporary variables
 ---------------------------------------------
+
+Anonymous functions can be used to create a private namespace to prevent temporary variables from polluting the global namespace or colliding with global variable names.
 
     x = 5;                      // Global variable
 
