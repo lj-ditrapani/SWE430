@@ -33,7 +33,7 @@ def markdown_2_html_body(file_name):
         html_text += ('\n<p>Return to <a href="index.html">' +
                       'Index Page</a></p>')
     html_text += ('\n<p class="footnote"> Lyall Jonathan Di Trapani ' +
-                  '15 Nov 2013</p>\n')
+                  '13 Dec 2013</p>\n')
     return ET.fromstring('<body>\n{0}\n</body>'.format(html_text))
 
 
