@@ -86,7 +86,6 @@ Tutorials
 Tutorial 1:  JavaScript Tutorial
 
 - Basic types:  null and undefined, are they used anywhere?
-- var declaration and assignment
 - Math operators
 - Operator tables?
 - comparisons `> < >= <= ===`

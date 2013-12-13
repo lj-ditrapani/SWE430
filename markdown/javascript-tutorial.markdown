@@ -1,22 +1,38 @@
 SWE 430 Tutorial 1:  JavaScript Tutorial
 ========================================================================
 
-This tutorial gives a short introduction of the JavaScript basics you will need to understand to complete the course.  The estimated time to complete this tutorial is 1 hour.
+This tutorial gives a short introduction of the JavaScript basics you
+will need to understand to complete the course.
+The estimated time to complete this tutorial is 1 hour.
 
-All the examples and assignments of this course are in JavaScript, so it is important you understand the topics listed below.  If the overview is not enough, a book with addition information is available at the end of the tutorial.  If you have any questions or run into any problems, please don't hesitate to ask me for help!
+All the examples and assignments of this course are in JavaScript,
+so it is important you understand the topics listed below.
+If the overview is not enough,a book with addition information
+is available at the end of the tutorial.
+If you have any questions or run into any problems,
+please don't hesitate to ask me for help!
 
-You can interact with the code from this JavaScript tutorial at jsbin.com:
+You can interact with the code from this JavaScript tutorial
+at jsbin.com:
 
 - [jsbin JavaScript Tutorial](http://jsbin.com/swe430_javascript_tutorial/latest/edit?javascript,console)
 
 
-Note:  **Everything you need to run JavaScript and qUnit is contained within the environment for each example and assignment.  You do not need to install anything.**
+Note:  **Everything you need to run JavaScript and qUnit is contained
+within the environment for each example and assignment.
+You do not need to install anything.**
 
 
 Comments
 --------
 
-Comments begin with `//` and continue until the end of the line.  They are ignored by the JavaScript interpreter.  Multi-line (or block) comments start with `/*` and end with a `*/`.  Comments provide a means to communicate information that may not be immediately evident in the code itself.  Comments are often used to document code.  They are also used to provide explanations in tutorials.
+Comments begin with `//` and continue until the end of the line.
+They are ignored by the JavaScript interpreter.
+Multi-line (or block) comments start with `/*` and end with a `*/`.
+Comments provide a means to communicate information that may not be
+immediately evident in the code itself.
+Comments are often used to document code.
+They are also used to provide explanations in tutorials.
 
     // This is a single line comment
 
@@ -39,7 +55,7 @@ Boolean, Number, String, Array, and Object.
 Boolean, Number and String are primitive types
 while Array and Object are composite types.
 
-A Boolean type can have one of two values, `True` or `False`.
+A Boolean type can have one of two values, `true` or `false`.
 
 The Number type represents numbers and can have values such as
 0, 5, 0.01, -500.76, -1, etc.
@@ -48,42 +64,48 @@ The String type represents a sequence of characters.
 String is defined by surrounding a sequence of characters with
 single quotes (`'` `'`) or double quotes (`"` `"`).
 
-    ''                          // An empty string
-    'I am a string'
-    "I am also a string"
+    '';                         // An empty string
+    'I am a string';
+    "I am also a string";
     // A double quoted string can contain single quotes
-    "I'm a string"
+    "I'm a string";
     // A single quoted string can contain double quotes
-    'I am a "string"'
+    'I am a "string"';
 
-Arrays represent sequences of arbitrary values.  They are defined using brackets (`[` `]`).
+Arrays represent sequences of arbitrary values.
+They are defined using brackets (`[` `]`).
 
     // An empty array
-    []
+    [];
     // An array containing numbers
-    [1, 2, 3]
+    [1, 2, 3];
     // An array of numbers and string
-    ['one', 2, 'three']
+    ['one', 2, 'three'];
     // Arrays can be nested,
     // this array contains 2 other arrays
-    ['mixed array', [1, 2, 3], ['one', 'two']]
+    ['mixed array', [1, 2, 3], ['one', 'two']];
 
-Like Arrays, Objects are also a composite data type.  However, instead of being a sequence of values, an object is a collection of named attributes.  Objects are defined using the curly braces (`{` `}`).
+Like Arrays, Objects are also a composite data type.
+However, instead of being a sequence of values,
+an object is a collection of named attributes.
+Objects are defined using the curly braces (`{` `}`).
+An attribute is associated with a value using the colon (`:`).
+Attribute-value pairs are separated by a comma (`,`).
     
     // An empty object
-    {}
+    {};
     // An object with 2 attributes, 'a' and 'b'.
     // The string 'a' is associated with the value 1
     // The string 'b' is associated with the value 2
-    { a: 1, b: 2}
+    {a: 1, b: 2};
     // Attributes can refer to any type as their value
     {
-        key1: False,            // Boolean
+        key1: false,            // Boolean
         key2: 'a string',       // String
         key3:  -42.7,           // Number
         key4: [1, 2, 3, 4],     // Array
         key5: {a: 1, b: 2}      // Object
-    }
+    };
 
 Functions are also a type in JavaScript.
 We will discuss them later on in the tutorial.
@@ -94,19 +116,23 @@ Var Declarations and Assignment
 
 To declare a new variable, precede it with the var keyword.  This ensures that it is only defined in the local scope and not globally.  Because  JavaScript is dynamically typed, you do not specify the type of the variable as you would in statically type languages like Java, C#, and C++.
 
-    var x, y, z;
-    x = 5;
-    y = 'hello';
-    z = [true, false];
     var x;                  // Ok, x defined locally
     y = 5;                  // Bad; missing var; y defined globally
-    var a, b, c;            // Multiple variables separated by commas 
+
+Multiple variables can be declared in the same `var` statement.  It is best practice to declare all the local variables of a function at the beginning of the function.  The `=` operator is the assignment operator.  It assigns the value on the right-hand-side to the variable on the left-hand-side so that the variable refers the value.
+
+    // Declare 5 variables in one var statement
+    var myBool, myNumber, myString, myArray, myObject;
+    // Assign values to all 5 variables
+    myBool = true;          // Assign true to myBool
+    myNumber = 5;           // Assign 5 to myNumber
+    myString = 'hello';
+    myArray = [true, false];
+    myObject = {a: 1, b: myArray}
+    // myObject.b refers to the array [true, false]
 
 
-Assignment
-----------
-
-As with many programming languages, = is used for assigning a value to a variable.
+Variables can be reassigned to different values over time.
 
     var x = 5;              // Declare x and assign 5 to it
     x = 3;                  // Reassign x to have the value 3
@@ -114,7 +140,7 @@ As with many programming languages, = is used for assigning a value to a variabl
                             // x now has the value of 8
     x += 5;                 // Shorthand for the previous line 
                             // x now has the value of 13
-                            // can be declared on the same line
+
 
 Math Operators
 --------------
@@ -124,6 +150,57 @@ Math Operators
     x - 7;                  // Subtracts 7 from the value of x
     3 / y;                  // Divide 3 by y
 
+Boolean Comparison Operators
+----------------------------
+
+<table>
+
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+</tr>
+
+<tr>
+<td>===</td>
+<td>Exactly equal to</td>
+</tr>
+
+<tr>
+<td>!==</td>
+<td>Not exactly equal to</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>Less than</td>
+</tr>
+
+<tr>
+<td>&gt;</td>
+<td>Greater than</td>
+</tr>
+
+<tr>
+<td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+
+<tr>
+<td>&gt;=</td>
+<td>Greater than or equal to</td>
+</tr>
+
+<tr>
+<td>&amp;&amp;</td>
+<td>Logical AND</td>
+</tr>
+
+<tr>
+<td>||</td>
+<td>Logical OR</td>
+</tr>
+
+</table>
 
 
 Arrays
