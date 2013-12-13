@@ -67,6 +67,7 @@ TO DO
 Syllabus
 
 - Missing objective???  How to update?
+- AFIT polices -- student rights reference 7 June 2012 -- up to date?
 
 Lessons
 
