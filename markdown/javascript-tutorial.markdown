@@ -89,18 +89,18 @@ They are defined using brackets (`[` `]`).
 
 Like Arrays, Objects are also a composite data type.
 However, instead of being a sequence of values,
-an object is a collection of named attributes.
+an object is a collection of named properties (also called attributes).
 Objects are defined using the curly braces (`{` `}`).
-An attribute is associated with a value using the colon (`:`).
-Attribute-value pairs are separated by a comma (`,`).
+A property is associated with a value using the colon (`:`).
+Property-value pairs are separated by a comma (`,`).
     
     // An empty object
     {};
-    // An object with 2 attributes, 'a' and 'b'.
+    // An object with 2 properties, 'a' and 'b'.
     // The string 'a' is associated with the value 1
     // The string 'b' is associated with the value 2
     {a: 1, b: 2};
-    // Attributes can refer to any type as their value
+    // Properties can refer to any type as their value
     {
         key1: false,            // Boolean
         key2: 'a string',       // String
@@ -239,6 +239,8 @@ The `!` operator is a unary operator (it only take one argument as opposed to tw
 
 Arrays
 ------
+
+Arrays can be created with the [] notation.  Elements can be appended to the array with the push() method.  Using [] on an existing array allows you to index into the array.  Array indexing is 0 based.
     
     var list;
     // Create a list with []
@@ -252,10 +254,6 @@ Arrays
     list.length;                // Returns 3
 
 
-Arrays
-------
-
-Arrays can be created with the [] notation.  Elements can be appended to the array with the push() method.  Using [] on an existing array allows you to index into the array.  Array indexing is 0 based.
 
     var a = [];             // New empty array
     a.push(5);              // Append the element 5 to the end of the array
@@ -266,11 +264,13 @@ Arrays can be created with the [] notation.  Elements can be appended to the arr
     a[1];                   // Index into the array; returns 3
 
 
-Accessing an object's property using a string
----------------------------------------------
+Accessing an object's properties
+--------------------------------
 
-    b = new B                   # the x property is set to x
-    b["x"]                      # returns 5
+    b = {};                 // Create an empty objet
+    b.x = 5;                // Add a property x with value 5
+    b.x;                    // Returns 5
+    b["x"]                  // Also returns 5
 
 
 Namespaces
