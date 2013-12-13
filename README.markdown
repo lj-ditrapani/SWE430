@@ -80,19 +80,28 @@ DBQ
 Tutorials
 
 - Make javascript tutorial
-- var declaration
-- bool, num, string, array, object
+- Update qunit jsbin to JavaScript
+- Change CoffeeScript jsbin to JavaScript
+
+Tutorial 1:  JavaScript Tutorial
+
+- Basic types:  null and undefined, are they used anywhere?
+- var declaration and assignment
+- Math operators
+- Operator tables?
 - comparisons `> < >= <= ===`
 - not (!) operator (&& || ?)
 - string manipulation functions; provide tutorial
-- array and array indexing, push, .length
+- Array and array indexing, push, .length
+- Object
 - if else
 - for loop (i & sequence length)
-- qunit tutorial:  do we need throws or module stuff?
 - function, function parameters & return
 - function definition vs function calling
-- Update qunit jsbin to JavaScript
-- Change CoffeeScript jsbin to JavaScript
+
+Tutorial 2:  qUnit Tutorial
+
+- qunit tutorial:  do we need throws or module stuff?
 
 Examples
 

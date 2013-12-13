@@ -13,11 +13,31 @@ You can interact with the code from this JavaScript tutorial at jsbin.com:
 Note:  **Everything you need to run JavaScript and qUnit is contained within the environment for each example and assignment.  You do not need to install anything.**
 
 
+Comments
+--------
+
+Comments begin with `//` and continue until the end of the line.  They are ignored by the JavaScript interpreter.  Multi-line (or block) comments start with `/*` and end with a `*/`.  Comments provide a means to communicate information that may not be immediately evident in the code itself.  Comments are often used to document code.  They are also used to provide explanations in tutorials.
+
+    // This is a single line comment
+
+    // Comments are not code, 
+    // they are ignored by the JavaScript interpreter
+
+    /* 
+       This is a multi-line comment,
+       it started with /*
+       It can contain anything {[()]}
+       end comment
+    */
+
+
 Basic Types
 -----------
 
 JavaScript has 5 basic types that we will use in this course:
 Boolean, Number, String, Array, and Object.
+Boolean, Number and String are primitive types
+while Array and Object are composite types.
 
 A Boolean type can have one of two values, `True` or `False`.
 
@@ -28,12 +48,45 @@ The String type represents a sequence of characters.
 String is defined by surrounding a sequence of characters with
 single quotes (`'` `'`) or double quotes (`"` `"`).
 
+    ''                          // An empty string
     'I am a string'
     "I am also a string"
-    // A double quoted string can contain sigle quotes
+    // A double quoted string can contain single quotes
     "I'm a string"
     // A single quoted string can contain double quotes
     'I am a "string"'
+
+Arrays represent sequences of arbitrary values.  They are defined using brackets (`[` `]`).
+
+    // An empty array
+    []
+    // An array containing numbers
+    [1, 2, 3]
+    // An array of numbers and string
+    ['one', 2, 'three']
+    // Arrays can be nested,
+    // this array contains 2 other arrays
+    ['mixed array', [1, 2, 3], ['one', 'two']]
+
+Like Arrays, Objects are also a composite data type.  However, instead of being a sequence of values, an object is a collection of named attributes.  Objects are defined using the curly braces (`{` `}`).
+    
+    // An empty object
+    {}
+    // An object with 2 attributes, 'a' and 'b'.
+    // The string 'a' is associated with the value 1
+    // The string 'b' is associated with the value 2
+    { a: 1, b: 2}
+    // Attributes can refer to any type as their value
+    {
+        key1: False,            // Boolean
+        key2: 'a string',       // String
+        key3:  -42.7,           // Number
+        key4: [1, 2, 3, 4],     // Array
+        key5: {a: 1, b: 2}      // Object
+    }
+
+Functions are also a type in JavaScript.
+We will discuss them later on in the tutorial.
 
 
 Var Declarations and Assignment
