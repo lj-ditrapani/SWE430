@@ -17,6 +17,8 @@ at jsbin.com:
 
 - [jsbin JavaScript Tutorial](http://jsbin.com/swe430_javascript_tutorial/latest/edit?javascript,console)
 
+[Instructions](jsbin-instructions.html) for using jsbin are available.
+
 
 Note:  **Everything you need to run JavaScript and qUnit is contained
 within the environment for each example and assignment.

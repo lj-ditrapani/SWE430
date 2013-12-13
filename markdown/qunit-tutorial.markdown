@@ -5,6 +5,7 @@ You can interact with the code from the following qUnit tutorial at jsbin.com:
 
 - [jsbin qUnit Tutorial](http://jsbin.com/swe430_qunit_tutorial/latest/edit?javascript,live)
 
+[Instructions](jsbin-instructions.html) for using jsbin are available.
 
 [qUnit](http://qunitjs.com) is the JavaScript unit testing framework we use in all the examples and assignments.  It exports several functions used for testing.  Make sure you understand the functions below.  The qUnit documentation is available on their
 [website](http://api.qunitjs.com)
