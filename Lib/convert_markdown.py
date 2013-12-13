@@ -2,6 +2,7 @@
 import io
 import os
 import json
+import datetime
 import xml.etree.ElementTree as ET
 import markdown2
 
@@ -32,8 +33,9 @@ def markdown_2_html_body(file_name):
     if file_name != 'index':
         html_text += ('\n<p>Return to <a href="index.html">' +
                       'Index Page</a></p>')
-    html_text += ('\n<p class="footnote"> Lyall Jonathan Di Trapani ' +
-                  '13 Dec 2013</p>\n')
+    now = datetime.datetime.now()
+    html_text += ('\n<p class="footnote">Lyall Jonathan Di Trapani ' +
+                  '{}</p>\n'.format(now.strftime('%d %b %Y')))
     return ET.fromstring('<body>\n{0}\n</body>'.format(html_text))
 
 
