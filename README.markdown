@@ -108,9 +108,11 @@ Assignments
 
 - Make video screen cast for Assignment 1
 - Explain type signatures?
+- Put list of useful functions in each assignment instruction
 
 Assignment 3
 
+- Explain unicode \u2660 \n
 - string manipulation functions; provide tutorial
 - consider splitting the project up into 2 segments?
 - Fix this sentence for new example code: "This is accomplished in
