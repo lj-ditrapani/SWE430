@@ -88,14 +88,10 @@ Tutorials
 - if else
 - for loop (i & sequence length)
 - qunit tutorial:  do we need throws or module stuff?
-- Update qunit jsbin to JavaScript
-- Change CoffeeScript jsbin to JavaScript
 - function, function parameters & return
 - function definition vs function calling
-
-Instructions
-
-- Grab instructions from 499 course and update 430 instructions
+- Update qunit jsbin to JavaScript
+- Change CoffeeScript jsbin to JavaScript
 
 Examples
 
