@@ -1,12 +1,17 @@
 SWE 430 Assignment 3 --- Password Checker
 =====================================
 
-Exercise Instructions
+Assignment Instructions
 ---------------------
 
 Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test (`write test => check if test fails => write production code => run all unit tests => refactor => run tests => go to next test case`).
 
-Turn in both the source code (code.js) and the unit tests (test.js) on blackboard Exercise Submission.  If you have any questions, run into problems, or need clarification, please let me know.  Your production code will be evaluated by running it against a set of reference test cases (written according to the specification).  Your unit test cases will be evaluated by using them to test a faulty implementation.
+- zip Environment users:  Turn in both the source code (code.js) and the
+  unit tests (test.js) in the blackboard Assignment 3 Submission.
+- jsbin Environment users:  Submit the URL of your jsbin project in the
+  blackboard Assignment 3 Submission.
+
+If you have any questions, run into problems, or need clarification, please let me know.  Your production code will be evaluated by running it against a set of reference test cases (written according to the specification).  Your unit test cases will be evaluated by using them to test a faulty implementation.
 
 Password Checker Specification
 ------------------------------
@@ -73,7 +78,9 @@ In order to be declared "valid," all accepted passwords must adhere to the follo
 
 The appropriate "reason string" for each rule is shown in parentheses and in green.  The check() function only returns one reason for a password failure.  If a password fails multiple rules, only the reason for the first rule failed, according to the order listed above, is returned by the function.  Be sure to use the exact reason strings listed above---they are case sensitive.
 
-- [Assignment 3 zip Environment](assignment3.zip)
-- [Assignment 3 jsbin Environment][jsbin assignment 3]
+Assignment 3 Environments (use one or the other):
 
-[jsbin assignment 3]: http://jsbin.com/swe430_assignment3/latest/edit?javascript,live
+- [Assignment 3 zip Environment](assignment3.zip)
+- [Assignment 3 jsbin Environment][jsbin]
+
+[jsbin]: http://jsbin.com/swe430_assignment3/latest/edit?javascript,live

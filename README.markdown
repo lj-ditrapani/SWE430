@@ -87,6 +87,10 @@ Tutorial 2:  qUnit Tutorial
 
 - qunit tutorial:  do we need throws or module stuff?
 
+Tutorial 3:  Environment Instructions
+
+- Add screenshots (console, debugger, jsbin)
+
 Examples
 
 - Make video screen cast for Example 1
