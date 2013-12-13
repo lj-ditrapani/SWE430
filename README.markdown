@@ -83,17 +83,6 @@ Tutorials
 - Update qunit jsbin to JavaScript
 - Change CoffeeScript jsbin to JavaScript
 
-Tutorial 1:  JavaScript Tutorial
-
-- Basic types:  null and undefined, are they used anywhere?
-- string manipulation functions; provide tutorial
-- Array and array indexing, push, .length
-- Object
-- if else
-- for loop (i & sequence length)
-- function, function parameters & return
-- function definition vs function calling
-
 Tutorial 2:  qUnit Tutorial
 
 - qunit tutorial:  do we need throws or module stuff?

@@ -396,6 +396,7 @@ Functions are first-class objects, can be assigned to variables,
 can be passed into functions as parameters,
 and can be returned from functions as a return value.
 
+Below we define a function named `square()`.  It has one input parameter, `x` and returns the value of `x` squared.
 
     function square(x) {        // Define a function named square
         return x * x;
@@ -420,6 +421,20 @@ and can be returned from functions as a return value.
 
     // Also return 4
     callWith2(square);
+
+Below we define a function `add()` with 2 input parameters, `a` and `b`.
+The function simply adds `a` and `b` and returns the result.
+The keyword `return` indicates the function should exit and return the
+value of the expression on the right-hand-side of he `return` operator.
+
+    // Define a function that has 2 paramters
+    function add(a, b) {
+        return a + b;
+    }
+
+    // Invoke/call the function twice with different inputs
+    add(3, 5);                  // Returns 8
+    add(2, 7);                  // Returns 9
 
 
 Namespaces
