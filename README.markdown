@@ -79,14 +79,10 @@ DBQ
 Tutorials
 
 - Make javascript tutorial
-- Grab tutorial (and lessons) from 499 course and integrate into
-  Lesson 1 and 2
 - var declaration
 - bool, num, string, array, object
 - comparisons `> < >= <= ===`
 - not (!) operator (&& || ?)
-- function, function parameters & return
-- function definition vs function calling
 - string manipulation functions; provide tutorial
 - array and array indexing, push, .length
 - if else
@@ -94,6 +90,8 @@ Tutorials
 - qunit tutorial:  do we need throws or module stuff?
 - Update qunit jsbin to JavaScript
 - Change CoffeeScript jsbin to JavaScript
+- function, function parameters & return
+- function definition vs function calling
 
 Instructions
 
