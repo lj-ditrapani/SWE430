@@ -442,12 +442,19 @@ Namespaces
 
 JavaScript doesn't directly support namespaces (also called modules.)  However, objects can be used to simulate a namespace.  Below we simulate a module by creating an object and naming it mod.  We then define a property 'x' on the mod object.  The variable x is thus 'hidden' in the mod namespace.
 
-    window.mod = {};        // Create an empty object literal and attach 
-                            // it to the global window object
-    mod.x = 7;              // The variable x is not visible globally but 
-                            // only accessible from the mod object.
-    x                       // Error, x is undefined!
-    mod.x + 10;             // OK, accessing x from the mod object.
+    // Create an empty object literal and attach 
+    // it to the global window object
+    window.mod = {};
+
+    // The variable x is not visible globally, but
+    // only accessible from the mod object.
+    mod.x = 7;              
+
+    // Error, x is undefined!                           
+    x                       
+
+    // OK, accessing x from the mod object.
+    mod.x + 10;             
 
 
 Anonymous function to hide temporary variables
