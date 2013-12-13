@@ -86,10 +86,6 @@ Tutorials
 Tutorial 1:  JavaScript Tutorial
 
 - Basic types:  null and undefined, are they used anywhere?
-- Math operators
-- Operator tables?
-- comparisons `> < >= <= ===`
-- not (!) operator (&& || ?)
 - string manipulation functions; provide tutorial
 - Array and array indexing, push, .length
 - Object

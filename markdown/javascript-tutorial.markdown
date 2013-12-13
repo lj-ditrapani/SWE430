@@ -153,6 +153,11 @@ Math Operators
 Boolean Comparison Operators
 ----------------------------
 
+JavaScript has boolean operators that allow comparisons between two
+values.
+The operators return `true` if the comparison is true and
+`false` otherwise.
+
 <table>
 
 <tr>
@@ -202,6 +207,33 @@ Boolean Comparison Operators
 
 </table>
 
+Examples:
+
+    5 === 5;                    // true
+    5 !== 5;                    // false
+    2 === 3;                    // false
+    2 !== 3;                    // true
+    2 < 3;                      // true
+    5 < 3;                      // false
+    5 > 3;                      // true
+    2 > 3;                      // false
+    2 <= 2;                     // true
+    2 <= 3;                     // true
+    5 <= 3;                     // false
+    3 >= 3;                     // true
+    5 >= 3;                     // true
+    2 >= 3;                     // false
+    true && false;              // false
+    false && true;              // false
+    true && true;               // true
+    true || false;              // true
+    false || true;              // true
+    false || false;             // false
+
+The `!` operator is a unary operator (it only take one argument as opposed to two arguments).  It negates the boolean value of its argument.
+
+    !true;                      // false
+    !false;                     // true
 
 Arrays
 ------
