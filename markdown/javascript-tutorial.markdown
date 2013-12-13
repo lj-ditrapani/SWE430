@@ -294,6 +294,7 @@ of its substrings.
     s.split(' ');               // Returns ['hello', 'world']
 
 Useful String Methods:
+
 <table>
 
 <tr>
@@ -342,10 +343,10 @@ Useful String Methods:
 Arrays
 ------
 
-Arrays can be created with the [] notation.
-Using [] on an existing array allows you to index into the array.
+Arrays can be created with the `[]` notation.
+Using `[]` on an existing array allows you to index into the array.
 Array indexing is 0-based;
-the first element is a index 0, the second at index 1, and so forth.
+the first element is at index 0, the second at index 1, and so forth.
     
     var list;
     // Create a list with []
@@ -358,7 +359,7 @@ the first element is a index 0, the second at index 1, and so forth.
     list[2];                    // Returns 'c'
     list.length;                // Returns 3
 
-Elements can be appended to the array with the push() method.
+Elements can be appended to the array with the `push()` method.
 
     // New empty array
     var a = [];
@@ -384,20 +385,6 @@ Accessing an object's properties
     b['x'];                 // Also returns 5
 
 
-Namespaces
-----------
-
-JavaScript doesn't directly support namespaces (also called modules.)  However, objects can be used to simulate a namespace.  Below we simulate a module by creating an object and naming it mod.  We then define a property 'x' on the mod object.  The variable x is thus 'hidden' in the mod namespace.
-
-    window.mod = {};        // Create an empty object literal and attach 
-                            // it to the global window object
-    mod.x = 7;              // The variable x is not visible globally but 
-                            // only accessible from the mod object.
-    x                       // Error, x is undefined!
-    mod.x + 10;             // OK, accessing x from the mod object.
-
-
-
 Functions
 ---------
 
@@ -419,7 +406,7 @@ and can be returned from functions as a return value.
     square(4);                  // Returns 16
 
     function(x) {               // Defines the same function, 
-        return x * x;           // but does not name it
+        return x * x;           // but does not give it a name
     };
 
     // Both square and alias refer to the same function
@@ -427,13 +414,25 @@ and can be returned from functions as a return value.
     alias(2);                   // Also returns 4
 
     // A function that takes a function as a parameter and calls it
-    call_with_2 = function(f) {
+    callWith2 = function(f) {
         f(2);
     };
 
     // Also return 4
-    call_with_2(square);
+    callWith2(square);
 
+
+Namespaces
+----------
+
+JavaScript doesn't directly support namespaces (also called modules.)  However, objects can be used to simulate a namespace.  Below we simulate a module by creating an object and naming it mod.  We then define a property 'x' on the mod object.  The variable x is thus 'hidden' in the mod namespace.
+
+    window.mod = {};        // Create an empty object literal and attach 
+                            // it to the global window object
+    mod.x = 7;              // The variable x is not visible globally but 
+                            // only accessible from the mod object.
+    x                       // Error, x is undefined!
+    mod.x + 10;             // OK, accessing x from the mod object.
 
 
 Anonymous function to hide temporary variables
