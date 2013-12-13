@@ -13,18 +13,31 @@ You can interact with the code from this JavaScript tutorial at jsbin.com:
 Note:  **Everything you need to run JavaScript and qUnit is contained within the environment for each example and assignment.  You do not need to install anything.**
 
 
+Basic Types
+-----------
 
-Math Operators
---------------
+JavaScript has 5 basic types that we will use in this course:
+Boolean, Number, String, Array, and Object.
 
-    x + 7;                  // Adds 7 to the value of x
-    3 * y;                  // Multiply 3 by y
-    x - 7;                  // Subtracts 7 from the value of x
-    3 / y;                  // Divide 3 by y
+A Boolean type can have one of two values, `True` or `False`.
+
+The Number type represents numbers and can have values such as
+0, 5, 0.01, -500.76, -1, etc.
+
+The String type represents a sequence of characters.
+String is defined by surrounding a sequence of characters with
+single quotes (`'` `'`) or double quotes (`"` `"`).
+
+    'I am a string'
+    "I am also a string"
+    // A double quoted string can contain sigle quotes
+    "I'm a string"
+    // A single quoted string can contain double quotes
+    'I am a "string"'
 
 
-Var Declarations
-----------------
+Var Declarations and Assignment
+-------------------------------
 
 To declare a new variable, precede it with the var keyword.  This ensures that it is only defined in the local scope and not globally.  Because  JavaScript is dynamically typed, you do not specify the type of the variable as you would in statically type languages like Java, C#, and C++.
 
@@ -35,7 +48,29 @@ To declare a new variable, precede it with the var keyword.  This ensures that i
     var x;                  // Ok, x defined locally
     y = 5;                  // Bad; missing var; y defined globally
     var a, b, c;            // Multiple variables separated by commas 
+
+
+Assignment
+----------
+
+As with many programming languages, = is used for assigning a value to a variable.
+
+    var x = 5;              // Declare x and assign 5 to it
+    x = 3;                  // Reassign x to have the value 3
+    x = x + 5;              // Make x 5 + the current value of x
+                            // x now has the value of 8
+    x += 5;                 // Shorthand for the previous line 
+                            // x now has the value of 13
                             // can be declared on the same line
+
+Math Operators
+--------------
+
+    x + 7;                  // Adds 7 to the value of x
+    3 * y;                  // Multiply 3 by y
+    x - 7;                  // Subtracts 7 from the value of x
+    3 / y;                  // Divide 3 by y
+
 
 
 Arrays
@@ -53,30 +88,18 @@ Arrays
     list.length;                // Returns 3
 
 
-Control Flow
-------------
+Arrays
+------
 
-    if good
-        do_a()
-    else
-        do_b()
+Arrays can be created with the [] notation.  Elements can be appended to the array with the push() method.  Using [] on an existing array allows you to index into the array.  Array indexing is 0 based.
 
-
-Functions
----------
-
-    square = (x) -> x * x       # -> defines a function
-    square 3                    # Returns 9
-
-    alias = square              # Both square and alias refer to the 
-                                # same function
-    alias 3                     # Also returns 9
-
-    call_with_3 = (f) -> f 3    # A function that takes a function as a
-                                # parameter and calls it
-    call_with_3 square          # Also return 9
-
-Functions are defined with the `function` keyword.  Functions are first-class objects, can be assigned to variables, can be passed into functions as parameters and can be returned from functions as a return value.
+    var a = [];             // New empty array
+    a.push(5);              // Append the element 5 to the end of the array
+                            // now the array is [5]
+    a.push(3);              // now the array is [5, 3]
+    a = [5, 3];             // Create another array with the same elements
+    a[0];                   // Index into the array; returns 5
+    a[1];                   // Index into the array; returns 3
 
 
 Accessing an object's property using a string
@@ -84,10 +107,6 @@ Accessing an object's property using a string
 
     b = new B                   # the x property is set to x
     b["x"]                      # returns 5
-
-Regular Expressions
-
-    re = /\d\d/                 # matches 2 digits
 
 
 Namespaces
@@ -103,57 +122,51 @@ JavaScript doesn't directly support namespaces (also called modules.)  However, 
     mod.x + 10;             // OK, accessing x from the mod object.
 
 
-Assignment
----------------------
+if Statement
+------------
 
-As with many programming languages, = is used for assigning a value to a variable.
+The function `do_a()` is only executed if the variable `good` is set to `true`.  Regardless of whether `do_a()` is executed or not, the function `always_do_c()` will be executed.
 
-    var x = 5;              // Declare x and assign 5 to it
-    x = 3;                  // Reassign x to have the value 3
-    x = x + 5;              // Make x 5 + the current value of x
-                            // x now has the value of 8
-    x += 5;                 // Shorthand for the previous line 
-                            // x now has the value of 13
+    if (good) {
+        do_a();
+    }
+    always_do_c();
 
+By including an `else` clause with the `if` statement, if the variable `good` is true, `do_a()` is executed, otherwise, `do_b()` is executed.  Either one or the other is executed, but not both.  Finally, `always_do_c()` executed regardless of the value of `good`.
 
-Arrays
-------
-
-Arrays can be created with the [] notation.  Elements can be appended to the array with the push() method.  Using [] on an existing array allows you to index into the array.  Array indexing is 0 based.
-
-    var a = [];             // New empty array
-    a.push(5);              // Append the element 5 to the end of the array
-                            // now the array is [5]
-    a.push(3);              // now the array is [5, 3]
-    a = [5, 3];             // Create another array with the same elements
-    a[0];                   // Index into the array; returns 5
-    a[1];                   // Index into the array; returns 3
+    if (good) {
+        do_a();
+    } else {
+        do_b();
+    }
+    always_do_c();
 
 
-Iteration
----------
+For loop
+--------
 
 Iteration can be accomplished using 'for' loops.  The for loop has three parts:  initialization, condition, and step operation.
-
-for loop
 
     // Displays the elements of the array one at a time
     var i, a;                   // Declare variables
     a = [1, 2, 3];              // Array with 3 elements
     // i iterates from 0 to 2; providing the indexes of the array
-    for (i = 0; i &lt; array.length; i += 1) {
+    for (i = 0; i < array.length; i += 1) {
         alert(a[i]);            // Each element is displayed
     }
 
 
-Functional Constructs
----------------------
+Functions
+---------
 
-Functions are defined using the "function" keyword.  JavaScript supports both named and anonymous functions (lambdas in other languages such as scheme, Haskell, ruby and python.)
+Functions are defined using the `function` keyword.
+JavaScript supports both named and anonymous functions
+(also called lambdas in many other languages such as scheme, Haskell,
+ruby and python.)
+Functions are first-class objects, can be assigned to variables,
+can be passed into functions as parameters,
+and can be returned from functions as a return value.
 
-
-Function
---------
 
     function square(x) {        // Define a function named square
         return x * x;
@@ -166,6 +179,18 @@ Function
     function(x) {               // Defines the same function, 
         return x * x;           // but does not name it
     };
+
+    // Both square and alias refer to the same function
+    alias = square;
+    alias(2);                   // Also returns 4
+
+    // A function that takes a function as a parameter and calls it
+    call_with_2 = function(f) {
+        f(2);
+    };
+
+    // Also return 4
+    call_with_2(square);
 
 
 
@@ -199,7 +224,7 @@ The relevant chapters of the book are listed below.
 - [Functions](http://eloquentjavascript.net/chapter3.html)
 - [Objects and Arrays](http://eloquentjavascript.net/chapter4.html)
 
-The Mozilla Developer Network also provides a nice introduction in their [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
+The Mozilla Developer Network also provides a nice introduction with their [JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide).
 
 Now that you have an understanding of the JavaScript basics, you are ready for the [qUnit Tutorial](qunit-tutorial.html).
 
