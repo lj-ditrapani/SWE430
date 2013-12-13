@@ -38,8 +38,12 @@ th {
 
 td {
     border: 1px solid black;
+    width: auto;
+    padding: 2px 4px;
+}
+
+table.narrow td {
     width: 150px;
-    padding: 3px;
 }
 
 div.filename {

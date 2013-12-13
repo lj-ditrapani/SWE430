@@ -10,7 +10,7 @@ code.
 In this example, we will create a `stringInfo` module with the following
 four string inspection functions.
 
-<table class="functions">
+<table>
 <tr>
 <th>Function Name</th><th>Input</th><th>Output</th>
 </tr>

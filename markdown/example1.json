@@ -1,5 +1,5 @@
 {
-    "css": ["css/example1.css", "css/prettify.css"],
+    "css": ["css/prettify.css"],
     "javascript": ["js/prettify.js"],
     "prettyprint": true
 }
