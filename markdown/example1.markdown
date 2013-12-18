@@ -236,3 +236,6 @@ Run the tests.  Now all tests pass.
 There is no need to refactor, so we have completed the example.
 
 [final code.js](example1/code.js)
+
+You have completed Example 1 and are now ready to take on
+[Assignment 1](assignment1.html).
