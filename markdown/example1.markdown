@@ -208,11 +208,25 @@ Run the tests again.  Now the first and second tests pass.
 Refactor Code
 -------------
 
-Before we move on to the next test, we should refactor our code.  You probably know that copying and pasting code is generally a sign of poor design.  The code for our `countLowerCaseLetters` and `countUpperCaseLetters` functions are nearly identical.  We should factor-out the duplicate code into a common helper function both functions can share.
+Before we move on to the next test, we should refactor our code.
+You probably know that copying and pasting code is generally a sign of
+poor design.
+The code for our `countLowerCaseLetters()` and `countUpperCaseLetters()`
+functions are nearly identical.
+We should factor-out the duplicate code into a common helper function
+both functions can share.
 
-As you have seen, the only difference between the two functions is the criteria used to determine if the current character is one we want to count or not.  So let's call our helper function `countCharacters`.  It will take two parameters, a string and a predicate function.
+As you have seen, the only difference between the two functions is the
+criteria used to determine if the current character is one we want to
+count or not.
+So let's name our helper function `countCharacters()`.
+It will take two parameters, a string and a predicate function.
 
-The predicate function takes a character code value as input and returns a boolean (true or false) value as output.  A return value of true indicates the character should be counted and a return value of false indicates the character should not be counted.
+The predicate function takes a character code value as input and returns
+a boolean (`true` or `false`) value as output.
+A return value of `true` indicates the character should be counted and a
+return value of `false` indicates the character should not be counted.
+Here is the code for the `countCharacters()` function.
 
 
     function countCharacters(string, predicate) {
@@ -225,7 +239,10 @@ The predicate function takes a character code value as input and returns a boole
         return count;
     }
 
-Run the tests.  The first two tests still pass, so we don't have any major syntax errors.  Now we rewrite the `countUpperCaseLetters` function to make use of the new `countCharacters` helper function.
+Run the tests.  The first two tests still pass, so we don't have any
+major syntax errors.
+Now we rewrite the `countUpperCaseLetters()` function to make use of the
+new `countCharacters()` helper function.
 
     stringInfo.countUpperCaseLetters = function(string) {
         function predicate(code) {
@@ -234,9 +251,13 @@ Run the tests.  The first two tests still pass, so we don't have any major synta
         return countCharacters(string, predicate);
     };
 
-The new `countUpperCaseLetters` function simply defines an appropriate predicate function and then calls the `countCharacters` function passing the string and predicate function as parameters.
+The new `countUpperCaseLetters()` function simply defines an appropriate
+predicate function and then calls the `countCharacters()` function
+passing the string and predicate function as parameters.
 
-Run the tests.  The first two tests still pass.  So we haven't broken anything during the refactoring.  No we can refactor the second function using the same process.
+Run the tests.  The first two tests still pass.
+So we haven't broken anything during the refactoring.
+No we can refactor the second function using the same process.
 
     stringInfo.countLowerCaseLetters = function(string) {
         function predicate(code) {
@@ -245,7 +266,9 @@ Run the tests.  The first two tests still pass.  So we haven't broken anything d
         return countCharacters(string, predicate);
     };
 
-Run the tests one more time.  The first two tests still pass.  We have successfully refactored our code; we eliminated duplication, while preserving behavior.
+Run the tests one more time.  The first two tests still pass.
+We have successfully refactored our code;
+we eliminated duplication, while preserving behavior.
 
 [code04.js](example1/code04.js)
 
