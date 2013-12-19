@@ -1,10 +1,10 @@
 SWE 430 Example 1 --- Running Tests
 ========================================================================
 
-Before we jump into full-blown TDD, we will start be working through an
-example and an assignment where all the tests are already written.  This
-will introduce you to running tests iteratively and writing code
-incrementally while running your test suite between each increments of
+Before we jump into full-blown TDD, we will start by working through an
+example and an assignment where all the tests are already written.
+This will introduce you to running tests iteratively and writing code
+incrementally while running your test suite between each increment of
 code.
 
 In this example, we will create a `stringInfo` module with the following
@@ -36,6 +36,14 @@ four string inspection functions.
 </tr>
 </table>
 
+See the Wikipedia [ASCII page][ASCII] For information on the ASCII
+encoding.
+
+At the end of each section, a link to the current state of the `code.js`
+file, which incorporates all of the work accomplished in the example
+up to that point, is provided for you to check your work against so you
+can follow along with confidence.
+
 - [Example 1 zip Environment](example1.zip)
 - [Example 1 jsbin Environment][jsbin example 1]
 
@@ -47,10 +55,18 @@ For a refresher on using the above environments, see the
 
 
 
-Initial Boilerplate
--------------------
+Create the `stringInfo` Module
+------------------------------
 
 First, we write the boilerplate code for the code.js file.
+We will place all our code inside of an anonymous function so all our
+code is encapsulated and hidden.
+Any local variables we define with the `var` keyword and
+any functions we define with the `function` keyword
+will only be visible within the anonymous function.
+This way, we do not pollute the global namespace.
+To accomplish this, we simply define an anonymous function and
+immediately execute it with the trailing `()`.
 
     (function() {
         'use strict';
@@ -58,8 +74,11 @@ First, we write the boilerplate code for the code.js file.
 
     }());
 
-All four tests fail with the same error: `'stringInfo' is undefined`.
-So we will follow the advice of the test failure messages and create a stringInfo object.
+Now, run the tests.  All four tests fail with the same error:
+`'stringInfo' is undefined`.
+So we will follow the advice of the test failure messages and create a
+`stringInfo` object.  The `stringInfo` object will serve as the module
+namespace.
 
     (function() {
         'use strict';
@@ -73,7 +92,9 @@ So we will follow the advice of the test failure messages and create a stringInf
 
     }());
 
-Now all four tests fail with the message that the function under test is missing.  Let's start with the first one:  "`Object doesn't support property or method 'countUpperCaseLetters'`".
+We attach the `stringInfo` object to the global `window` object so that it is visible and accessible outside of our anonymous function.
+
+Run the tests again.  Now all four tests fail with the message that the function under test is missing.  Let's start with the first one:  "`Object doesn't support property or method 'countUpperCaseLetters'`".
 
 [code01.js](example1/code01.js)
 
@@ -82,7 +103,10 @@ Now all four tests fail with the message that the function under test is missing
 Count Upper-case Characters
 ---------------------------
 
-We will start by creating an empty function with the appropriate name attached to the stringInfo object.
+The error message is telling us we need to create a property named
+'countUpperCaseLetters'.
+We will start by creating an empty function with the appropriate name,
+`countUpperCaseLetters`, attached to the `stringInfo` object.
 
     var stringInfo = {};
 
@@ -93,9 +117,22 @@ We will start by creating an empty function with the appropriate name attached t
 
     window.stringInfo = stringInfo;
 
-Now the "Count upper-case characters" test assertions each fail with an `undefined` result.  Let's fill in the function to take in a string parameter and count the number of upper-case letters found in the string.  The function should initialize a count variable to 0, loop through each character in the string and add one to the count if the character is an upper-case letter.  Looking at the table on the
+With this change in place, the `stringInfo` object has a
+`countUpperCaseLetters()` function defined,
+but it doesn't do anything yet.
+Let's run the tests again.
+Now the "Count upper-case characters" test assertions
+each fail with an `undefined` result.
+Let's fill in the function to take in a string parameter and count the
+number of upper-case letters found in the string.
+The function should initialize a count variable to 0,
+loop through each character in the string
+and add one to the count if the character is an upper-case letter.
+Looking at the table on the
 [ASCII][]
-Wikipedia page, we can see that upper-case characters have code values between 64 and 90 inclusive, so these will be the values we will use to compare the character code value against.
+Wikipedia page, we can see that upper-case characters have code values
+between 64 and 90 inclusive, so these will be the values we will use to
+compare the character code value against.
 
     stringInfo.countUpperCaseLetters = function(string) {
         var i, code, count = 0;
@@ -108,7 +145,7 @@ Wikipedia page, we can see that upper-case characters have code values between 6
         return count;
     };
 
-In order to find the value of a character, we sue the `charCodeAt` method of the String class.  It returns the numerical value of the character at the given position of the string object.
+In order to find the value of a character, we use the `charCodeAt()` method of the String class.  It returns the numerical value of the character at the given position of the string object.
 
 Run the tests again.  Now the first test passes.
 
@@ -119,7 +156,7 @@ Run the tests again.  Now the first test passes.
 Count Lower-case Characters
 ---------------------------
 
-The next failing test is fails with "`Object doesn't support property or method 'countLowerCaseLetters'`" because the `countLowerCaseLetters` function doesn't exist yet.  Let's declare the `countUpperCaseLetters` function now.
+The next failing test has an error message of "`Object doesn't support property or method 'countLowerCaseLetters'`" because the `countLowerCaseLetters` function doesn't exist yet.  Let's declare the `countLowerCaseLetters` function now.
 
     stringInfo.countLowerCaseLetters = function() {
     };
