@@ -1,6 +1,28 @@
 Example 2
 ========================================================================
 
+For Example 2, we will use the Test-driven Development (TDD) process to
+iteratively develop a function that can translate roman numerals into
+decimal values.  We will write both the test code and the production
+code step-by-step.
+
+The TDD cycle:
+
+- Write a test
+- Run all your tests, ensuring the new test fails
+- Write the code to pass the test
+- Run all your tests, ensuring the new test passes
+- Refactor your production code if necessary
+- Run all your tests
+- Refactor your test code if necessary
+- Run all your tests
+- Repeat
+
+We will create a module named `roman` which has a function `toDecimal`
+that converts roman numerals to decimal values.
+
+If you are not familiar with roman numerals, take a look at the [Wikipedia page]().
+
 - [Example 2 zip Environment](example2.zip)
 - [Example 2 jsbin Environment][jsbin]
 
