@@ -156,6 +156,8 @@ It returns the numerical value of the character at the given position
 of the string object.
 
 Run the tests again.  Now the first test passes.
+We do not have any duplicate code, and have nothing to refactor yet,
+so we can skip the refactoring step.
 
 [code02.js](example1/code02.js)
 
@@ -277,11 +279,16 @@ we eliminated duplication, while preserving behavior.
 Count Control Characters
 ------------------------
 
-Now that we have refactored the code, we can move on to the 3rd test, "Count control characters".  Looking again at the 
-[ASCII][]
-tables, we see that the ASCII control characters are found in the first 32 ASCI characters (code values 0 through 31 inclusive) and the last (code value 127). 
+Now that we have refactored the code, we can move on to the 3rd test,
+"Count control characters".
+Looking again at the [ASCII][] tables, we see that the ASCII control
+characters are found in the first 32 ASCII characters
+(code values 0 through 31 inclusive) and the last ASCII character
+(code value 127). 
 
-We can leverage the `countCharacters` helper function we produced from the previous refactoring to help us write the `countControlCharacters` function.
+We can leverage the `countCharacters()` helper function we produced from
+the previous refactoring to help us write the `countControlCharacters()`
+function.
 
     stringInfo.countControlCharacters = function(string) {
         function predicate(code) {
@@ -290,9 +297,10 @@ We can leverage the `countCharacters` helper function we produced from the previ
         return countCharacters(string, predicate);
     };
 
-Instead of using the "and" boolean operator (`&&`) in the predicate, we instead use the "or" boolean operator (`||`).
+Instead of using the "and" boolean operator (`&&`) in the predicate,
+we instead use the "or" boolean operator (`||`).
 
-Run the tests.  We now see the firs three tests passing.
+Run the tests.  We now see the first three tests passing.
 
 There is no need to refactor, so we move on.
 
@@ -303,7 +311,11 @@ There is no need to refactor, so we move on.
 Count Non-ASCII Characters
 --------------------------
 
-We only have one failing test left to deal with---the "Count Non-ASCII characters" test.  Any character with a code value above 127 is not an ASCII character.  We can write the code for the `countNonASCIICharacters` function in the same way we wrote the code for the other three functions.
+We only have one failing test left to deal with---the
+"Count Non-ASCII characters" test.
+Any character with a code value above 127 is not an ASCII character.
+We can write the code for the `countNonASCIICharacters()` function in
+the same manner we wrote the code for the other three functions.
 
     stringInfo.countNonASCIICharacters = function(string) {
         function predicate(code) {
