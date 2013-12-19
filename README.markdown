@@ -81,7 +81,7 @@ Tutorials
 
 - Make javascript tutorial
 - Update qunit jsbin to JavaScript
-- Change CoffeeScript jsbin to JavaScript
+- Change CoffeeScript jsbin to JavaScript, update
 
 Tutorial 2:  qUnit Tutorial
 
@@ -132,7 +132,6 @@ Tools and scripts
 - convert jshint, jslint to py/batch
 - Create ui.py to 1) init env and 2) deploy 3) lint check
 - clean git ls-files
-- Update jsbins
 
 Exam: Exam covers lessons 1-3, include study guide?
 
