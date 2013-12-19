@@ -83,4 +83,7 @@ Assignment 3 Environments (use one or the other):
 - [Assignment 3 zip Environment](assignment3.zip)
 - [Assignment 3 jsbin Environment][jsbin]
 
+[Instructions](instructions.html)
+for the environments are available.
+
 [jsbin]: http://jsbin.com/swe430_assignment3/latest/edit?javascript,live
