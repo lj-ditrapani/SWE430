@@ -103,10 +103,6 @@ Assignments
 - Explain type signatures?
 - Put list of useful functions in each assignment instruction
 
-Assignment 2
-
-- Create jsbin environment
-
 Assignment 3
 
 - Explain unicode \u2660 \n
