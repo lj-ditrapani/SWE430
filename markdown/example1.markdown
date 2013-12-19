@@ -128,13 +128,14 @@ but it doesn't do anything yet.
 Let's run the tests again.
 Now the "Count upper-case characters" test assertions
 each fail with an `undefined` result.
-Let's fill in the function to take in a string parameter and count the
+Let's fill in the function with the code to count the
 number of upper-case letters found in the string.
-The function should initialize a count variable to 0,
-loop through each character in the string
+The function signature should take a paramer named `string` of type
+`String`.
+The body of the function should initialize a count variable to 0,
+loop through each character in the string,
 and add one to the count if the character is an upper-case letter.
-Looking at the table on the
-[ASCII][]
+Looking at the table on the [ASCII][]
 Wikipedia page, we can see that upper-case characters have code values
 between 64 and 90 inclusive, so these will be the values we will use to
 compare the character code value against.
