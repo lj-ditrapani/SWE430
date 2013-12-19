@@ -4,7 +4,21 @@ SWE 430 Assignment 3 --- Password Checker
 Assignment Instructions
 ---------------------
 
-Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test (`write test => check if test fails => write production code => run all unit tests => refactor => run tests => go to next test case`).
+Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test.
+
+The TDD cycle:
+
+- Write a test
+- Run all your tests, ensuring the new test fails
+- Write the production code to pass the test
+- Run all your tests, ensuring the new test passes
+- Refactor your production code if necessary
+- Run all your tests
+- Refactor your test code if necessary
+- Run all your tests
+- Repeat
+
+Submission Instructions
 
 - zip Environment users:  Turn in both the source code (code.js) and the
   unit tests (test.js) in the blackboard Assignment 3 Submission.

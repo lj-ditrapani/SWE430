@@ -22,6 +22,8 @@ At each step, re-run the tests.
 Use the tests to help guide your implementation of the `basicMath`
 module as we did in Example 1 when creating the `stringInfo` module.
 
+Submission Instructions
+
 - zip Environment users:  Turn in the source code file (code.js) in the
   blackboard Assignment 1 Submission.
 - jsbin Environment users:  Submit the URL of your jsbin project in the

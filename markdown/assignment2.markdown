@@ -97,7 +97,7 @@ Useful JavaScript [Array methods][array]:
 **Note**:  The `toWords()`, `inList()`, and `capitalize()` functions can
 (and should) be used to construct the `titleize()` function.
 
-Environments:
+Submission Instructions
 
 - zip Environment users:  Turn in both the source code (code.js) and the
   unit tests (test.js) in the blackboard Assignment 2 Submission.
