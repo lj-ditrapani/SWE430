@@ -43,7 +43,7 @@ Week 2
 <h3>Full-blown TDD (7 hours)</h3>
 
 - [Example 2: TDD from Scratch --- Roman Numerals](example2.html) (4 hours)
-- [Assignment 2: TDD from Scratch --- Titlize](assignment2.html) (2 hours)
+- [Assignment 2: TDD from Scratch --- Titleize](assignment2.html) (2 hours)
 
 
 - - - - - -

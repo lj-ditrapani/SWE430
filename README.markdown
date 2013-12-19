@@ -105,8 +105,6 @@ Assignments
 
 Assignment 2
 
-- Change titlize to titleize everywhere (code01-xx.js, code.js,
-  test01-xx.js, test.js)
 - Create jsbin environment
 
 Assignment 3
