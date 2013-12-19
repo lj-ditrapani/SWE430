@@ -92,9 +92,14 @@ namespace.
 
     }());
 
-We attach the `stringInfo` object to the global `window` object so that it is visible and accessible outside of our anonymous function.
+We attach the `stringInfo` object to the global `window` object so that
+it is visible and accessible outside of our anonymous function.
 
-Run the tests again.  Now all four tests fail with the message that the function under test is missing.  Let's start with the first one:  "`Object doesn't support property or method 'countUpperCaseLetters'`".
+Run the tests again.
+Now all four tests fail with the message that the function under test is
+missing.
+Let's start with the first one:
+"`Object doesn't support property or method 'countUpperCaseLetters'`".
 
 [code01.js](example1/code01.js)
 
@@ -145,7 +150,10 @@ compare the character code value against.
         return count;
     };
 
-In order to find the value of a character, we use the `charCodeAt()` method of the String class.  It returns the numerical value of the character at the given position of the string object.
+In order to find the value of a character,
+we use the `charCodeAt()` method of the String class.
+It returns the numerical value of the character at the given position
+of the string object.
 
 Run the tests again.  Now the first test passes.
 
@@ -156,12 +164,23 @@ Run the tests again.  Now the first test passes.
 Count Lower-case Characters
 ---------------------------
 
-The next failing test has an error message of "`Object doesn't support property or method 'countLowerCaseLetters'`" because the `countLowerCaseLetters` function doesn't exist yet.  Let's declare the `countLowerCaseLetters` function now.
+The next failing test has an error message of
+"`Object doesn't support property or method 'countLowerCaseLetters'`"
+because the `countLowerCaseLetters()` function doesn't exist yet.
+Let's declare the `countLowerCaseLetters()` function now.
 
     stringInfo.countLowerCaseLetters = function() {
     };
 
-The assertions for the "Count lower-case characters" test now all fail with a result of `undefined`.  Let's implement the body of the `countLowerCaseLetters` function.  First, we add the string parameter to the function.  The body of the function should be very similar to the `countUpperCaseLetters` function.  So let's copy the code we wrote for `countUpperCaseLetters` and modify it to make it count lower-case letters instead.
+Run the tests again.
+The assertions for the "Count lower-case characters" test all fail
+with a result of `undefined`.
+Let's implement the body of the `countLowerCaseLetters()` function.
+First, we add the string parameter to the function.
+The body of the function should be very similar to the
+`countUpperCaseLetters()` function.
+So let's copy the code we wrote for `countUpperCaseLetters()` and modify
+it to make it count lower-case letters instead.
 
     stringInfo.countLowerCaseLetters = function(string) {
         var i, code, count = 0;
@@ -174,9 +193,11 @@ The assertions for the "Count lower-case characters" test now all fail with a re
         return count;
     };
 
-All we had to do to make the code work is is change the two numbers in the `if` statement.  According to the 
-[ASCII][]
-table, lower-case characters have code values between 97 and 122 inclusive.  So we just change the 65 to 97 and the 90 to 122 and we are done.
+All we had to do to make the code work is is change the two numbers
+inside the `if` statement.
+According to the [ASCII][] table, lower-case characters have code values
+between 97 and 122 inclusive.
+So we just change the 65 to 97 and the 90 to 122 and we are done.
 
 Run the tests again.  Now the first and second tests pass.
 
