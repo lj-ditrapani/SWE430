@@ -462,16 +462,26 @@ Anonymous function to hide temporary variables
 
 Anonymous functions can be used to create a private namespace to prevent temporary variables from polluting the global namespace or colliding with global variable names.
 
-    x = 5;                      // Global variable
+    // Global variable
+    x = 5;
+    // A global object acting as a module namespace
+    window.mod = {};
 
+    // Anonymous function
     (function() {
-        var x = 7;              // Separate, locally scoped variable x
-        var temp = x + 9;       // temp is only defined locally
-        window.mod.y = temp * 3;
-    }());                       // Notice the function is immediately 
-                                // called
-                                // x is still 5
-                                // temp is undefined
+        // A separate, locally scoped variable x
+        var x = 7;
+        // temp is only defined locally
+        var temp = x + 9;
+        // Create a porperty 'y' in the global 'mod' object
+        mod.y = temp * 3;
+    }());
+    // Notice the function is immediately called
+    // with the () at the end
+
+    // Outside of the anonymous function
+    // x is still 5 and
+    // temp is undefined
 
 
 If Statement
