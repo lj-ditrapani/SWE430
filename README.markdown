@@ -71,6 +71,7 @@ Syllabus
 
 Lessons
 
+- Review and update lessons
 - Add javascript style standards to lesson 1
 
 DBQ
@@ -93,12 +94,15 @@ Tutorial 3:  Environment Instructions
 
 Examples
 
+- Work through both examples, step by step.  Fill-in prose.
+- Work through both examples, step by step.  Time it.
 - Make video screen cast for Example 1
 - Make video screen cast for Example 2?
 - Grab ideas from example 1.1, 1.2 and 2 from 430 13B
 
 Assignments
 
+- Work through all 3 assignments and time each.
 - Make video screen cast for Assignment 1
 - Explain type signatures?
 - Put list of useful functions in each assignment instruction
