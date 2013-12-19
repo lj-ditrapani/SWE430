@@ -2,7 +2,11 @@ Assignment 2
 ========================================================================
 
 In this assignment, you will apply what you learned in Example 2.
-Use the Test-driven Development (TDD) process to iteratively develop the module definde below.  You will write both the test code and the production code on your own.
+Use the Test-driven Development (TDD) process to iteratively develop the
+module defined below.
+You will write both the test code and the production code on your own.
+Read through the problem definition carefully.
+If you have an questions, please don't hesitate to ask me.
 
 The TDD cycle:
 
@@ -16,9 +20,12 @@ The TDD cycle:
 - Run all your tests
 - Repeat
 
-
 For Assignment 2, you will create a module named `wordModule`
-with the following 4 functions:
+with the following 4 functions.
+You should write at least one qUnit test for each function.
+You should consider at least 2 test cases for each function.
+You can execute both test cases in the same qUnit test or have
+individual qUnit tests for each test case.
 
 <table>
 <tr>
@@ -59,14 +66,14 @@ Example usage:
 
     var words, result, word, title;
 
-    words = wordModule.toWords('UPPER CASE and lower case');
-    // words is ['UPPER', 'CASE', 'and', 'lower', 'case']
+    words = wordModule.toWords('UPPER cASE And lower case');
+    // words is ['upper', 'case', 'and', 'lower', 'case']
 
     result = wordModule.inList('pear', ['apple', 'pear', 'banana']);
-    // result is true
+    // result is true; 'pear' is the second element in the array
 
     word = wordModule.capitalize('pear');
-    // word is 'Pear'
+    // word is 'Pear'; the first letter is now upper-case
 
     title = wordModule.titleize('a title for a book');
     // title is 'A Title for a Book'
