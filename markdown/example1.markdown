@@ -44,6 +44,8 @@ file, which incorporates all of the work accomplished in the example
 up to that point, is provided for you to check your work against so you
 can follow along with confidence.
 
+Example 1 Environments (use one or the other):
+
 - [Example 1 zip Environment](example1.zip)
 - [Example 1 jsbin Environment][jsbin example 1]
 
