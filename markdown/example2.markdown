@@ -92,26 +92,38 @@ the enclosing anonymous functions, we get the same result as before.
 
 
 `I -> 1` Test
------------
+-------------
 
-Let's write our first test.  We will start with the most basic test.
-Convert `I` to 1.
+Let's write our first test.  We will start with the most basic test:
+convert `I` to 1.  To write a test, we invoke the qUnit `test` function.
+The `test()` function takes a function object as it's second argument.
+The `test()` function is how we tell qUnit to add the function object to
+the test suite.  The test should assert that the return value of the
+`toDecimal()` function, when given an argument of `'I'`, is 1.
+We use the qUnit `equal()` function to make this assertion.
 
     // test.js
     test('I -> 1', function() {
         equal(roman.toDecimal('I'), 1);
     });
 
-'roman' is undefined
+Run the tests.  The test fails with a result of:
+"`'roman' is undefined`".  This makes sense, because we have not defined
+the variable `roman` yet.
+Let's do that now, as the test results suggest.
 
-export roman name-space
+The `roman` variable should reference an object that we will use as our
+module namespace.
 
     // code.js
     window.roman = {};
 
-Object doesn't support property or method 'toDecimal'
-
-create empty toDecimal method
+Let's run our tests again.  Now the test fails with a different message:
+"`Object doesn't support property or method 'toDecimal'`".  This is a
+logical response as we have not defined a `toDecimal` property on the
+`roman` object yet.
+Therefor, we create an empty `toDecimal()` function and
+attach it as a property of the `roman` object.
 
     // code.js
     function toDecimal() {
@@ -122,12 +134,13 @@ create empty toDecimal method
         toDecimal: toDecimal
     };
 
-Failed
+Run the tests.  The test fails again.  This time the message is:
 
 - expected: 1
 - result: undefined
 
-Return 1
+What is the simplest solution to make this test pass?
+It is to modify the `toDecimal()` function to return 1.  Let's do that.
 
     // code.js
     function toDecimal() {
@@ -139,7 +152,8 @@ Return 1
         toDecimal: toDecimal
     };
 
-Passes
+Run the tests.  The test now passes.  There is no need to refactor,
+so we will move on to the next test.
 
 [test02.js](example2/test02.js)
 [code02.js](example2/code02.js)
