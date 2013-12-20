@@ -1,4 +1,4 @@
-Example 2
+SWE 430:  Example 2
 ========================================================================
 
 For Example 2, we will use the Test-driven Development (TDD) process to
@@ -18,10 +18,25 @@ The TDD cycle:
 - Run all your tests
 - Repeat
 
-We will create a module named `roman` which has a function `toDecimal`
+We will create a module named `roman` which has a function `toDecimal()`
 that converts roman numerals to decimal values.
 
-If you are not familiar with roman numerals, take a look at the [Wikipedia page]().
+If you are not familiar with roman numerals, take a look at the
+[Wikipedia page](http://en.wikipedia.org/wiki/Roman_numerals).
+
+The `toDecimal()` function must be able to handle roman numerals with
+values from 1 to 3999.  In roman numerals, this means
+`I` to `MMMCMXCIX`.
+The roman numerals are assumed to be valid numbers;
+therefore the `toDecimal()` function is not responsible for performing
+any validation.
+
+At the end of each section, a link to the current state of the `code.js`
+and `test.js` files, which incorporates all of the work accomplished in
+the example up to that point, is provided for you to check your work
+against so you can follow along with confidence.
+
+Example 2 Environments (use one or the other):
 
 - [Example 2 zip Environment](example2.zip)
 - [Example 2 jsbin Environment][jsbin]
@@ -32,10 +47,26 @@ For a refresher on using the above environments, see the
 [jsbin]: http://jsbin.com/swe430_example2/latest/edit?javascript,live
 
 
-Initial
--------
+Initial Code
+------------
 
-Initial skeleton, module function wrapper
+Both the code.js and test.js files are empty.  If we try running the tests, we see this response from qUnit.
+
+    Tests completed in 18 milliseconds.
+    0 assertions of 0 passed, 0 failed.
+
+Since there are no tests to run, there is nothing to report.
+
+As we did in Example 1, we start by writing the boilerplate code for the
+`test.js` file.
+We will place all our test code inside of an anonymous function so all
+our code is encapsulated and hidden.
+Any local variables we define with the `var` keyword and
+any functions we define with the `function` keyword
+will only be visible within the anonymous function.
+This way, we do not pollute the global namespace.
+To accomplish this, we simply define an anonymous function and
+immediately execute it with the trailing `()`.
 
     // test.js
     (function() {
@@ -44,7 +75,7 @@ Initial skeleton, module function wrapper
 
     }());
 
-code.js
+We do the same thing with the `code.js` file.
 
     // code.js
     (function() {
@@ -53,12 +84,18 @@ code.js
 
     }());
 
+Run the tests again.  Since we haven't defined anything yet other than
+the enclosing anonymous functions, we get the same result as before.
+
 [test01.js](example2/test01.js)
 [code01.js](example2/code01.js)
 
 
-I -> 1 Test
+`I -> 1` Test
 -----------
+
+Let's write our first test.  We will start with the most basic test.
+Convert `I` to 1.
 
     // test.js
     test('I -> 1', function() {
