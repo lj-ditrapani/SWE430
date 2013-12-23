@@ -418,7 +418,7 @@ times and changing the property name each time.
         M: 10
     };
 
-Let's run the tests again.  This time the test fails because the Result
+Let's run the tests again.  This time the test fails because the result
 for 
 `L`, `C`, `D`, and `M`
 is 10 instead of the expected value.
@@ -443,7 +443,17 @@ There is no need to refactor, so we will move on to the next test.
 
 
 Roman Numeral String Test
--------------------------------------
+-------------------------
+
+Up to this point, our tests have only considered single-character
+roman numerals.  It is time to create a test that deals with
+multi-character roman numeral strings.
+
+We create a new test, "Roman Numeral String".  It is very similar to
+the "Individual Roman Numerals" test.  It has an array of test cases
+named `tests` and calls the `runTests()` function passing `tests` as the
+input parameter.  However, it differs in that the input value for each
+test cases is a string of roman numerals instead of a single-character.
 
     // test.js
     test('Roman Numeral Stings', function() {
@@ -461,20 +471,32 @@ Roman Numeral String Test
         runTests(tests);
     });
 
-All assertions fail with undefined.  Expected single letter numbers.  We must rewrite the code to handle strings of multiple roman numerals.
+Run the tests.  All assertions in the new test fail with
+"`Result: undefined`".
+The production code was written to expected a single letter roman
+numeral.  We must rewrite the code to handle strings of multiple roman
+numerals.
 
-Rewrite code to loop through characters and sum values.
+The easiest way I see to fix this is to create a loop that iterates
+over each character and sums the decimal values of each character.
+To accomplish this, we need a `number` local variable that keeps track
+of the running sum.  The `number` variable must be initialized to 0.
+We can use the `DICTIONARY` to lookup the value of each character as we
+did previously.
 
     // code.js
     function toDecimal(romanNumerals) {
         var i, number = 0;
         for (i = 0; i < romanNumerals.length; i += 1) {
-            number += DICTIONARY[romanNumerals[i]];
+            number += DICTIONARY[romanNumerals.charAt(i)];
         }
         return number;
     }
 
-Pass
+Run the tests.  Both tests now pass.
+Notice that our production code now works for both single-character
+and multi-character roman numeral strings.
+There is no need to refactor, so we will move on to the next test.
 
 [test07.js](example2/test07.js)
 [code07.js](example2/code07.js)
@@ -713,7 +735,7 @@ Integrate the `rewrite` function into the `toDecimal` function to pass the "Subt
         var i, number = 0;
         romanNumerals = rewrite(romanNumerals);
         for (i = 0; i < romanNumerals.length; i += 1) {
-            number += DICTIONARY[romanNumerals[i]];
+            number += DICTIONARY[romanNumerals.charAt(i)];
         }
         return number;
     }
