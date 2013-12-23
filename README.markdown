@@ -59,6 +59,7 @@ WIP
 ====
 
 Example 2
+**fix romanNumerals[i] to romanNumerals.charAt(i)**
 
 
 TO DO
