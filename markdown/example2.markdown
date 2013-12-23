@@ -281,13 +281,60 @@ The `romanNumerals` input parameter is actually the look-up key of the
 `DICTIONARY` object.  Notice how simple our `toDecimal()` function has
 become.  It is only a single line with no need for control-flow logic.
 
-Run the tests.  They all pass.  This means our production code refactoring has been successful because we improved the structure of our code without changing the behavior of our code.
+Run the tests.  They all pass.  This means our production code
+refactoring has been successful because we improved the _structure_ of
+our code without changing the _behavior_ of our code.
 
 [code05.js](example2/code05.js)
 
 
 Refactor test code
 ------------------
+
+We have removed duplication from the production code via refactoring,
+but we still have duplication in our test code to deal with.
+Our three tests are nearly identical.  They differ only in the input
+roman numeral and expected output decimal value.
+Instead of writing a new test for each roman numeral, it would be nice
+to have a single test with a list of test cases that executes the test
+for each test case automatically.
+Testing an additional roman numeral would only require adding a test
+case input/output pair to the list of test cases instead of copying an
+entire test and changing the values.
+
+Let's start by creating a generic `runTests()` function that takes an
+array of test cases an input.  Each test case should be an array that
+consists of two values, the input roman numeral and the expected output
+decimal value.  The `runTests()` function should pass the input to the
+`toDecimal()` function and compare the actual result with the expected
+result.
+
+    // test.js
+    function runTests(tests) {
+        var i, pair, label;
+        for (i = 0; i < tests.length; i += 1) {
+            pair = tests[i];
+            label = pair[0] + ' -> ' + pair[1];
+            equal(roman.toDecimal(pair[0]), pair[1], label);
+        }
+    }
+
+The `runTests()` function iterates over the test cases in the `tests`
+input parameter.  In each iteration, the current test case is assigned
+to the `pair` variable.  The first item in `pair` is the roman numeral
+and the second item in `pair` is the expected output.
+
+Line 6 provides a label for each assertion explaining the purpose of
+the test case.
+
+Run the tests.  All tests still pass, so we don't have any syntax
+problems with our new code.
+
+Now let's rewrite our three original tests into a single test that
+makes use of the new `runTests()` function.  The new test should define
+a array of test cases named `tests` and then invoke the `runTests`
+function passing the `tests` variable as the input.
+
 
     // test.js
     function runTests(tests) {
@@ -309,6 +356,18 @@ Refactor test code
         runTests(tests);
     });
 
+The `tests` array contains three test cases that represent the three
+original tests we had before the refactoring.  So this single test does
+all the work accomplished by the original three tests, but without the
+duplication in test code.  In addition, our `runTests()` helper function
+will come in handy when writing future tests.
+
+Run the tests.  All tests still pass.
+This means our test code refactoring has been successful because we
+improved the _structure_ of our code without changing the _behavior_ of
+our code.
+
+[code05.js](example2/code05.js)
 [test05.js](example2/test05.js)
 
 
