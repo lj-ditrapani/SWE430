@@ -246,7 +246,24 @@ in our production code that requires some refactoring.
 Refactor to use dictionary
 --------------------------
 
-We
+Looking ahead, we know we will want our code to work for `L`, `C`, `D`,
+and `M` as well as `I`, `V`, and `X`.
+We already see a pattern emerging in the `toDecimal()` function from the
+if-else statement.
+It checks the value of the `romanNumerals` input parameter against the
+possible roman numerals and returns the corresponding decimal value.
+Each additional roman numeral will require duplicating another else
+clause to perform the same actions on different values.
+The code is acting like a mapping from roman numerals to decimal values.
+We should use a datastructure to express this mapping implicitly
+instead of using redundant if-else clauses.
+It turns out, JavaScript objects are already key-value mappings.
+So let's rewrite the code to use a JavaScript object so that the
+`toDecimal()` function only needs to look up the correct decimal value
+by accessing the correct property.
+We'll call the JavaScript object `DICTIONARY` to indicate its true
+purpose and write it in upper-case to indicate it is immutable (the
+value of `DICTIONARY` does not change during execution of the program).
 
     // code.js
     var DICTIONARY = {
@@ -259,6 +276,12 @@ We
     function toDecimal(romanNumerals) {
         return DICTIONARY[romanNumerals];
     }
+
+The `romanNumerals` input parameter is actually the look-up key of the
+`DICTIONARY` object.  Notice how simple our `toDecimal()` function has
+become.  It is only a single line with no need for control-flow logic.
+
+Run the tests.  They all pass.  This means our production code refactoring has been successful because we improved the structure of our code without changing the behavior of our code.
 
 [code05.js](example2/code05.js)
 
