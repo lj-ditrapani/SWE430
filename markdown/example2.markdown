@@ -372,7 +372,13 @@ our code.
 
 
 Finish "Individual Roman Numerals" test
--------------------------------------
+---------------------------------------
+
+It's time to complete our "Individual Roman Numerals" test.
+It is missing test cases for `"L"`, `"C"`, `"D"`, and `"M"`. 
+Now that our test code is nicely refactored, we can easily add the
+required test cases.  All we have to do is insert 4 items into the
+`tests` array.
 
     // test.js
     test('Individual Roman Numerals', function() {
@@ -388,10 +394,18 @@ Finish "Individual Roman Numerals" test
         runTests(tests);
     });
 
-Failed
-Result is undefined for L, C, D, and M
+Run the tests.  The test now fails.  Of the seven assertions,
+the assertions for
+`L`, `C`, `D`, and `M`
+fail with
+"`Result: undefined`".
+The failure is due to not having 
+`L`, `C`, `D`, or `M`
+properties defined in the `DICTIONARY` object of the production code.
 
-Add L, C, D, M entries by copying the X entry.
+Therefore, we should add `L`, `C`, `D`, and `M` properties to the
+`DICTIONARY` object.  We will do so by copying the `X` property four
+times and changing the property name each time.
 
     // code.js
     var DICTIONARY = {
@@ -404,10 +418,11 @@ Add L, C, D, M entries by copying the X entry.
         M: 10
     };
 
-Failed
-Result is 10 for L, C, D, and M
-
-Fix dictionary values
+Let's run the tests again.  This time the test fails because the Result
+for 
+`L`, `C`, `D`, and `M`
+is 10 instead of the expected value.
+Let's change the values of the properties to the correct numbers.
 
     // code.js
     var DICTIONARY = {
@@ -420,7 +435,8 @@ Fix dictionary values
         M: 1000
     };
 
-Pass
+Run the tests again.  This time the test passes.
+There is no need to refactor, so we will move on to the next test.
 
 [test06.js](example2/test06.js)
 [code06.js](example2/code06.js)
