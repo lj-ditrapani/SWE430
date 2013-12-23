@@ -152,27 +152,33 @@ It is to modify the `toDecimal()` function to return 1.  Let's do that.
         toDecimal: toDecimal
     };
 
-Run the tests.  The test now passes.  There is no need to refactor,
-so we will move on to the next test.
+Run the tests.  The test now passes.
+There is no need to refactor, so we will move on to the next test.
 
 [test02.js](example2/test02.js)
 [code02.js](example2/code02.js)
 
 
-V -> 5 Test
------------
+`V -> 5` Test
+-------------
+
+What is the next most basic test we could write?
+Let's create a test for when the input is `"V"`.
+This should produce an output of 5.
+We can copy the previous test for `I -> 1`
+and replace `I` with `V` and 1 with 5.
 
     // test.js
     test('V -> 5', function() {
         equal(roman.toDecimal('V'), 5);
     });
 
-Failed
+Run the tests.  Th second test fails with the following message:
 
-- expected: 5
-- result: 1
+- Expected: 5
+- Result: 1
 
-Use if-else
+We previously hard-coded the `toDecimal()` function to always return 1 regardless of the input parameter.   We want the return value to be determined by the input parameter.  First, we must define an actual input parameter---we will call it `romanNumerals`.  Then we will use an if-else statement to return either 1 or 5 based on the value of the input parameter `romanNumerals`.
 
     // code.js
     function toDecimal(romanNumerals) {
@@ -183,21 +189,24 @@ Use if-else
         }
     }
 
-pass
+Run the tests again.  Now they both pass.
+There is no need to refactor, so we will move on to the next test.
 
 [test03.js](example2/test03.js)
 [code03.js](example2/code03.js)
 
 
-X -> 10 Test
-------------
+`X -> 10` Test
+--------------
+
+Now we write a test to handle `"X"` in the same manner we have don for `"I"` and `"V"`.
 
     // test.js
     test('X -> 10', function() {
         equal(roman.toDecimal('X'), 10);
     });
 
-Failed
+Run the tests.  The third test fails with 
 - expected: 10
 - result: 5
 
