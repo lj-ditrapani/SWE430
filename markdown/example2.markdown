@@ -243,8 +243,8 @@ in our production code that requires some refactoring.
 [code04.js](example2/code04.js)
 
 
-Refactor to use dictionary
---------------------------
+Refactor Production Code
+------------------------
 
 Looking ahead, we know we will want our code to work for `L`, `C`, `D`,
 and `M` as well as `I`, `V`, and `X`.
@@ -288,7 +288,7 @@ our code without changing the _behavior_ of our code.
 [code05.js](example2/code05.js)
 
 
-Refactor test code
+Refactor Test Code
 ------------------
 
 We have removed duplication from the production code via refactoring,
@@ -371,7 +371,7 @@ our code.
 [test05.js](example2/test05.js)
 
 
-Finish Individual Roman Numerals test
+Finish "Individual Roman Numerals" test
 -------------------------------------
 
     // test.js
@@ -496,8 +496,8 @@ Fails because we have not implemented subtractive rules yet.
 [test08.js](example2/test08.js)
 
 
-Rewrite function
-----------------
+"Rewrite" Function
+------------------
 
 Our code works fine if we allow numerals to be repeated 4 times and ignore the Subtractive rules.  Instead of changing our code, let's create a rewrite function that rewrites normal roman numerals by removing subtractive pairs and replacing them by the 4 symbol equivalent.
 
@@ -544,8 +544,8 @@ The rewrite test now runs, but all assertions fail with `result is undefined`.
 Create helper function `replaceTwoCharacters`
 
 
-Replace Two Characters function
--------------------------------
+"Replace Two Characters" Function
+---------------------------------
 
 Write test for `replaceTwoCharacters`
 
@@ -598,7 +598,7 @@ Run the tests.  The 'Replace Two Characters' test now passes.
 [code09.js](example2/code09.js)
 
 
-Back to the Rewrite Function
+Back to the "Rewrite" Function
 ----------------------------
 
 Now we write the code for the `rewrite` function using the `replaceTwoCharacters` helper function.
@@ -687,8 +687,8 @@ pass
 [code10.js](example2/code10.js)
 
 
-Integrate the Rewrite function into the toDecimal function
-----------------------------------------------------------
+Integrate the "rewrite" and "toDecimal" Functions
+-------------------------------------------------
 
 Integrate the `rewrite` function into the `toDecimal` function to pass the "Subtractive Rules" test.
 
