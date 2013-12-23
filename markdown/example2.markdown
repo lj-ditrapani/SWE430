@@ -50,7 +50,8 @@ For a refresher on using the above environments, see the
 Initial Code
 ------------
 
-Both the code.js and test.js files are empty.  If we try running the tests, we see this response from qUnit.
+Both the code.js and test.js files are empty.
+If we try running the tests, we see this response from qUnit.
 
     Tests completed in 18 milliseconds.
     0 assertions of 0 passed, 0 failed.
@@ -136,8 +137,8 @@ attach it as a property of the `roman` object.
 
 Run the tests.  The test fails again.  This time the message is:
 
-- expected: 1
-- result: undefined
+- Expected: 1
+- Result: undefined
 
 What is the simplest solution to make this test pass?
 It is to modify the `toDecimal()` function to return 1.  Let's do that.
@@ -178,7 +179,13 @@ Run the tests.  Th second test fails with the following message:
 - Expected: 5
 - Result: 1
 
-We previously hard-coded the `toDecimal()` function to always return 1 regardless of the input parameter.   We want the return value to be determined by the input parameter.  First, we must define an actual input parameter---we will call it `romanNumerals`.  Then we will use an if-else statement to return either 1 or 5 based on the value of the input parameter `romanNumerals`.
+We previously hard-coded the `toDecimal()` function to always return 1
+regardless of the input parameter.
+We want the return value to be determined by the input parameter.
+First, we must define an actual input parameter---we
+will call it `romanNumerals`.
+Then we will use an if-else statement to return either 1 or 5 based on
+the value of the input parameter `romanNumerals`.
 
     // code.js
     function toDecimal(romanNumerals) {
@@ -199,18 +206,24 @@ There is no need to refactor, so we will move on to the next test.
 `X -> 10` Test
 --------------
 
-Now we write a test to handle `"X"` in the same manner we have don for `"I"` and `"V"`.
+Now we write a test to handle `"X"` in the same manner we have don for
+`"I"` and `"V"`.
 
     // test.js
     test('X -> 10', function() {
         equal(roman.toDecimal('X'), 10);
     });
 
-Run the tests.  The third test fails with 
-- expected: 10
-- result: 5
+Run the tests.  The third test fails with the following message:
 
-Use if-else
+- Expected: 10
+- Result: 5
+
+Our `toDecimal()` function returns 5 for any input other than `"I"`.
+Let's add another else clause to our code.
+We want the second clause to capture the case when the input is `"V"`
+and as a result, return 5.
+The third and final else clause should return 10.
 
     // code.js
     function toDecimal(romanNumerals) {
@@ -223,7 +236,8 @@ Use if-else
         }
     }
 
-pass
+Run the tests.  All tests pass.  However, there is a disturbing pattern
+in our production code that requires some refactoring.
 
 [test04.js](example2/test04.js)
 [code04.js](example2/code04.js)
@@ -231,6 +245,8 @@ pass
 
 Refactor to use dictionary
 --------------------------
+
+We
 
     // code.js
     var DICTIONARY = {
