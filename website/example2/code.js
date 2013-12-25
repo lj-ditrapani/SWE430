@@ -52,7 +52,7 @@
         var i, number = 0;
         romanNumerals = rewrite(romanNumerals);
         for (i = 0; i < romanNumerals.length; i += 1) {
-            number += DICTIONARY[romanNumerals[i]];
+            number += DICTIONARY[romanNumerals.charAt(i)];
         }
         return number;
     }
