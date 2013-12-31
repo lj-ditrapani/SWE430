@@ -719,9 +719,19 @@ Let's try to get the "Rewrite function" test to pass.
 Back to the "Rewrite" Function
 ----------------------------
 
-Now we write the code for the `rewrite()` function using the `replaceTwoCharacters()` helper function.
+Now we write the code for the `rewrite()` function using the
+`replaceTwoCharacters()` helper function.
+Since we have arleady solved the problem of replacing two characters
+with a substring by writing the `replaceTwoCharacters()` helper
+function, the implementation of the `rewrite()` function is very simple
+and straight forward.
 
-Call `replaceTwoCharacters()` six times in rewrite function
+Recall, there are six subtractive rules to apply.  All we need to do now
+to implement the `rewrite()` function is call the
+`replaceTwoCharacters()` function six times;
+once for each subtractive rule.
+Each time, we update the value of romanNumerals to the value returned
+by `replaceTwoCharacters()`.
 
     // code.js
     function rewrite(romanNumerals) {
