@@ -629,7 +629,7 @@ will be accessible for testing outside the `code.js` file.
 The rewrite test now runs and executes all assertions,
 but each assertions fail with `Result: undefined`.
 
-Before we dive into filling in the body of the `rewrite()` function with
+Before we dive into filling-in the body of the `rewrite()` function with
 code, it would be nice to break down this problem into smaller pieces.
 Let's isolate a portion of the rewrite function into a smaller,
 helper function.
@@ -642,9 +642,12 @@ In light of what the `rewrite()` function is required to do,
 it would be nice to have a helper function that,
 given a string, a two character string, and a replacement substring,
 would return a string with the first occurrence of the two character
-string replaced with the replacement substring. Let's create a helper function named `replaceTwoCharacters()` that does exactly that.
+string replaced with the replacement substring.
+Let's create a helper function named `replaceTwoCharacters()`
+that does exactly that.
 
-Write test for `replaceTwoCharacters`
+Before we write the production code for `replaceTwoCharacters()`, we
+write a test for it.
 
     // test.js
     test('Replace Two Characters', function() {
@@ -656,10 +659,22 @@ Write test for `replaceTwoCharacters`
         equal(f('abcde', 'de', 'WXYZ'), 'abcWXYZ');
     });
 
-fail
-Object expected
+Run the tests.  The new test fails with a message of:
+`undefined: Object expected`.  This is expected since we haven't even
+declared the `replaceTwoCharacters()` function in the production code
+yet.
 
-Create empty `replaceTwoCharacters` function
+Let's create an empty `replaceTwoCharacters()` function in the production code now.  The function should have 3 parameters:
+
+- `string`:  the input string
+- `twoCharacters`:  the two characters that should be removed from the
+  input string.
+- `replacement`:  the replacement substring that should be added to the
+  string at the position of the `twoCharacters`.
+
+Line 7 attaches the `replaceTwoCharacters()` function to the `roman`
+module so it is accessible for testing outside of the `code.js` file.
+
 
     // code.js
     function replaceTwoCharacters(string, twoCharacters, replacement) {
@@ -672,12 +687,12 @@ Create empty `replaceTwoCharacters` function
         toDecimal: toDecimal
     };
 
+Run the tests.  Now the test executes all the assertions, but each assertions fails because the result is `undefined`.
 
-fail
-result undefined
-
-Define body of replace two characters function `replaceTwoCharacters`
-If `twoCharacters` is found in string, replace it with `replacement`.
+Now we can define the body of `replaceTwoCharacters()` function.
+The function should check if `twoCharacters` is found in `string`.
+If `twoCharacters` is found in string, it should replace it with
+`replacement`.
 
     // code.js
     function replaceTwoCharacters(string, twoCharacters, replacement) {
@@ -689,7 +704,13 @@ If `twoCharacters` is found in string, replace it with `replacement`.
                string.slice(index + 2, string.length);
     }
 
-Run the tests.  The 'Replace Two Characters' test now passes.
+- Line 3 tries to find the index of the first occurrence of `twoCharacters` in `string`. 
+- Lines 4 and 5: If `index` is -1, it means `twoCharacters` was not found in `string` and therefore `string` should be returned as-is with no changes.
+- Lines 7 and 8 insert the `replacement` substring where `twoCharacters` used to be.  The first `slice()` returns the portion of `string` before `twoCharacters` and the second `slice()` returns the portion of `string` after `twoCharacters`.
+
+Run the tests.  The "Replace Two Characters" test now passes.
+However, we still have 2 failing tests.
+Let's try to get the "Rewrite function" test to pass.
 
 [test09.js](example2/test09.js)
 [code09.js](example2/code09.js)
@@ -698,9 +719,9 @@ Run the tests.  The 'Replace Two Characters' test now passes.
 Back to the "Rewrite" Function
 ----------------------------
 
-Now we write the code for the `rewrite` function using the `replaceTwoCharacters` helper function.
+Now we write the code for the `rewrite()` function using the `replaceTwoCharacters()` helper function.
 
-Call `replaceTwoCharacters` six times in rewrite function
+Call `replaceTwoCharacters()` six times in rewrite function
 
     // code.js
     function rewrite(romanNumerals) {
@@ -719,7 +740,7 @@ Call `replaceTwoCharacters` six times in rewrite function
         return romanNumerals;
     }
 
-pass
+Run the tests.  The "Rewrite function" test now passes.
 
 Refactor into loop
 
@@ -740,9 +761,11 @@ Refactor into loop
         return romanNumerals;
     }
 
-pass
+Run the tests.  The "Rewrite function" still passes.  This means the
+refactoring has been successful because we improved the _structure_ of
+our code without changing the _behavior_ of our code.
 
-Refactor the test.  Use existing runTest with second `runRewriteTest` boolean parameter.
+Refactor the test.  Use existing `runTest()` with second `runRewriteTest` boolean parameter.
 
     // test.js
     function runTests(tests, runRewriteTest) {
