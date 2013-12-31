@@ -41,7 +41,7 @@ Example 2 Environments (use one or the other):
 - [Example 2 zip Environment](example2.zip)
 - [Example 2 jsbin Environment][jsbin]
 
-For a refresher on using the above environments, see the 
+For a refresher on using the above environments, see the
 [Environment Instructions](instructions.html).
 
 [jsbin]: http://jsbin.com/swe430_example2/latest/edit?javascript,live
@@ -296,14 +296,14 @@ but we still have duplication in our test code to deal with.
 Our three tests are nearly identical.  They differ only in the input
 roman numeral and expected output decimal value.
 Instead of writing a new test for each roman numeral, it would be nice
-to have a single test with a list of test cases that executes the test
+to have a single test with a list of test cases that executes the code
 for each test case automatically.
 Testing an additional roman numeral would only require adding a test
 case input/output pair to the list of test cases instead of copying an
 entire test and changing the values.
 
 Let's start by creating a generic `runTests()` function that takes an
-array of test cases an input.  Each test case should be an array that
+array of test cases an input.  Each test case should be a sub-array that
 consists of two values, the input roman numeral and the expected output
 decimal value.  The `runTests()` function should pass the input to the
 `toDecimal()` function and compare the actual result with the expected
@@ -375,7 +375,7 @@ Finish "Individual Roman Numerals" test
 ---------------------------------------
 
 It's time to complete our "Individual Roman Numerals" test.
-It is missing test cases for `"L"`, `"C"`, `"D"`, and `"M"`. 
+It is missing test cases for `"L"`, `"C"`, `"D"`, and `"M"`.
 Now that our test code is nicely refactored, we can easily add the
 required test cases.  All we have to do is insert 4 items into the
 `tests` array.
@@ -399,7 +399,7 @@ the assertions for
 `L`, `C`, `D`, and `M`
 fail with
 "`Result: undefined`".
-The failure is due to not having 
+The failure is due to not having
 `L`, `C`, `D`, or `M`
 properties defined in the `DICTIONARY` object of the production code.
 
@@ -419,7 +419,7 @@ times and changing the property name each time.
     };
 
 Let's run the tests again.  This time the test fails because the result
-for 
+for
 `L`, `C`, `D`, and `M`
 is 10 instead of the expected value.
 Let's change the values of the properties to the correct numbers.
@@ -505,7 +505,33 @@ There is no need to refactor, so we will move on to the next test.
 Subtractive Rules Test
 ----------------------
 
-Add a test to ensure subtractive rules are being applied.
+Roman numerals use subtractive rules to avoid repeating the same numeral
+more than 3 times.  For example 4 is not `IIII`, but `IV` and 9 is not
+`VIIII`, but `IX`.
+
+According to
+[Wikipedia](http://en.wikipedia.org/wiki/Roman_numerals):
+
+> Symbols are placed from left to right in order of value, starting with
+> the largest. However, in a few specific cases, to avoid four
+> characters being repeated in succession (such as `IIII` or `XXXX`)
+> these can be reduced using subtractive notation as follows:
+> 
+> - the numeral `I` can be placed before `V` and `X` to make 4 units
+>   (`IV`) and 9 units (`IX`) respectively
+> - `X` can be placed before `L` and `C` to make 40 (`XL`) and 90 (`XC`)
+>   respectively
+> - `C` can be placed before D and M to make 400 (`CD`) and 900 (`CM`)
+>   according to the same pattern
+
+
+We should add a test to ensure the subtractive rules are being applied
+correctly.  The test is very similar to the previous 2 tests.
+It defines an array of test cases and then invokes the `runTests()`
+function passing the `tests` array as the input argument.
+
+We define test cases that cover the 6 possible subtractive rules in
+various combinations throughout the range of allowed values (1 to 3999).
 
     // test.js
     test('Subtractive Rules', function() {
@@ -529,7 +555,11 @@ Add a test to ensure subtractive rules are being applied.
         runTests(tests);
     });
 
-Fails because we have not implemented subtractive rules yet.
+Run the tests.  The new fails.  Every assertion in the test has a
+result value that is greater than the expected value.
+This is because we have not yet implemented the subtractive rules.
+Let's work on implementing the subtractive rules in our production code
+in order to pass this new test.
 
 [test08.js](example2/test08.js)
 
@@ -537,9 +567,16 @@ Fails because we have not implemented subtractive rules yet.
 "Rewrite" Function
 ------------------
 
-Our code works fine if we allow numerals to be repeated 4 times and ignore the Subtractive rules.  Instead of changing our code, let's create a rewrite function that rewrites normal roman numerals by removing subtractive pairs and replacing them by the 4 symbol equivalent.
+Our code works fine if we allow numerals to be repeated 4 times and
+ignore the Subtractive rules.  Instead of changing our existing code,
+let's create a `rewrite()` function that rewrites normal roman
+numerals by removing subtractive pairs and replacing them by the 4
+symbol equivalent.
 
-We start by writing the test.
+For example, if the `rewrite('IV')` will return `IIII` and
+`rewrite('IX')` will return `VIIII`.
+
+We start by writing the test for the `rewrite()` function.
 
     // test.js
     test('Rewrite function', function() {
@@ -560,8 +597,8 @@ We start by writing the test.
         equal(roman.rewrite('MMMCMXCIX'), 'MMMDCCCCLXXXXVIIII');
     });
 
-The new test fails because `roman.rewrite` is undefined:
-Object doesn't support property or method 'rewrite'
+The new test fails because `roman.rewrite()` is undefined:
+"`Object doesn't support property or method 'rewrite'`"
 
 Now we write the production code.
 
