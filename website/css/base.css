@@ -93,3 +93,9 @@ a:hover {
     color: #b0d0ff;
     background-color: #990000;
 }
+
+blockquote {
+    background-color: #EEE;
+    border: 1px dashed #999;
+    padding: 0px 10px;
+}
