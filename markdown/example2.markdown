@@ -573,10 +573,14 @@ let's create a `rewrite()` function that rewrites normal roman
 numerals by removing subtractive pairs and replacing them by the 4
 symbol equivalent.
 
-For example, if the `rewrite('IV')` will return `IIII` and
+For example, `rewrite('IV')` will return `IIII` and
 `rewrite('IX')` will return `VIIII`.
 
 We start by writing the test for the `rewrite()` function.
+We define several test-cases inside the test.  Each test case
+corresponds to a test-case from the "Subtractive Rules" test.
+For each test-case, we assert that the result of calling the `rewrite()`
+function on the input is equal to the expected output.
 
     // test.js
     test('Rewrite function', function() {
@@ -597,12 +601,20 @@ We start by writing the test for the `rewrite()` function.
         equal(roman.rewrite('MMMCMXCIX'), 'MMMDCCCCLXXXXVIIII');
     });
 
-The new test fails because `roman.rewrite()` is undefined:
+We cannot leverage our `runTests()` helper function for this test
+because the `runTests()` helper function calls the `roman.toDecimal()`
+function and not the `roman.rewrite()` function.
+
+The new test fails because `roman.rewrite()` is undefined.  The failure
+message is:
 "`Object doesn't support property or method 'rewrite'`"
+So we have 2 failing tests, the "Subtractive Rules" test and the
+"Rewrite function" test.
 
-Now we write the production code.
-
-Add rewrite function to roman module
+Now let's turn to the production code.  We will start by declaring the
+`rewrite()` function.  We will give it an empty function body for now.
+Line 7 attaches the `rewrite()` function to the `roman` module so it
+will be accessible for testing outside the `code.js` file.
 
     // code.js
     function rewrite(romanNumerals) {
@@ -614,13 +626,23 @@ Add rewrite function to roman module
         toDecimal: toDecimal
     };
 
-The rewrite test now runs, but all assertions fail with `result is undefined`.
+The rewrite test now runs and executes all assertions,
+but each assertions fail with `Result: undefined`.
 
-Create helper function `replaceTwoCharacters`
+Before we dive into filling in the body of the `rewrite()` function with
+code, it would be nice to break down this problem into smaller pieces.
+Let's isolate a portion of the rewrite function into a smaller,
+helper function.
 
 
 "Replace Two Characters" Function
 ---------------------------------
+
+In light of what the `rewrite()` function is required to do,
+it would be nice to have a helper function that,
+given a string, a two character string, and a replacement substring,
+would return a string with the first occurrence of the two character
+string replaced with the replacement substring. Let's create a helper function named `replaceTwoCharacters()` that does exactly that.
 
 Write test for `replaceTwoCharacters`
 
