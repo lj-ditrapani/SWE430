@@ -717,11 +717,11 @@ Let's try to get the "Rewrite function" test to pass.
 
 
 Back to the "Rewrite" Function
-----------------------------
+------------------------------
 
 Now we write the code for the `rewrite()` function using the
 `replaceTwoCharacters()` helper function.
-Since we have arleady solved the problem of replacing two characters
+Since we have already solved the problem of replacing two characters
 with a substring by writing the `replaceTwoCharacters()` helper
 function, the implementation of the `rewrite()` function is very simple
 and straight forward.
@@ -750,9 +750,15 @@ by `replaceTwoCharacters()`.
         return romanNumerals;
     }
 
-Run the tests.  The "Rewrite function" test now passes.
+Run the tests.  The "Rewrite function" test now passes.  However, there
+is a lot of duplication in the code we just wrote.  Now that we now it
+works properly because of the passing test, let's refactor it to remove
+the redundant code.
 
-Refactor into loop
+We rewrite the function to use a "`for`" loop that iterates over the
+`subtractivePairs` and `replacements`.  At each iteration, the function
+calls `replaceTwoCharacters()`, and replaces the value of
+`romanNumerals` with the result.
 
     // code.js
     function rewrite(romanNumerals) {
@@ -771,11 +777,32 @@ Refactor into loop
         return romanNumerals;
     }
 
+- Lines 4-6 define the pairs of roman numerals that make use of the
+  subtractive rules.
+- Lines 7-9 define the roman numerals that should be used to replace the
+  subtractive pairs.
+- Lines 11-13 invoke the `replaceTwoCharacters()` function for the
+  current iteration, updating the value of `romanNumerals` to the result
+  of the function call.
+
 Run the tests.  The "Rewrite function" still passes.  This means the
 refactoring has been successful because we improved the _structure_ of
 our code without changing the _behavior_ of our code.
 
-Refactor the test.  Use existing `runTest()` with second `runRewriteTest` boolean parameter.
+We have refactored the production code, but what about the test code?
+There is a lot of duplication in the "Rewrite function" test.  It would
+be nice if we could leverage the `runTests()` function to run the test
+as we have done in the other test functions.
+This would allow us to remove
+the duplication in the "Rewrite function" test.  Let's refactor the
+`runTests()` function so it works for both `roman.rewrite()` and
+`roman.toDecimal()`.  To do this, we add a second parameter to the
+`runTests()` function named `runRewriteTest` with a boolean type.
+Remember, booleans can only have a value of `true` or `false`.
+If the input parameter `runRewriteTest` is `false`, `undefined`, or
+missing, the `toDecimal()` function is executed.  If the
+`runRewriteTest` input parameter is `true`, the `rewrite()` function is
+executed.
 
     // test.js
     function runTests(tests, runRewriteTest) {
@@ -790,6 +817,19 @@ Refactor the test.  Use existing `runTest()` with second `runRewriteTest` boolea
         }
     }
 
+Run the tests.  All tests (except the "Subtractive Rules" test) still
+pass.  This means the `runTests()` function still works correctly for
+all the previous tests.  Now we can modify the "Rewrite function" test
+to make use of the `runTests()` helper function.  We write the
+"Rewrite function" test in the same way we have written the other tests
+that make use of the `runTests()` function.  We define an array of
+test-cases named `tests` and pass them as input to the `runTests()`
+function.  The only wrinkle is, this time, `runTests()` takes a second
+input argument, a literal `true` to indicate the `runTests()` function
+should call the `roman.rewrite()` function instead of the
+`roman.toDecimal()` function.
+
+    // test.js
     test('Rewrite function', function() {
         var tests = [
             ['IV', 'IIII'],
@@ -811,7 +851,7 @@ Refactor the test.  Use existing `runTest()` with second `runRewriteTest` boolea
         runTests(tests, true);
     });
 
-pass
+Run the tests.  All tests (except the "Subtractive Rules" test) still pass.  Our refactoring was successful.  We can now move on to the final step in making our production code pass the "Subtractive Rules" test.
 
 [final test.js](example2/test.js)
 [code10.js](example2/code10.js)
@@ -820,7 +860,13 @@ pass
 Integrate the "rewrite" and "toDecimal" Functions
 -------------------------------------------------
 
-Integrate the `rewrite` function into the `toDecimal` function to pass the "Subtractive Rules" test.
+Now that we have a working `rewrite()` function, we simply need to
+modify the `toDecimal()` function to make use of it and pass the
+"Subtractive Rules" test.
+
+The modification is simple.  We add a single line of code that calls
+the `rewrite()` function and updates the value of `romanNumerals` with
+the result.
 
     // code.js
     function toDecimal(romanNumerals) {
@@ -832,6 +878,10 @@ Integrate the `rewrite` function into the `toDecimal` function to pass the "Subt
         return number;
     }
 
-Pass
+Run the tests.  Now all tests pass and we have completed the project.
+Well done!
 
 [final code.js](example2/code.js)
+
+
+You are now ready to proceed to [Assignment 2](assignment2.html).
