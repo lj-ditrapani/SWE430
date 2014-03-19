@@ -1,7 +1,7 @@
 SWE 430 Lesson 2:  Refactoring
 ========================================================================
 
-In this lesson we will lay the conceptual foundations of refactoring which we will later apply in Example 2 and Exercise 2.
+In this lesson we will lay the conceptual foundations of refactoring which will be useful in the SWE 430 examples and exercises.
 
 What is Refactoring
 -------------------
