@@ -37,7 +37,8 @@ Learning Objectives
 5. Trace elements of a software solution to requirements and test cases.
 6. Assess the effectiveness of unit and interface test cases.
 7. Analyze methods of improving software assurance.
-Identify steps involved in construction and debugging processes.
+8. Identify steps involved in construction and debugging processes.
+9. Assess various sources for obtaining software artifacts.
 
 
 Evaluation
@@ -116,6 +117,6 @@ The chain of appeal follows this order:
 
 1. Course director
 2. SPDP Program Director
-3. AFIT School of Systems and Logistics Dean
-4. AFIT Vice Commandant
-5. AFIT Chancellor and President (decisions made at this level are final)
+3. Department Head
+4. AFIT School of Systems and Logistics Dean
+5. AFIT Director and Chancellor (decisions made at this level are final)
