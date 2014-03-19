@@ -62,10 +62,20 @@ WIP
 TO DO
 ========================================================================
 
+From calendar:  330/430 fixes
+- Revise lessons (3)
+- Discussion board questions
+- Choose content to cut-out of 330 and replace with new lessons (3)
+- Video screen casts
+- screen shots?
+- Update 330 with better content?
+- 330 DoDI 5000.02 curriculum update
+- learning objective matrix update (objective 3)
+- CUI prep (430 documentation on sharepoint)
+
 Syllabus
 
 - Missing objective???  How to update?
-- AFIT polices -- student rights reference 7 June 2012 -- up to date?
 
 Lessons
 
@@ -210,3 +220,42 @@ Assessment -> do unlimited attempts
 
 - to grade -> grade center -> view grade details
 - (top right 'v' in assignment box) clear attempt or ignore attempt
+
+
+
+Objectives
+==========
+
+430
+---
+- Actively participates in online course activities.
+* Assess the impact of decisions made in selecting construction tools
+  and processes.
+- Assess various sources for obtaining software artifacts.
+* Detail software artifacts produced during and in support of
+  construction.
+* Analyze software construction artifacts for standards compliance and
+  errors.
+* Evaluate the conversion of low-level design artifacts into a software
+  solution.
+* Trace elements of a software solution to the design.
+* Assess the effectiveness of unit and interface test cases.
+* Analyze methods of improving software assurance.
+* Identify steps involved in construction and debugging processes
+
+330
+---
+- Actively participates in online course activities.
+- Assess the impact of decisions made in selecting construction tools
+  and processes.
+- Evaluate various sources for obtaining software artifacts.
+- Describe software artifacts produced during and in support of
+  construction.
+- Trace elements of constructed software to requirements.
+- Define characteristics of a productive development environment.
+- Assess software assurance characteristics of artifacts developed in
+  software construction.
+- Assess options to mitigate risks associated with transitioning beyond
+  the construction phase
+ 
+
