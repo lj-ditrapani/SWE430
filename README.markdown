@@ -64,6 +64,8 @@ TO DO
 
 From calendar:  330/430 fixes
 - Revise lessons (3)
+    - Clarify references to examples/assignments (not exercises)
+      as 430 only (because these will be shared with 330 students)
 - Discussion board questions
 - Choose content to cut-out of 330 and replace with new lessons (3)
 - Video screen casts
