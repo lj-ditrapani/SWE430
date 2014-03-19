@@ -138,7 +138,7 @@ Variables can be reassigned to different values over time.
 
     var x = 5;              // Declare x and assign 5 to it
     x = 3;                  // Reassign x to have the value 3
-    x = x + 5;              // Make x 5 + the current value of x
+    x = x + 5;              // Increase the value of x by 5
                             // x now has the value of 8
     x += 5;                 // Shorthand for the previous line 
                             // x now has the value of 13
