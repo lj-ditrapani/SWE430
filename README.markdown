@@ -63,9 +63,14 @@ TO DO
 ========================================================================
 
 From calendar:  330/430 fixes
+- move exam to 2nd week? (index and syllabus?)
 - Revise lessons (3)
     - Clarify references to examples/assignments (not exercises)
       as 430 only (because these will be shared with 330 students)
+    - what about links:  could be confusing for 330 students
+      either:
+        - remove links
+        - or create sepreate 330/430 versions (seperate links & titles).
 - Discussion board questions
 - Choose content to cut-out of 330 and replace with new lessons (3)
 - Video screen casts
