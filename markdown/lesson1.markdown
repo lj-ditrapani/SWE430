@@ -1,4 +1,4 @@
-SWE 430 Lesson 1:  Tools and Standards
+SWE 330/430 Lesson 1:  Tools and Standards
 ========================================================================
 
 This lesson discusses general implementation tools and coding standards.
@@ -11,9 +11,9 @@ The most obvious and necessary tool in software development is the actual progra
 [assembled](http://en.wikipedia.org/wiki/Assembly_language), 
 [compiled](http://en.wikipedia.org/wiki/Compiler), or 
 [interpreted](http://en.wikipedia.org/wiki/Interpreter_%28computing%29).
-The examples and exercises you will work with in this course make use of the JavaScript programming language.  JavaScript is an interpreted language.  Your web browser contains a JavaScript interpreter, which parses and interprets any linked or embedded JavaScript in the current web page.  
+The examples and assignments the 430 students will work with in this course make use of the JavaScript programming language.  JavaScript is an interpreted language.  Your web browser contains a JavaScript interpreter, which parses and interprets any linked or embedded JavaScript in the current web page.  
 
-Although we will only be dealing with JavaScript, there are many languages to chose from.  Wikipedia lists a few hundred languages on its
+Although the 430 students will only be dealing with JavaScript, there are many languages to chose from.  Wikipedia lists a few hundred languages on its
 [Timeline of Programming Languages][timeline]
 page.
 
@@ -44,7 +44,7 @@ The ultimate purpose of coding standards is to produce readability and maintaina
 In order to create cost-effective software, all developers on a team must be able to easily read and understand each other's code.  This includes future developers, who may not be on the team yet, but will have to, someday, maintain the code.
 Coding standards can help us achieve this.
 
-The most prominent component of many coding standards are the naming conventions.  The naming conventions can apply to variables, functions, classes, and any other constructs used in the language.  Coding standards can also address the structure and layout of the code.  For instance, it may define indentation for the body of conditional structures (if statements, while loops, for loops, etc).  This often involves the use of whitespace to create visually structured code.
+The most prominent component of many coding standards are the naming conventions.  The naming conventions can apply to variables, functions, classes, and any other named constructs used in the language.  Coding standards can also address the structure and layout of the code.  For instance, it may define indentation for the body of conditional structures (if statements, while loops, for loops, etc).  This often involves the use of whitespace to create visually structured code.
 A bad example of the use (or abuse) of white space is the
 [IOCCC](http://en.wikipedia.org/wiki/IOCCC).
 
@@ -60,7 +60,7 @@ While the aforementioned coding standards focus more on style, other coding stan
 [MISRA](http://www.misra-c.com/Activities/MISRAC/tabid/160/Default.aspx)
 provides C coding standards that focus on software safety.  MISRA C has gained widespread acceptance in the automotive and aerospace industries.
 
-Since we will be using JavaScript in our examples and exercises, here are some well-known JavaScript coding standards:
+Since the 430 students will be using JavaScript for their examples and assignments, here are some well-known JavaScript coding standards:
 
 - [Douglas Crockford's JavaScript Conventions][Crokford]
 - [Mozilla Coding Style][Mozilla]
