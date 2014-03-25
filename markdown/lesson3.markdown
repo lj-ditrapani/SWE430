@@ -1,4 +1,4 @@
-SWE 430 Lesson 3:  TDD and Unit Testing
+SWE 330/430 Lesson 3:  TDD and Unit Testing
 ========================================================================
 
 In this lesson we will lay conceptual foundations regarding test-driven development (TDD) and unit testing which we will later apply in the examples and assignments.
