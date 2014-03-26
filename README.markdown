@@ -63,7 +63,6 @@ TO DO
 ========================================================================
 
 From calendar:  330/430 fixes
-- move exam to 2nd week? (index and syllabus?)
 - Revise lessons (3)
     - Clarify references to examples/assignments (not exercises)
       as 430 only (because these will be shared with 330 students)
