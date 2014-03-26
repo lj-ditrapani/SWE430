@@ -49,12 +49,18 @@ Week 2
 -----------
 
 
-### Full-blown TDD (7 hours) ###
+### Full-blown TDD (6.5 hours) ###
 
 - [Example 2: TDD from Scratch --- Roman Numerals](example2.html)
   (4 hours)
 - [Assignment 2: TDD from Scratch --- Titleize](assignment2.html)
-  (3 hours)
+  (2.5 hours)
+
+
+### Progress Check (0.5 hours) ###
+
+The Progress Check will be available on blackboard under 
+the "Progress Check" tab.  The Progress Check covers lessons 1-3.
 
 
 - - - - - -
@@ -66,12 +72,6 @@ Week 3
 
 - [Assignment 3: Password Checker](assignment3.html)
    (9 hours)
-
-
-### Exam ###
-
-The exam will be available during week 3 on blackboard under 
-the Exams tab.  The exam covers lessons 1-3.
 
 
 - - - - - -
