@@ -4,7 +4,7 @@ SWE 430 Assignment 3 --- Password Checker
 Assignment Instructions
 ---------------------
 
-Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write the unit test before writing the code to pass the unit test.
+Use test-driven development (TDD) along with qUnit, the xUnit testing framework, to implement the password checker code module (defined below) for a DoD information system.  Ensure you write a unit test before writing the code to pass the unit test.
 
 The TDD cycle:
 
@@ -56,16 +56,22 @@ Because `proposed_password` is a valid password, the result variable would evalu
 
 In this case, the result variable would evaluate to false and the reason would be `"too long"`.  Even though the password fails 2 rules, `"too long"` and `"4+ char substring"`, only the reason for the first failure (according to the order listed below) is reported.
 
-The only global variable your code should export is an object (which will serve as a module) named password which contains a function named check.  This is accomplished in the same way we export the target object which contains both the Target and the Grid classes in Example 1.
+The only global variable your code should export is an object (which will serve as a module) named `password` which contains a function named `check()`.  This is accomplished in the same way we exported the `stringInfo` object, which contained 4 functions, in Example 1.
 
 
     // code.js
-    window.password = {}
-    password.check = (proposed_password, previous_passwords) ->
-        # body of function goes here
-        # ...
 
-In order to be declared "valid," all accepted passwords must adhere to the following criteria:
+    var password = {};          // Create password module
+
+    // Create check function and attach it to password module
+    password.check = function(proposed_password, previous_passwords) {
+        // body of function goes here
+        // ...
+    }
+
+    window.password = password; // Export password module
+
+In order to be declared "valid," all accepted passwords must adhere to the following criteria (the reason string returned for failing the associated rule is in green and parentheses):
 
 1. A password must be at least 8 (**too short**) and no more than 20 characters long (**too long**).
 2. A password is comprised of only [ASCII](http://en.wikipedia.org/wiki/ASCII) printable characters.  No whitespcae---tabs, space, etc., control characters, or unicode is allowed (**not printable ASCII**).
