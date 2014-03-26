@@ -67,7 +67,7 @@ The only global variable your code should export is an object (which will serve 
     password.check = function(proposed_password, previous_passwords) {
         // body of function goes here
         // ...
-    }
+    };
 
     window.password = password; // Export password module
 
