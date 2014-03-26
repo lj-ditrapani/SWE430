@@ -9,10 +9,10 @@ Welcome to SWE 430: Software Implementation!  I am happy to have you in my class
 
 The first week of the course lays the necessary conceptual foundations.  You will read 3 lessons, answer 3 discussion board questions, and accomplish 3 tutorials.  The week ends with a short example and assignment on running tests iteratively and coding incrementally which will prepare you for full-blow test-driven development.
 
+In the second week, you will work through an example of TDD and then complete a short TDD assignment.  The TDD example provides a concrete instantiation of the concepts you learned in week 1 and the assignment gives you the opportunity to apply the concepts on your own.  Week 2 concludes
+ with a Progress Check that covers lessons 1-3.
 
-In the second week, you will work through an example of TDD and then complete a short TDD assignment.  The TDD example provides a concrete instantiation of the concepts you learned in week 1 and the assignment gives you the opportunity to apply the concepts on your own.
-
-The final week allows you to apply all that you have learned in a capstone TDD assignment and concludes with a final exam.
+The final week allows you to apply all that you have learned in a capstone TDD assignment.
 
 The majority of the time you spend on the class will be in working through the two examples and the three assignments.
 
@@ -44,7 +44,7 @@ Learning Objectives
 Evaluation
 ----------
 
-You will primarily be evaluated on the work you turn in for Assignment 1 and 2 and your score on the final exam.  The points possible for each evaluated item is listed below.
+You will primarily be evaluated on the work you turn in for Assignments 1-3.  You will also be evaluated through the Discussion Board Questions and the Progress Check.  The points possible for each evaluated item is listed below.
 
 <table summary="Points possible for each graded item">
 <tr><th>Item</th><th>Points Possible</th></tr>
@@ -53,7 +53,7 @@ You will primarily be evaluated on the work you turn in for Assignment 1 and 2 a
 <tr><td>Assignment 1 </td><td>05</td></tr>
 <tr><td>Assignment 2 </td><td>10</td></tr>
 <tr><td>Assignment 3 </td><td>60</td></tr>
-<tr><td>Final Exam </td><td>10</td></tr>
+<tr><td>Progress Check</td><td>10</td></tr>
 </table>
 
 The bulk of your grade depends on the assignments, so please be sure to give yourself plenty of time to complete them.  Assignment 3 will take approximately nine hours to complete.  You need at least 75 points to pass the class.
@@ -68,22 +68,22 @@ Meeting the recommended turn-in dates will allow you to progress smoothly throug
 <tr><th>Item</th><th>Recommended Turn-in</th><th>Deadline</th></tr>
 <tr><td>Introduction</td><td>07 April</td><td>14 April</td></tr>
 <tr><td>3 Discussion Board Questions</td>
-                         <td>10 April</td><td>14 April</td></tr>
+                         <td>09 April</td><td>14 April</td></tr>
 <tr><td>Assignment 1</td><td>11 April</td><td>14 April</td></tr>
-<tr><td>Assignment 2</td><td>17 April</td><td>21 April</td></tr>
-<tr><td>Assignment 3</td><td>24 April</td><td>25 April</td></tr>
-<tr><td>Final Exam </td> <td>25 April</td><td>25 April</td></tr>
+<tr><td>Assignment 2</td><td>18 April</td><td>21 April</td></tr>
+<tr><td>Progress Check</td><td>18 April</td><td>21 April</td></tr>
+<tr><td>Assignment 3</td><td>25 April</td><td>25 April</td></tr>
 </table>
 
 <!--
 Item          Recommended    Deadline
 =====================================
 Intro           1st Mon      2nd Mon
-3 DB Questions  1st Thu      2nd Mon
+3 DB Questions  1st Wed      2nd Mon
 Assignment 1    1st Fri      2nd Mon
-Assignment 2    2nd Thu      3rd Mon
+Assignment 2    2nd Fri      3rd Mon
+Progress Check  2nd Fri      3rd Mon
 Assignment 3    3rd Thu      3rd Fri
-Final Exam      3rd Fri      3rd Fri
 -->
 
 
