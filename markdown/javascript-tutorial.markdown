@@ -20,11 +20,6 @@ at jsbin.com:
 [Instructions](jsbin-instructions.html) for using jsbin are available.
 
 
-Note:  **Everything you need to run JavaScript and qUnit is contained
-within the environment for each example and assignment.
-You do not need to install anything.**
-
-
 Comments
 --------
 
@@ -45,7 +40,7 @@ They are also used to provide explanations in tutorials.
        This is a multi-line comment,
        it started with /*
        It can contain anything {[()]}
-       end comment
+       end comment with "star slash"
     */
 
 
@@ -130,7 +125,7 @@ Multiple variables can be declared in the same `var` statement.  It is best prac
     myNumber = 5;           // Assign 5 to myNumber
     myString = 'hello';
     myArray = [true, false];
-    myObject = {a: 1, b: myArray}
+    myObject = {a: 1, b: myArray};
     // myObject.b refers to the array [true, false]
 
 
@@ -233,7 +228,7 @@ Examples:
     false || true;              // true
     false || false;             // false
 
-The `!` operator is a unary operator (it only take one argument as opposed to two arguments).  It negates the boolean value of its argument.
+The `!` operator is a unary operator (it only take one argument as opposed to two arguments).  It is called the "NOT" operator becasue it negates the boolean value of its argument.
 
     !true;                      // false
     !false;                     // true
@@ -427,7 +422,7 @@ The function simply adds `a` and `b` and returns the result.
 The keyword `return` indicates the function should exit and return the
 value of the expression on the right-hand-side of he `return` operator.
 
-    // Define a function that has 2 paramters
+    // Define a function that has 2 parameters
     function add(a, b) {
         return a + b;
     }
@@ -437,10 +432,10 @@ value of the expression on the right-hand-side of he `return` operator.
     add(2, 7);                  // Returns 9
 
 
-Namespaces
-----------
+Namespaces/Modules
+------------------
 
-JavaScript doesn't directly support namespaces (also called modules.)  However, objects can be used to simulate a namespace.  Below we simulate a module by creating an object and naming it mod.  We then define a property 'x' on the mod object.  The variable x is thus 'hidden' in the mod namespace.
+JavaScript doesn't directly support namespaces (also called modules.)  However, objects can be used to simulate a namespace or module.  Below we simulate a module by creating an object and naming it mod.  We then define a property 'x' on the mod object.  The variable x is thus 'hidden' inside the mod namespace from the global environment.
 
     // Create an empty object literal and attach 
     // it to the global window object
@@ -510,13 +505,13 @@ By including an `else` clause with the `if` statement, if the variable `good` is
 For loop
 --------
 
-Iteration can be accomplished using 'for' loops.  The for loop has three parts:  initialization, condition, and step operation.
+Iteration can be accomplished using `for` loops.  The for loop has three parts:  initialization, condition, and step operation.
 
     // Displays the elements of the array one at a time
     var i, a;                   // Declare variables
     a = [1, 2, 3];              // Array with 3 elements
     // i iterates from 0 to 2; providing the indexes of the array
-    for (i = 0; i < array.length; i += 1) {
+    for (i = 0; i < a.length; i += 1) {
         alert(a[i]);            // Each element is displayed
     }
 
