@@ -62,7 +62,6 @@ WIP
 TO DO
 ========================================================================
 
-From calendar:  330/430 fixes
 - Revise lessons (3)
     - Clarify references to examples/assignments (not exercises)
       as 430 only (because these will be shared with 330 students)
@@ -71,26 +70,15 @@ From calendar:  330/430 fixes
         - remove links
         - or create sepreate 330/430 versions (seperate links & titles).
 - Discussion board questions
+- Progress Check: review, include study guide (check 430 13A)?
 - Choose content to cut-out of 330 and replace with new lessons (3)
 - Video screen casts
-- screen shots?
+- screen shots for environment tutorial
 - Update 330 with better content?
 - 330 DoDI 5000.02 curriculum update
 - learning objective matrix update (objective 3)
 - CUI prep (430 documentation on sharepoint)
-
-Syllabus
-
-- Missing objective???  How to update?
-
-Lessons
-
-- Review and update lessons
-- Add javascript style standards to lesson 1
-
-DBQ
-
-- Add discussion board questions for interaction with managers
+- Missing jsbin for tutorials (remove or create one)
 
 Tutorials
 
@@ -124,18 +112,13 @@ Assignments
 Assignment 3
 
 - Explain unicode \u2660 \n
-- string manipulation functions; provide tutorial
-- consider splitting the project up into 2 segments?
-- Fix this sentence for new example code: "This is accomplished in
-  the same way we export the target object which contains both the
-  Target and the Grid classes in Example 1."
 - 335 LOC: 183 code, 152 test
 
+- string manipulation functions; provide tutorial
 - String.length, replace, slice() to get substring, indexOf to find
   substring
 - slice() and indexOf() for "has 4 char substring" '4+ char substring'
 - charCodeAt
-- regex /[a-z]/ /[^a-z]/
 
 Tools and scripts
 
@@ -151,14 +134,10 @@ Tools and scripts
 - Create ui.py to 1) init env and 2) deploy 3) lint check
 - clean git ls-files
 
-Exam: Exam covers lessons 1-3, include study guide?
-
 General TO DO
 
 - Check SWE 430 13A offering discussion board and announcement, for
   info to include (questions, problems, ..)
-- Ensure all files are set ff=dos
-- Remove references to refactoring example and exercise
 - Delete or integrate extra files being ignored
     - Lib/check-html.sh
     - Lib/lint-ex1.sh
