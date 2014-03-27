@@ -78,7 +78,7 @@ TO DO
 - 330 DoDI 5000.02 curriculum update
 - learning objective matrix update (objective 3)
 - CUI prep (430 documentation on sharepoint)
-- Missing jsbin for tutorials (remove or create one)
+- Missing jsbin for qunit tutorial (remove or create one)
 
 Tutorials
 
