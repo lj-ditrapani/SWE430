@@ -62,7 +62,6 @@ WIP
 TO DO
 ========================================================================
 
-- Do not use string[n];, use string.charAt(n); instead
 - Revise lessons (3)
     - Clarify references to examples/assignments (not exercises)
       as 430 only (because these will be shared with 330 students)
@@ -74,22 +73,14 @@ TO DO
 - Progress Check: review, include study guide (check 430 13A)?
 - Choose content to cut-out of 330 and replace with new lessons (3)
 - Video screen casts
-- screen shots for environment tutorial
 - Update 330 with better content?
 - 330 DoDI 5000.02 curriculum update
 - learning objective matrix update (objective 3)
 - CUI prep (430 documentation on sharepoint)
-- Missing jsbin for qunit tutorial (remove or create one)
 
-Tutorials
+Tutorial 2:  qUnit
 
-- Make javascript tutorial
-- Update qunit jsbin to JavaScript
-- Change CoffeeScript jsbin to JavaScript, update
-
-Tutorial 2:  qUnit Tutorial
-
-- qunit tutorial:  do we need throws or module stuff?
+- add qUnit HTML interface screenshots
 
 Tutorial 3:  Environment Instructions
 
@@ -101,7 +92,6 @@ Examples
 - Work through both examples, step by step.  Time it.
 - Make video screen cast for Example 1
 - Make video screen cast for Example 2?
-- Grab ideas from example 1.1, 1.2 and 2 from 430 13B
 
 Assignments
 
@@ -109,6 +99,7 @@ Assignments
 - Make video screen cast for Assignment 1
 - Explain type signatures?
 - Put list of useful functions in each assignment instruction
+    - refer them to js tutorial "Useful String Methods" table?
 
 Assignment 3
 
