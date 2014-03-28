@@ -62,6 +62,7 @@ WIP
 TO DO
 ========================================================================
 
+- Do not use string[n];, use string.charAt(n); instead
 - Revise lessons (3)
     - Clarify references to examples/assignments (not exercises)
       as 430 only (because these will be shared with 330 students)
