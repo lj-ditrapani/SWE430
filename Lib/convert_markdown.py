@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import io
 import os
+import sys
 import json
 import datetime
 import xml.etree.ElementTree as ET
@@ -130,4 +131,14 @@ if __name__ == '__main__':
         'assignment2',
         'assignment3',
     )
-    map(main, file_names)
+    if len(sys.argv) == 2:
+        file_name = sys.argv[1]
+        if sys.argv[1] in file_names:
+            main(file_name)
+        else:
+            template = '"{0}" not a file in file_names list\nEXIT\n'
+            message = template.format(file_name)
+            sys.stderr.write(message)
+            sys.exit(1)
+    else:
+        map(main, file_names)
