@@ -63,13 +63,13 @@ TO DO
 ========================================================================
 
 - Revise lessons (3)
-    - Clarify references to examples/assignments (not exercises)
-      as 430 only (because these will be shared with 330 students)
-    - what about links:  could be confusing for 330 students
-      either:
-        - remove links
-        - or create sepreate 330/430 versions (seperate links & titles).
+    - When creating 330 copies of lessons:
+        - remove links back to index and to other lessons/430 stuff
+        - remove 430 student comments?
 - Discussion board questions
+    - of the benefits of TDD in lesson 3:  what's the most important, leaste important, give an example where this was an issue, how could TDD help
+    - Why is refactoring important to TDD.  Give example where refactoring was needed, but no preformed, what was the outcome.
+    - Why is automated unit testing framework so important to TDD and refactoring?
 - Progress Check: review, include study guide (check 430 13A)?
 - Choose content to cut-out of 330 and replace with new lessons (3)
 - Video screen casts
