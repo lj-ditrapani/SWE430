@@ -288,6 +288,14 @@ of its substrings.
     s = 'hello world';
     s.split(' ');               // Returns ['hello', 'world']
 
+The String method `replace()` can be used to replace a substring with a replacement string.  By default `replace()` only replaces the first occurrence of the substring in the string.
+
+    var s;
+    s = 'Can you see the car is parked on the street?';
+    // The substring is 'the' and the replacement is 'no'
+    s.replace('the', 'no');
+    // Returns 'Can you see no car is parked on the street?'
+
 Useful String Methods:
 
 <table>
@@ -330,6 +338,13 @@ Useful String Methods:
 <tr>
 <td>split()</td>
 <td>Split the original string and return an array of substrings</td>
+</tr>
+
+<tr>
+<td>replace()</td>
+<td>
+The `replace()` method returns a new string with some or all matches of a substring replaced by a replacement string.
+</td>
 </tr>
 
 </table>
