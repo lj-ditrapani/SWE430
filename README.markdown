@@ -84,22 +84,17 @@ Tutorial 3:  Environment Instructions
 
 - Add screenshots (console, debugger, jsbin)
 
-Examples
+Examples & Assignments
 
-- Work through both examples, step by step.  Fill-in prose.
-- Work through both examples, step by step.  Time it.
+- Ex1 start     10:28  10:47 18 minutes
+- Assg1 start   10:51  10:55  4 minutes
+- Ex2 start     11:54  12:49 55 minutes
+- Assg2 start   12:58  1:40  working 1:50 refactor 52 minutes
+- Assg3 start   
+    - 335 LOC: 183 code, 152 test
 - Make video screen cast for Example 1
 - Make video screen cast for Example 2?
-
-Assignments
-
-- Work through all 3 assignments and time each.
-- Make video screen cast for Assignment 1
-- Explain type signatures?
-
-Assignment 3
-
-- 335 LOC: 183 code, 152 test
+- Time 3rd assignment
 
 Tools and scripts
 
