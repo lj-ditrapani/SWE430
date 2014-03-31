@@ -13,11 +13,11 @@ Week 1
 ### Lessons (2 hours) ###
 
 - [Lesson 1:  Tools and Standards](lesson1.html)
-  (2 pages 30 min)
-- [Lesson 2:  Refactoring](lesson2.html)
   (3 pages 30 min)
+- [Lesson 2:  Refactoring](lesson2.html)
+  (4 pages 30 min)
 - [Lesson 3:  TDD and Unit Testing](lesson3.html)
-  (7 pages 1 hour)
+  (9 pages 1 hour)
 
 
 ### Discussion Board Questions (1 hour) ###
