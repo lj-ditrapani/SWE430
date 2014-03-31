@@ -23,9 +23,10 @@ The TDD cycle:
 For Assignment 2, you will create a module named `wordModule`
 with the following 4 functions.
 You should write at least one qUnit test for each function.
-You should consider at least 2 test cases for each function.
-You can execute both test cases in the same qUnit test or have
-individual qUnit tests for each test case.
+You should consider at least 2 test cases (assertions) for each
+function.
+You can execute both test cases (assertions) in the same qUnit test or
+have individual qUnit tests for each test case (assertion).
 
 <table>
 <tr>
@@ -35,7 +36,10 @@ individual qUnit tests for each test case.
 </tr>
 <tr>
     <td><code>toWords</code></td>
-    <td><code>string</code></td>
+    <td>
+    <code>string</code> of words separated by a single space.
+    Does not contain leading or trailing whitespace.
+    </td>
     <td>Convert the string of words into an Array of
     <strong>lower-case</strong> words.
     If the string is empty (<code>''</code>),
@@ -92,7 +96,7 @@ Useful JavaScript [String methods][string]:
 `split()` `toLowerCase()` `toUpperCase()` `slice()`
 
 Useful JavaScript [Array methods][array]:
-`push()`
+`push()` `join()`
 
 See the [JavaScript Tutorial](javascript-tutorial.html) for examples of the useful methods listed above.
 
