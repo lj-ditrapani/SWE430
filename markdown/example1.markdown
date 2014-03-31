@@ -39,6 +39,8 @@ four string inspection functions.
 See the Wikipedia [ASCII page][ASCII] For information on the ASCII
 encoding.
 
+Since the tests are already written, you do not need to modify the test.js file.  You will only be working with the code.js file for this example.
+
 At the end of each section, a link to the current state of the `code.js`
 file, which incorporates all of the work accomplished in the example
 up to that point, is provided for you to check your work against so you
