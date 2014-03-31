@@ -62,10 +62,9 @@ WIP
 TO DO
 ========================================================================
 
-- Revise lessons (3)
-    - When creating 330 copies of lessons:
-        - remove links back to index and to other lessons/430 stuff
-        - remove 430 student comments?
+- When creating 330 copies of lessons:
+    - remove links back to index and to other lessons/430 stuff
+    - remove 430 student comments?
 - Discussion board questions
     - of the benefits of TDD in lesson 3:  what's the most important, leaste important, give an example where this was an issue, how could TDD help
     - Why is refactoring important to TDD.  Give example where refactoring was needed, but no preformed, what was the outcome.
