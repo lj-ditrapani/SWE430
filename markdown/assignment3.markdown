@@ -30,10 +30,17 @@ If you have any questions, run into problems, or need clarification, please let 
 Password Checker Specification
 ------------------------------
 
-The check function in the password module determines if a proposed password is valid or not.  Function signature:  `String X list of Strings => boolean X String`
+The check function in the password module determines if a proposed
+password is valid or not.
+Function signature:  `String X Array of Strings => boolean X String`
 
-- Inputs: a proposed password and an array of 0 to 6 previous passwords.
-- Output: A 2 element array containing a boolean and a String.  The boolean is true if the proposed password is valid, false otherwise.  When the boolean is false, the String provides the reason the password is invalid.  When the boolean is true, the second value is the empty string: `""`.
+- Inputs: a proposed password (String) and an array of 0 to 6 previous
+  passwords (Array of Strings).
+- Output: A 2 element array containing a boolean and a String.  The
+  boolean is true if the proposed password is valid, false otherwise.
+  When the boolean is false, the String provides the reason the
+  password is invalid.  When the boolean is true, the second value is
+  the empty string: `""`.
 
 Precondition:  All previous passwords are assumed to be valid (you don't have to test that the previous passwords are valid, only test the proposed password.)  Here is an example of using the password.check function:
 
