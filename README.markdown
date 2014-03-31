@@ -69,11 +69,10 @@ TO DO
     - of the benefits of TDD in lesson 3:  what's the most important, leaste important, give an example where this was an issue, how could TDD help
     - Why is refactoring important to TDD.  Give example where refactoring was needed, but no preformed, what was the outcome.
     - Why is automated unit testing framework so important to TDD and refactoring?
-- Progress Check: review, include study guide (check 430 13A)?
 - Choose content to cut-out of 330 and replace with new lessons (3)
-- Video screen casts
 - Update 330 with better content?
 - 330 DoDI 5000.02 curriculum update
+- Video screen casts
 - learning objective matrix update (objective 3)
 - CUI prep (430 documentation on sharepoint)
 
@@ -97,19 +96,10 @@ Assignments
 - Work through all 3 assignments and time each.
 - Make video screen cast for Assignment 1
 - Explain type signatures?
-- Put list of useful functions in each assignment instruction
-    - refer them to js tutorial "Useful String Methods" table?
 
 Assignment 3
 
-- Explain unicode \u2660 \n
 - 335 LOC: 183 code, 152 test
-
-- string manipulation functions; provide tutorial
-- String.length, replace, slice() to get substring, indexOf to find
-  substring
-- slice() and indexOf() for "has 4 char substring" '4+ char substring'
-- charCodeAt
 
 Tools and scripts
 
