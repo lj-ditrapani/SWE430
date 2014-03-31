@@ -5,16 +5,22 @@ In this lesson we will lay conceptual foundations regarding test-driven developm
 
 SWE 430 students:  We will apply these concepts in the examples and assignments throughout the rest of the course.
 
+
+Introduction
+------------
+
 <!--
-Reducing risk
-Shortening feedback cycles
-Reducing time between requirement -> test
-cycle requirement -> design -> implementation -> test
-Contrast with waterfall
-showing details
-brain abstracts details
-only see half picture without implementation
+Software development revolves around communication.
+Source code is written to communicate to the computer what actions it should take.  But equally important is the communication between developers.  The source code must also be easy to understand by other developers.  If the compiler or interpreter is the only thing that can understand the source code, it is impossible to maintain.  So source code must be written with both the computer and other developers in mind.
 -->
+
+Successful software development requires controlling complexity and reducing risk.  Requirements, design, implementation and testing form a feedback cycle in which the results of the testing can be fed-back into the previous phases to correct errors.  The longer a feedback cycle, the more risk.  The shorter a feedback cycle, the less risk.  So if we shorten our feedback cycles, we reduce our risk.
+
+Using the waterfall development model is a very high risk approach to software development, because the strongest feedback cycles are the longest.  The feedback cycle from requirements, through design and implementation, to testings lasts nearly the entire development effort.  In the waterfall model, you gather all your requirements, then completely design your software system, then completely implement the software, then completely test the software.  The results of the testing phase finally reveal errors introduced in the implementation phase, the design phase and even the requirements phase.  Trying to correct errors so late in the development cycle is very expensive.  Discovering errors at the end of the development timeline can seriously delay a project and even cause its cancellation.
+
+Shorter feedback cycles also provide you with high-quality information from which to make design decisions.  Your brain abstracts away details during requirements and design.  Some details are not important.  But often, during implementation, some of these details that were glossed over, turn out to be important.  Having short feedback cycles allows you to address these uncovered details during subsequent cycles.  By contrast, the waterfall method essentially forces you to accomplish the requirements and design activities "half-blind" because you do not have available the insights that the implementation phase affords until these phases are complete.
+
+Automated unit testing and test-driven development, which we will discuss in this lesson, is one way you can greatly reduce this feedback cycle between requirements and test execution.  These tools also help reduce complexity by isolating interface design, encouraging refactoring, and providing high-quality information (via test results) to make better design decisions with.
 
 
 Unit Testing
@@ -128,11 +134,11 @@ Examples of dependencies that cause slow running tests:
 
 - Database:  A test that starts a database, sets up initial tables and creates a database connection. 
 - Sockets:  A test that requires communicating with a remote server.
-- Disk Access:  A test that reads on writes to a file on disk multiple times.
+- Disk Access:  A test that reads or writes to a file on disk multiple times.
 
-These dependencies can be easily substituted with special stubs called "mock" objects. A mock object has an identical interface to the real object it replaces.  For example, to replace a dependency on a file object that has read and write methods, one might use a mock object that also has read and write methods, but is backed by a string buffer, so reads and writes to the file only access main memory instead of the disk.  The unit under test must be properly parameterized so that the correct dependency can be injected at run time---the mock object during testing, and the actual object during integration testing, system testing and in production use.
+These dependencies can be easily substituted with special stubs called "mock" objects. A mock object has an identical interface to the real object it replaces.  For example, to replace a dependency on a file object that has read and write methods, one might use a mock object that also has read and write methods, but is backed by a string buffer, so reads and writes to the mock file only access main memory instead of the disk.  The unit under test must be properly parameterized so that the correct dependency can be injected at run time---the mock object during testing, and the actual object during integration testing, system testing and in production use.
 
-### Step 2:  Divide-up Test Suite ### 
+### Step 2:  Divide-up Test Suite ###
 
 If the first step is not enough to reduce the execution time of the test suite, it may be necessary to divide the test suite into multiple, smaller test suites.  This only occurs when the system is exceptionally large.  When deciding how to partition the software units, attempt to group interdependent units together.  Some dependencies will still exist between groups of software units.  If a unit depends on units outside its own test suite, those dependencies must be stubbed-out.  This will allow each test suite to be run safely in isolation from the other test suites.
 
@@ -181,7 +187,7 @@ Usually test code is very simple.  It flows from setting up pre-conditions, to e
 Conclusion
 --------------------
 
-This lesson covered TDD and unit testing.  In it, we introduced the concepts, discussed the benefits, and explored the risks of TDD and unit testing.  We also considered strategies to deal with large systems and legacy systems.  Finally we addressed software security, GUI testing, and testing tests as it applies to TDD and unit testing.  Following the above guidance will increase the quality of your code and help keep your project be on time and under budget.  You are now ready to answer the discussion board questions on Blackboard and then move on to [Tutorial 1:  JavaScript Tutorial](javascript-tutorial.html).
+This lesson covered TDD and unit testing.  In it, we introduced the concepts, discussed the benefits, and explored the risks of TDD and unit testing.  We also considered strategies to deal with large systems and legacy systems.  Finally we addressed software security, GUI testing, and testing tests as it applies to TDD and unit testing.  Following the above guidance will increase the quality of your code and help keep your project on time and under budget.  You are now ready to answer the discussion board questions on Blackboard and then move on to [Tutorial 1:  JavaScript Tutorial](javascript-tutorial.html).
 
 
 References
