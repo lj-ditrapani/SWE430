@@ -25,23 +25,23 @@ Week 1
 Answer the three discussion board questions on blackboard. (1 hour)
 
 
-### Tutorials (3 hours) ###
+### Tutorials (2 hours 45 minutes) ###
 
 - [Tutorial 1: JavaScript Tutorial](javascript-tutorial.html)
-  (1 hour)
+  (9 pages 1.5 hours)
 - [Tutorial 2: qUnit Tutorial](qunit-tutorial.html)
-  (1 hour)
+  (3 pages 30 minutes)
 - [Tutorial 3: Instructions](instructions.html)
   for examples and assignments
-  (1 hour)
+  (5 pages 45 minutes)
 
 
-### Running Tests (1 hour) ###
+### Running Tests (1 hour 15 minutes) ###
 
 - [Example 1: Running Tests --- String Functions](example1.html)
-  (30 min)
+  (60 min)
 - [Assignment 1: Running Tests --- Math Library](assignment1.html)
-  (30 min)
+  (15 min)
 
 
 - - - - - -
