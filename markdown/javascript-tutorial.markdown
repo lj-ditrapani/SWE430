@@ -383,6 +383,16 @@ Elements can be appended to the array with the `push()` method.
     a[0];                   // Index into the array; returns 5
     a[1];                   // Index into the array; returns 3
 
+The individual strings in an array of strings can be joined together into a single string using the `join()` method.  The input parameter to `join()` is the string separator used to separate the strings of the array.
+
+    var numbers = ['192', '168', '1', '1'];
+    var ip = numbers.join('.');
+    // returns '192.168.1.1'
+
+    var words = ['The', 'answer', 'is', '42.'];
+    var sentence = words.join(' ');
+    // returns 'The answer is 42.'
+
 
 Accessing an object's properties
 --------------------------------
