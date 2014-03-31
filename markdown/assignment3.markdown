@@ -98,6 +98,19 @@ In order to be declared "valid," all accepted passwords must adhere to the follo
 
 The appropriate "reason string" for each rule is shown in parentheses and in green.  The check() function only returns one reason for a password failure.  If a password fails multiple rules, only the reason for the first rule failed, according to the order listed above, is returned by the function.  Be sure to use the exact reason strings listed above---they are case sensitive.
 
+Because this module deals with password strings, string methods will be particularly useful in completing the assignment.  Take a moment to review the "Strings" section of the [JavaScript Tutorial](javascript-tutorial.html).  Pay special attention to the "Useful String Methods" table.
+Also review the "Arrays" section.  Array indexing will be useful in dealing with the set of 6 previous passwords.
+
+When writing certain tests for this assignment, you may want to express an arbitrary Unicode character within a string.  In order to express any Unicode character, the format is as follows `'\uDDDD'` where DDDD is the four hexadecimal digits that represent the desired character.  For example, `'\u2660'` represents a spade.
+
+Therefore, the line of code:
+
+    var s = 'My favorite suit is \u2660';
+
+Will cause variable `s` to point to the string 'My favorite suit is &#9824;'.
+
+Some ASCII control characters can be expressed directly using an escape sequence.  For example, the line feed character (the tenth character, or 0x0A in hexadecimal) can be expressed within a string a `'\n'`.  However, this character can also be expressed using the Unicode notation as `'\u000A'`.  So the Unicode notation allows you to express all Unicode characters, including ASCII control characters.
+
 Assignment 3 Environments (use one or the other):
 
 - [Assignment 3 zip Environment](assignment3.zip)
