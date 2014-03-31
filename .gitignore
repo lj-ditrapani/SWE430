@@ -47,9 +47,3 @@ assignment*-test.html
 qunit.css
 qunit.js
 /assignment1-dev/code.js
-
-# TODO!!
-# Delete or integrate
-/Lib/check-html.sh
-/Lib/lint-ex2.sh
-/Lib/lint-ex1.sh

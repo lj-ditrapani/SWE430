@@ -119,10 +119,6 @@ General TO DO
 
 - Check SWE 430 13A offering discussion board and announcement, for
   info to include (questions, problems, ..)
-- Delete or integrate extra files being ignored
-    - Lib/check-html.sh
-    - Lib/lint-ex1.sh
-    - Lib/lint-ex2.sh
 
 Low-priority
 
