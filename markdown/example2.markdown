@@ -453,7 +453,7 @@ We create a new test, "Roman Numeral String".  It is very similar to
 the "Individual Roman Numerals" test.  It has an array of test cases
 named `tests` and calls the `runTests()` function passing `tests` as the
 input parameter.  However, it differs in that the input value for each
-test cases is a string of roman numerals instead of a single-character.
+test case is a string of roman numerals instead of a single-character.
 
     // test.js
     test('Roman Numeral Stings', function() {
@@ -751,7 +751,7 @@ by `replaceTwoCharacters()`.
     }
 
 Run the tests.  The "Rewrite function" test now passes.  However, there
-is a lot of duplication in the code we just wrote.  Now that we now it
+is a lot of duplication in the code we just wrote.  Now that we know it
 works properly because of the passing test, let's refactor it to remove
 the redundant code.
 
