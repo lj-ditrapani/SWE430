@@ -94,6 +94,8 @@ Useful JavaScript [String methods][string]:
 Useful JavaScript [Array methods][array]:
 `push()`
 
+See the [JavaScript Tutorial](javascript-tutorial.html) for examples of the useful methods listed above.
+
 **Note**:  The `toWords()`, `inList()`, and `capitalize()` functions can
 (and should) be used to construct the `titleize()` function.
 
